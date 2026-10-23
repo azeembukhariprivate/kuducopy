@@ -83,13 +83,9 @@ out\KUDUCOPY\KUDUCOPY.exe --self-test
 
 ## Publishing a new version
 
-1. Change `<Version>` in `src/KUDUCOPY/KUDUCOPY.csproj`.
-2. Commit, then create and push a tag with the same number:
-   ```
-   git tag v1.0.1
-   git push origin v1.0.1
-   ```
-3. GitHub Actions tests and builds the app, and publishes the installer and portable zip on the Releases page.
+1. Change `<Version>` in `src/KUDUCOPY/KUDUCOPY.csproj` (and `MyAppVersion` in `installer/KUDUCOPY.iss`).
+2. Commit and push to `main`.
+3. GitHub Actions tests and builds the app. When no release exists yet for that version, it creates the `v` tag and publishes the installer and portable zip on the Releases page. Pushes that keep the same version only build.
 
 ## License
 
