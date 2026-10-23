@@ -33,6 +33,7 @@ namespace Kuducopy.Tests
             Run("Reads job files", ReadsJobFiles);
             Run("Preview sorts files by what will happen", PreviewSorts);
             Run("Mirror", MirrorRules);
+            Run("Compare two folders", CompareFolders);
 
             Console.WriteLine();
             Console.WriteLine($"{_passes} passed, {_failures} failed");
@@ -485,6 +486,82 @@ Microsoft Windows [Version 10.0.19045.4529]";
             Equal("21.5 GB", Format.Size(23085449216), "GB");
             Equal("186 MB/s", Format.Speed(186L * 1024 * 1024), "speed");
             Equal("1 min 4 s", Format.Duration(TimeSpan.FromSeconds(64)), "duration");
+        }
+
+        private static void CompareFolders()
+        {
+            var root = Path.Combine(Path.GetTempPath(), "kuducopy-compare-" + Guid.NewGuid().ToString("N"));
+            var left = Path.Combine(root, "Left");
+            var right = Path.Combine(root, "Right");
+            try
+            {
+                void Put(string dir, string rel, string text, DateTime when)
+                {
+                    var file = Path.Combine(dir, rel);
+                    Directory.CreateDirectory(Path.GetDirectoryName(file));
+                    File.WriteAllText(file, text);
+                    File.SetLastWriteTimeUtc(file, when);
+                }
+                var t = new DateTime(2026, 5, 1, 12, 0, 0, DateTimeKind.Utc);
+                Put(left, "same.txt", "same", t);
+                Put(right, "same.txt", "same", t.AddSeconds(1));
+                Put(left, P("sub", "only left.txt"), "L", t);
+                Put(right, "only right.txt", "R", t);
+                Put(left, P("sub", "newer.txt"), "new text", t.AddHours(1));
+                Put(right, P("sub", "newer.txt"), "old", t);
+                Put(left, "older.txt", "a", t);
+                Put(right, "older.txt", "b", t.AddDays(1));
+                Put(left, "size.txt", "short", t);
+                Put(right, "size.txt", "longer", t);
+                Put(left, "content.txt", "abc", t);
+                Put(right, "content.txt", "xyz", t);
+                Put(left, "touched.txt", "same data", t);
+                Put(right, "touched.txt", "same data", t.AddHours(3));
+
+                var quick = FolderCompare.Run(left, right, false);
+                CompareState S(CompareResult r, string rel) => r.Entries.Single(e => e.Relative == rel).State;
+                Equal(8, quick.Entries.Count, "files listed");
+                Equal(CompareState.Same, S(quick, "same.txt"), "within 2 seconds");
+                Equal(CompareState.LeftOnly, S(quick, P("sub", "only left.txt")), "left only");
+                Equal(CompareState.RightOnly, S(quick, "only right.txt"), "right only");
+                Equal(CompareState.LeftNewer, S(quick, P("sub", "newer.txt")), "left newer");
+                Equal(CompareState.RightNewer, S(quick, "older.txt"), "right newer");
+                Equal(CompareState.Different, S(quick, "size.txt"), "same date, other size");
+                Equal(CompareState.Same, S(quick, "content.txt"), "size and date can't see changed bytes");
+                Equal(CompareState.RightNewer, S(quick, "touched.txt"), "touched date");
+                Check(!quick.Identical, "not identical");
+                Equal(CompareState.LeftOnly, quick.Entries[0].State, "sorted by state");
+
+                var deep = FolderCompare.Run(left, right, true);
+                Equal(CompareState.Different, S(deep, "content.txt"), "contents differ");
+                Equal(CompareState.Same, S(deep, "touched.txt"), "same contents, other date");
+                Check(deep.Entries.Single(e => e.Relative == "touched.txt").SameContent, "flagged as same content");
+                Equal(CompareState.RightNewer, S(deep, "older.txt"), "different contents keep newer side");
+
+                var picked = quick.Entries.Where(e => e.State != CompareState.Same).ToList();
+                var toRight = FolderCompare.CopySpec(quick, picked, true);
+                Equal(right, toRight.Destination, "copies into the right folder");
+                Equal(Conflict.Overwrite, toRight.Conflict, "replaces what's there");
+                var top = toRight.Tasks.Single(x => x.SourceDir == left);
+                Equal(right, top.DestDir, "top level files");
+                Check(top.Files.Contains("older.txt") && top.Files.Contains("size.txt") && !top.Files.Contains("only right.txt"), "left files only: " + string.Join(",", top.Files));
+                var sub = toRight.Tasks.Single(x => x.SourceDir == Path.Combine(left, "sub"));
+                Equal(Path.Combine(right, "sub"), sub.DestDir, "same subfolder on the other side");
+                Equal(2, sub.Files.Count, "files in sub");
+                Equal(2, FolderCompare.ReplacesNewer(picked, true), "two newer files would be replaced");
+                var toLeft = FolderCompare.CopySpec(quick, picked, false);
+                Check(toLeft.Tasks.SelectMany(x => x.Files).Contains("only right.txt") && !toLeft.Tasks.SelectMany(x => x.Files).Contains("only left.txt"), "right to left");
+                Check(FolderCompare.Report(quick).Contains("Only on the left\t" + P("sub", "only left.txt")), "report");
+
+                var threw = false;
+                try { FolderCompare.Run(left, Path.Combine(left, "sub"), false); }
+                catch (InvalidOperationException) { threw = true; }
+                Check(threw, "nested folders rejected");
+            }
+            finally
+            {
+                try { Directory.Delete(root, true); } catch { }
+            }
         }
     }
 }

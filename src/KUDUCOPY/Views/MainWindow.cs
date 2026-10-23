@@ -149,15 +149,17 @@ namespace Kuducopy.Views
             _standard.GroupName = "level";
             _advanced.GroupName = "level";
 
-            var grid = Ui.Columns(Ui.Auto, Ui.Auto, Ui.Star(), Ui.Auto, Ui.Auto, Ui.Auto, Ui.Auto, Ui.Auto);
+            var grid = Ui.Columns(Ui.Auto, Ui.Auto, Ui.Star(), Ui.Auto, Ui.Auto, Ui.Auto, Ui.Auto, Ui.Auto, Ui.Auto);
             grid.Margin = new Thickness(16, 12, 16, 12);
             grid.Children.Add(Segments(_copy, _move, _mirror).At(0, 0));
             grid.Children.Add(Ui.Subtle("files and folders", 13, false).Margin(12, 0, 0, 0).At(0, 1));
             grid.Children.Add(Segments(_standard, _advanced).At(0, 3));
             grid.Children.Add(Ui.Divider(true).Margin(12, 6, 8, 6).At(0, 4));
-            grid.Children.Add(Ui.Button("Favourites", "IconStar", "GhostButton", (s, e) => ShowFavourites()).At(0, 5));
-            grid.Children.Add(Ui.Button("History", "IconHistory", "GhostButton", (s, e) => new HistoryWindow(this).Show()).At(0, 6));
-            grid.Children.Add(Ui.Button("Settings", "IconSettings", "GhostButton", (s, e) => new SettingsWindow(this, () => _robocopyVersion).ShowDialog()).At(0, 7));
+            grid.Children.Add(Ui.Button("Compare", "IconCompare", "GhostButton", (s, e) => ShowCompare())
+                .Tip("Compare two folders and see which files are only on one side, newer or different").At(0, 5));
+            grid.Children.Add(Ui.Button("Favourites", "IconStar", "GhostButton", (s, e) => ShowFavourites()).At(0, 6));
+            grid.Children.Add(Ui.Button("History", "IconHistory", "GhostButton", (s, e) => new HistoryWindow(this).Show()).At(0, 7));
+            grid.Children.Add(Ui.Button("Settings", "IconSettings", "GhostButton", (s, e) => new SettingsWindow(this, () => _robocopyVersion).ShowDialog()).At(0, 8));
             return grid;
         }
 
@@ -725,6 +727,26 @@ namespace Kuducopy.Views
             AddSources(files);
             if (cut) SetMode(CopyMode.Move);
             SetStatus($"Added {Format.Count(files.Count, "item")} from the clipboard" + (cut ? " (cut, so Move is selected)." : "."));
+        }
+
+        /// <summary>Opens Compare, starting from the first source folder and its copy in the destination when there is one.</summary>
+        internal CompareWindow ShowCompare()
+        {
+            string left = null, right = null;
+            try
+            {
+                left = Draft.Sources.FirstOrDefault(Directory.Exists);
+                var dest = _dest.Text.Trim();
+                if (left != null && dest.Length > 0)
+                {
+                    var copy = Path.Combine(Planner.Full(dest), Planner.DisplayName(left));
+                    right = Directory.Exists(copy) ? copy : null;
+                }
+            }
+            catch { /* start empty */ }
+            var w = new CompareWindow(this, left, right);
+            w.Show();
+            return w;
         }
 
         private void RemoveSource(string path)

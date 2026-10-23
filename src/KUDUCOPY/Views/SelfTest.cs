@@ -49,6 +49,7 @@ namespace Kuducopy.Views
             Step("Single files", SingleFiles);
             Step("Preview: standard and /MIR", PreviewJob);
             Step("Mirror a folder", MirrorFolder);
+            Step("Compare two folders, copy the differences", CompareFolders);
 
             Step("Load themes and styles", () => ThemeManager.Init(ThemeMode.Light));
             Step("Theme keys exist", () =>
@@ -111,6 +112,18 @@ namespace Kuducopy.Views
                 while (!w.IsReady && DateTime.UtcNow < until) Pump();
                 Expect(w.IsReady, "preview finished");
                 Expect(w.Result.Count(PreviewAction.Skip) == 4, "everything already there is skipped, got " + w.Result.Count(PreviewAction.Skip));
+                Pump();
+                w.Close();
+            });
+            Step("Compare window", () =>
+            {
+                var w = new CompareWindow(main, Folder("ui-src"), Path.Combine(_temp, "ui-dest", "ui-src"));
+                OffScreen(w);
+                w.Show();
+                var until = DateTime.UtcNow.AddSeconds(30);
+                while ((w.Result == null || w.IsBusy) && DateTime.UtcNow < until) Pump();
+                Expect(w.Result != null, "comparison finished");
+                Expect(w.Result.Identical, "the copied folder matches, got " + string.Join(", ", w.Result.Entries.Where(e => e.State != CompareState.Same).Select(e => e.Relative)));
                 Pump();
                 w.Close();
             });
@@ -413,6 +426,33 @@ namespace Kuducopy.Views
             try { Planner.Tasks(new JobSpec { Sources = { Path.Combine(src, "notes.txt") }, Destination = dest, Mode = CopyMode.Mirror }); }
             catch (Exception) { rejected = true; }
             Expect(rejected, "mirror rejects single files");
+        }
+
+        private static void CompareFolders()
+        {
+            var src = Folder("compare");
+            var dest = Path.Combine(_temp, "out13");
+            RunJob(new JobSpec { Sources = { src }, Destination = dest });
+            var right = Path.Combine(dest, "compare");
+            File.WriteAllText(Path.Combine(src, "March", "Week 1", "added.txt"), "New on the left");
+            File.WriteAllText(Path.Combine(src, "notes.txt"), "Changed");
+            File.SetLastWriteTimeUtc(Path.Combine(src, "notes.txt"), DateTime.UtcNow.AddHours(1));
+            File.WriteAllText(Path.Combine(right, "only right.txt"), "Only on the right");
+
+            var result = FolderCompare.Run(src, right, true);
+            Expect(result.Count(CompareState.LeftOnly) == 1 && result.Count(CompareState.RightOnly) == 1 && result.Count(CompareState.LeftNewer) == 1,
+                "1 left only, 1 right only, 1 left newer; got " + string.Join(", ", result.Entries.Where(e => e.State != CompareState.Same).Select(e => e.State + " " + e.Relative)));
+            Expect(result.Count(CompareState.Same) == 3, "3 the same, got " + result.Count(CompareState.Same));
+
+            var changed = result.Entries.Where(e => e.State != CompareState.Same).ToList();
+            var job = RunJob(FolderCompare.CopySpec(result, changed, true));
+            Expect(job.Record.Result == JobResult.Done && job.Record.Copied == 2, "2 copied to the right, got " + job.Record.Copied + ": " + job.Record.Message);
+            Expect(Read(Path.Combine(right, "March", "Week 1", "added.txt")) == "New on the left", "copied into the same subfolder");
+            job = RunJob(FolderCompare.CopySpec(result, changed, false));
+            Expect(Read(Path.Combine(src, "only right.txt")) == "Only on the right", "copied back to the left");
+
+            var again = FolderCompare.Run(src, right, true);
+            Expect(again.Identical, "the folders match afterwards");
         }
 
         // ================================================================== windows

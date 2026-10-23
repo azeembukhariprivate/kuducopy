@@ -23,6 +23,7 @@
 - **Favourite folders**, **History** with failed files and logs, and **when finished**: close, play a sound, sleep or shut down.
 - **Preview** before copying: see which files are new, which will be replaced and why, which are skipped or kept as copies, and (with `/MIR` or `/PURGE` in Advanced mode) which files would be deleted. Nothing is copied until you press Start.
 - **Mirror / sync** a folder: make the destination an exact copy of the source. New and changed files are copied, and files that exist only in the destination are deleted. A mirror always opens the preview first so you can see every deletion before anything happens, and History shows how many files were deleted.
+- **Compare two folders** without copying: see which files are only on the left or the right, newer on one side, different, or the same, by size and date or (optionally) by contents too. Filter the list, copy selected files across in either direction into the matching subfolders, and copy or save the comparison as a report.
 - **Free space check** before copying, **light and dark mode**, and an **update check**.
 
 **Advanced mode** — every Robocopy option:
@@ -78,7 +79,7 @@ dotnet build src/KUDUCOPY/KUDUCOPY.csproj -c Release -o out/KUDUCOPY
 out\KUDUCOPY\KUDUCOPY.exe --self-test
 ```
 
-`--self-test` makes real copies with Robocopy in a temporary folder (conflicts, keep both, move, verify, a locked file and retry, advanced options, cancel, preview, mirror), opens every window in both themes, writes `self-test.log` and exits. To build the installer, install [Inno Setup 6](https://jrsoftware.org/isinfo.php) and compile `installer/KUDUCOPY.iss`.
+`--self-test` makes real copies with Robocopy in a temporary folder (conflicts, keep both, move, verify, a locked file and retry, advanced options, cancel, preview, mirror, compare), opens every window in both themes, writes `self-test.log` and exits. To build the installer, install [Inno Setup 6](https://jrsoftware.org/isinfo.php) and compile `installer/KUDUCOPY.iss`.
 
 ## Publishing a new version
 
