@@ -1,0 +1,80 @@
+name: Build
+
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+
+      - name: Work out the version
+        id: ver
+        shell: pwsh
+        run: |
+          $version = ([xml](Get-Content src/KUDUCOPY/KUDUCOPY.csproj)).Project.PropertyGroup.Version | Where-Object { $_ } | Select-Object -First 1
+          if ("${{ github.ref_type }}" -eq "tag") { $version = "${{ github.ref_name }}".TrimStart('v', 'V') }
+          "version=$version" >> $env:GITHUB_OUTPUT
+          Write-Host "Version: $version"
+
+      - name: Test the core logic
+        shell: pwsh
+        run: dotnet run --project tests/KUDUCOPY.Tests -c Release
+
+      - name: Build
+        shell: pwsh
+        run: dotnet build src/KUDUCOPY/KUDUCOPY.csproj -c Release "-p:Version=${{ steps.ver.outputs.version }}" -o out/KUDUCOPY
+
+      - name: Self-test the app (real Robocopy copies, every window, both themes)
+        shell: pwsh
+        timeout-minutes: 10
+        run: |
+          $p = Start-Process -FilePath out/KUDUCOPY/KUDUCOPY.exe -ArgumentList '--self-test' -PassThru
+          if (-not $p.WaitForExit(480000)) { $p.Kill(); Write-Host "Self-test timed out"; exit 1 }
+          Get-Content out/KUDUCOPY/self-test.log -ErrorAction SilentlyContinue
+          Remove-Item out/KUDUCOPY/self-test.log -ErrorAction SilentlyContinue
+          if ($p.ExitCode -ne 0) { Write-Host "Self-test failed with exit code $($p.ExitCode)"; exit 1 }
+
+      - name: Show build output
+        shell: pwsh
+        run: Get-ChildItem -Recurse out/KUDUCOPY | Select-Object FullName, Length | Format-Table -AutoSize
+
+      - name: Make portable zip
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force artifacts | Out-Null
+          Compress-Archive -Path out/KUDUCOPY/* -DestinationPath "artifacts/KUDUCOPY-${{ steps.ver.outputs.version }}-portable.zip"
+
+      - name: Make installer
+        shell: pwsh
+        run: |
+          $iscc = Join-Path ${env:ProgramFiles(x86)} "Inno Setup 6\ISCC.exe"
+          if (-not (Test-Path $iscc)) {
+            choco install innosetup -y --no-progress | Out-Null
+          }
+          & $iscc "/DMyAppVersion=${{ steps.ver.outputs.version }}" "/DSourceDir=$PWD\out\KUDUCOPY" "/O$PWD\artifacts" installer\KUDUCOPY.iss
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+      - name: Upload build files
+        uses: actions/upload-artifact@v4
+        with:
+          name: KUDUCOPY-${{ steps.ver.outputs.version }}
+          path: artifacts/*
+
+      - name: Publish GitHub release
+        if: github.ref_type == 'tag'
+        uses: softprops/action-gh-release@v2
+        with:
+          name: KUDUCOPY ${{ steps.ver.outputs.version }}
+          files: artifacts/*
+          generate_release_notes: true

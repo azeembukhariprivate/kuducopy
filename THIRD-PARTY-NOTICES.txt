@@ -1,0 +1,21 @@
+KUDUCOPY - third-party notices
+==============================
+
+KUDUCOPY is released under the MIT License (see LICENSE.txt).
+It does not include any third-party code or files.
+
+It uses the following parts of Windows, which are NOT included with KUDUCOPY:
+
+1. Robocopy (Robust File Copy)
+------------------------------
+robocopy.exe is part of Microsoft Windows (Windows Vista and later) and is
+found in the Windows system folder. KUDUCOPY runs the copy that is already on
+the computer, and never includes, changes or redistributes it.
+
+KUDUCOPY is not affiliated with, sponsored or endorsed by Microsoft.
+Windows and Robocopy are names of Microsoft Corporation.
+
+2. Microsoft .NET Framework 4.8
+-------------------------------
+KUDUCOPY runs on the .NET Framework 4.8, which is part of Windows 10 and 11
+and is not redistributed with KUDUCOPY.

@@ -1,0 +1,14 @@
+			           6291456	C:\Users\Azeem\Pictures\Photos 2026\IMG_4021.jpg
+  0%
+ 45.5%
+100%
+			        1468006400	C:\Users\Azeem\Pictures\Photos 2026\VID_0311.mp4
+  0.0%
+ 62.0%
+			             24576	C:\Users\Azeem\Pictures\Photos 2026\Thumbs.db
+2026/10/22 14:12:03 ERROR 32 (0x00000020) Copying File C:\Users\Azeem\Pictures\Photos 2026\Thumbs.db
+The process cannot access the file because it is being used by another process.
+Waiting 5 seconds... Retrying...
+2026/10/22 14:12:09 FEHLER 5 (0x00000005) Datei wird kopiert C:\Users\Azeem\Pictures\Photos 2026\desktop.ini
+			             12	C:\Users\Azeem\Pictures\Photos 2026\Ünïcødé ファイル.txt
+100%
