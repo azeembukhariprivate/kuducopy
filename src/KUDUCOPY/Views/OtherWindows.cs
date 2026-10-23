@@ -335,7 +335,11 @@ namespace Kuducopy.Views
                 g.Children.Add(value.At(0, 1));
                 rows.Children.Add(new Border { BorderThickness = new Thickness(0, 1, 0, 0), Padding = new Thickness(0, 7, 0, 7), Child = g }.Res(Border.BorderBrushProperty, "BorderBrush"));
             }
-            Row("Made by", Ui.Text(AppInfo.Author, 12.5));
+            var madeBy = Ui.Text("Azeem, with Claude and ", 12.5);
+            var heart = new Run("♥");
+            heart.SetResourceReference(TextElement.ForegroundProperty, "Accent");
+            madeBy.Inlines.Add(heart);
+            Row("Made by", madeBy);
             Row("Licence", Ui.Row(Ui.Text("MIT · free and open source  ", 12.5), Ui.Link("View", (s, e) => OpenLocal("LICENSE.txt"))));
             Row("Source code", Ui.Link("github.com/" + AppInfo.RepoOwner + "/" + AppInfo.RepoName, (s, e) => AppInfo.OpenUrl(AppInfo.RepoUrl)));
             Row("Copy engine", Ui.Text("Robocopy " + (string.IsNullOrEmpty(robocopyVersion) ? string.Empty : robocopyVersion + " ") + "(built into Windows)", 12.5));
