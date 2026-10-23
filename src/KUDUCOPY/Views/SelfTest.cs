@@ -47,6 +47,7 @@ namespace Kuducopy.Views
             Step("Advanced options (/XF, /MIR)", AdvancedOptions);
             Step("Cancel a copy", CancelCopy);
             Step("Single files", SingleFiles);
+            Step("Preview: standard and /MIR", PreviewJob);
 
             Step("Load themes and styles", () => ThemeManager.Init(ThemeMode.Light));
             Step("Theme keys exist", () =>
@@ -100,6 +101,18 @@ namespace Kuducopy.Views
             Step("History window", () => ShowAndClose(new HistoryWindow(main)));
             Step("Favourites window", () => ShowAndClose(new FavouritesWindow(main)));
             Step("Settings window", () => ShowAndClose(new SettingsWindow(main, () => "10.0")));
+            Step("Preview window", () =>
+            {
+                var w = new PreviewWindow(new JobSpec { Sources = { Folder("ui-src") }, Destination = Path.Combine(_temp, "ui-dest"), Conflict = Conflict.ReplaceIfNewer }, main);
+                OffScreen(w);
+                w.Show();
+                var until = DateTime.UtcNow.AddSeconds(30);
+                while (!w.IsReady && DateTime.UtcNow < until) Pump();
+                Expect(w.IsReady, "preview finished");
+                Expect(w.Result.Count(PreviewAction.Skip) == 4, "everything already there is skipped, got " + w.Result.Count(PreviewAction.Skip));
+                Pump();
+                w.Close();
+            });
             Step("Close main window", () => main?.Close());
 
             _log.AppendLine(Errors.Count == 0 ? "SELF-TEST PASSED" : $"SELF-TEST FAILED ({Errors.Count})");
@@ -343,6 +356,35 @@ namespace Kuducopy.Views
             Expect(job.Record.Copied == 2, "2 files copied, got " + job.Record.Copied);
             Expect(File.Exists(Path.Combine(dest, "notes.txt")) && File.Exists(Path.Combine(dest, "photo.bin")), "copied straight into the folder");
             Expect(!Directory.Exists(Path.Combine(dest, "March")), "no folders walked for single files");
+        }
+
+        private static void PreviewJob()
+        {
+            var src = Folder("preview");
+            var dest = Path.Combine(_temp, "out11");
+            RunJob(new JobSpec { Sources = { src }, Destination = dest });
+            File.WriteAllText(Path.Combine(src, "notes.txt"), "Newer");
+            File.SetLastWriteTimeUtc(Path.Combine(src, "notes.txt"), DateTime.UtcNow.AddHours(1));
+            File.WriteAllText(Path.Combine(src, "added.txt"), "New");
+            var extra = Path.Combine(dest, "preview", "extra.txt");
+            File.WriteAllText(extra, "only here");
+
+            var standard = new CopyJob(new JobSpec { Sources = { src }, Destination = dest, Conflict = Conflict.ReplaceIfNewer }).PreviewAsync().Result;
+            Expect(standard.Count(PreviewAction.Copy) == 1, "1 new file, got " + standard.Count(PreviewAction.Copy));
+            Expect(standard.Count(PreviewAction.Replace) == 1, "1 newer file replaced, got " + standard.Count(PreviewAction.Replace));
+            Expect(standard.Count(PreviewAction.Skip) == 3, "3 identical files skipped, got " + standard.Count(PreviewAction.Skip));
+            Expect(standard.Count(PreviewAction.Delete) == 0, "no deletes in standard mode");
+            Expect(Read(Path.Combine(dest, "preview", "notes.txt")) == "Hello from KUDUCOPY", "preview copied nothing");
+
+            var mirror = new CopyJob(new JobSpec
+            {
+                Sources = { src }, Destination = dest, Advanced = true,
+                Switches = new List<SwitchValue> { new SwitchValue("/MIR"), new SwitchValue("/R", "0"), new SwitchValue("/W", "0") }
+            }).PreviewAsync().Result;
+            Expect(mirror.Count(PreviewAction.Delete) == 1 && mirror.Entries.Single(e => e.Action == PreviewAction.Delete).Dest == extra,
+                "the extra file is listed for deletion, got " + mirror.Count(PreviewAction.Delete));
+            Expect(File.Exists(extra), "preview deleted nothing");
+            _log.AppendLine($"      Preview: {standard.Count(PreviewAction.Copy)} new, {standard.Count(PreviewAction.Replace)} replace, {standard.Count(PreviewAction.Skip)} skip; /MIR: {mirror.Count(PreviewAction.Delete)} delete");
         }
 
         // ================================================================== windows

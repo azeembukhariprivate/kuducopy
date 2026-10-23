@@ -169,6 +169,22 @@ namespace Kuducopy.Core
 
         public Task RunAsync() => Task.Run(() => Run());
 
+        /// <summary>Lists what the job would do (robocopy /L), without copying anything or saving History.</summary>
+        public Task<PreviewResult> PreviewAsync() => Task.Run(() =>
+        {
+            var planned = new List<PlannedFile>();
+            var extras = new List<PlannedFile>();
+            var deletes = Spec.Advanced && (Spec.Switches ?? new List<SwitchValue>())
+                .Any(s => s.Switch.Equals("/MIR", StringComparison.OrdinalIgnoreCase) || s.Switch.Equals("/PURGE", StringComparison.OrdinalIgnoreCase));
+            if (!File.Exists(RobocopyPath)) throw new InvalidOperationException("Robocopy wasn't found in " + Environment.SystemDirectory + ".");
+            foreach (var task in Planner.Tasks(Spec))
+            {
+                _cancel.Token.ThrowIfCancellationRequested();
+                planned.AddRange(Scan(task, deletes ? extras : null));
+            }
+            return PreviewResult.Build(Spec, planned, extras);
+        });
+
         private void Run()
         {
             Record.Started = DateTime.Now;
@@ -324,7 +340,7 @@ namespace Kuducopy.Core
 
         // ================================================================== scan (robocopy /L)
 
-        private List<PlannedFile> Scan(RoboTask task)
+        private List<PlannedFile> Scan(RoboTask task, List<PlannedFile> extras = null)
         {
             var list = new List<PlannedFile>();
             var srcRoot = task.SourceDir.TrimEnd('\\') + "\\";
@@ -337,7 +353,11 @@ namespace Kuducopy.Core
                 var l = RoboOutput.Parse(line);
                 if (l.Kind != LineKind.File) return;
                 if (l.Path.StartsWith(destRoot, StringComparison.OrdinalIgnoreCase) && !l.Path.StartsWith(srcRoot, StringComparison.OrdinalIgnoreCase))
-                    return; // an "extra" file in the destination (/PURGE, /MIR), not something to copy
+                {
+                    // An "extra" file in the destination: only deleted when /PURGE or /MIR is on.
+                    extras?.Add(new PlannedFile { Dest = l.Path, Size = l.Size, Task = task });
+                    return;
+                }
                 if (!l.Path.StartsWith(srcRoot, StringComparison.OrdinalIgnoreCase)) return;
                 var rel = l.Path.Substring(srcRoot.Length);
                 var p = new PlannedFile { Source = l.Path, Dest = Path.Combine(task.DestDir, rel), Size = l.Size, Task = task };

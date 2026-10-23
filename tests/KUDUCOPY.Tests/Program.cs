@@ -31,6 +31,7 @@ namespace Kuducopy.Tests
             Run("History and retry", HistoryAndRetry);
             Run("Formats sizes", FormatsSizes);
             Run("Reads job files", ReadsJobFiles);
+            Run("Preview sorts files by what will happen", PreviewSorts);
 
             Console.WriteLine();
             Console.WriteLine($"{_passes} passed, {_failures} failed");
@@ -382,6 +383,33 @@ Microsoft Windows [Version 10.0.19045.4529]";
         }
 
         private static string P(params string[] parts) => Path.Combine(parts);
+
+        private static void PreviewSorts()
+        {
+            var files = new List<PlannedFile>
+            {
+                new PlannedFile { Source = "a", Size = 10, Existing = Existing.None },
+                new PlannedFile { Source = "b", Size = 20, Existing = Existing.SourceNewer },
+                new PlannedFile { Source = "c", Size = 30, Existing = Existing.SourceOlder },
+                new PlannedFile { Source = "d", Size = 40, Existing = Existing.Same }
+            };
+            string Actions(PreviewResult r) => string.Join(",", r.Entries.Select(e => e.Action));
+
+            Equal("Copy,Replace,Skip,Skip", Actions(PreviewResult.Build(new JobSpec { Conflict = Conflict.ReplaceIfNewer }, files, null)), "replace if newer");
+            Equal("Copy,Replace,Replace,Replace", Actions(PreviewResult.Build(new JobSpec { Conflict = Conflict.Overwrite }, files, null)), "overwrite");
+            Equal("Copy,Skip,Skip,Skip", Actions(PreviewResult.Build(new JobSpec { Conflict = Conflict.Skip }, files, null)), "skip");
+            Equal("Copy,KeepBoth,KeepBoth,KeepBoth", Actions(PreviewResult.Build(new JobSpec { Conflict = Conflict.KeepBoth }, files, null)), "keep both");
+            var ask = PreviewResult.Build(new JobSpec { Conflict = Conflict.Ask }, files, null);
+            Equal("Copy,Ask,Ask,Ask", Actions(ask), "ask");
+            Equal(100L, ask.BytesToWrite, "at most everything is written when asking");
+
+            var mirror = PreviewResult.Build(new JobSpec { Advanced = true }, files.Take(2),
+                new[] { new PlannedFile { Dest = @"D:\x\old.txt", Size = 5 } });
+            Equal("Copy,Replace,Delete", Actions(mirror), "advanced: listed files are copied, extras deleted");
+            Equal(1, mirror.Count(PreviewAction.Delete), "one delete");
+            Equal(5L, mirror.Bytes(PreviewAction.Delete), "delete size");
+            Equal("Yours is newer", mirror.Entries[1].Note, "note");
+        }
 
         private static void ReadsJobFiles()
         {

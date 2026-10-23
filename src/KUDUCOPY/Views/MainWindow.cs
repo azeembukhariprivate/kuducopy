@@ -193,9 +193,12 @@ namespace Kuducopy.Views
 
         private FrameworkElement BuildActionBar()
         {
-            var g = Ui.Columns(Ui.Star(), Ui.Auto);
+            var g = Ui.Columns(Ui.Star(), Ui.Auto, Ui.Auto);
             g.Children.Add(Ui.Column(_summary, _summaryNote.Margin(0, 2, 0, 0)).At(0, 0));
-            g.Children.Add(_start.At(0, 1));
+            var preview = Ui.Button("Preview", "IconList", click: (s, e) => Preview()).Tip("See what will be copied, replaced, skipped or deleted, before anything happens");
+            preview.MinHeight = 42;
+            g.Children.Add(preview.Margin(0, 0, 8, 0).At(0, 1));
+            g.Children.Add(_start.At(0, 2));
             return Ui.Card(g, 14);
         }
 
@@ -1103,28 +1106,53 @@ namespace Kuducopy.Views
 
         private void Start()
         {
+            var spec = Prepare(false);
+            if (spec == null) return;
+            Settings.LastDestination = spec.Destination;
+            if (App.StartJob(spec, this)) Started(spec);
+        }
+
+        private void Preview()
+        {
+            var spec = Prepare(true);
+            if (spec == null) return;
+            Settings.LastDestination = spec.Destination;
+            new PreviewWindow(spec, this, () => Started(spec)).Show();
+        }
+
+        private void Started(JobSpec spec)
+        {
+            Draft.Sources = new List<string>();
+            _sizes.Clear();
+            RefreshSources();
+            SetStatus($"Started: {spec.Verb.ToLowerInvariant()} to {spec.Destination}. You can add another job now.");
+        }
+
+        /// <summary>Checks the choices and returns the job to run, or null (after telling the user why).</summary>
+        private JobSpec Prepare(bool preview)
+        {
             if (Draft.Sources.Count == 0)
             {
                 Dialogs.Info(this, "Add some files or folders to copy first. Drag them in, use Add files / Add folder, or paste with Ctrl+V.");
-                return;
+                return null;
             }
             if (string.IsNullOrWhiteSpace(Draft.Destination))
             {
                 Dialogs.Info(this, "Choose where to copy to.");
                 FocusDestination();
-                return;
+                return null;
             }
 
             var spec = Draft.Clone();
             try
             {
                 Planner.Tasks(spec); // friendly errors (into itself, missing files) before anything starts
-                Directory.CreateDirectory(Planner.Full(spec.Destination));
+                if (!preview) Directory.CreateDirectory(Planner.Full(spec.Destination));
             }
             catch (Exception ex)
             {
                 Dialogs.Error(this, ex is InvalidOperationException ? ex.Message : "That destination can't be used:\n\n" + ex.Message);
-                return;
+                return null;
             }
 
             if (spec.Advanced)
@@ -1133,28 +1161,26 @@ namespace Kuducopy.Views
                 if (problems.Count > 0)
                 {
                     Dialogs.Error(this, "Fix these options first:\n\n" + string.Join("\n", problems));
-                    return;
+                    return null;
                 }
-                var admin = spec.Switches.Where(s => RoboOptions.Find(s.Switch)?.NeedsAdmin == true).Select(s => s.Switch).ToList();
-                if (spec.Switches.Any(s => s.Switch == "/COPY" && (s.Value ?? string.Empty).ToUpperInvariant().IndexOfAny(new[] { 'O', 'U' }) >= 0)) admin.Add("/COPY:O or U");
-                if (admin.Count > 0 && !Admin.IsAdmin)
+                if (!preview)
                 {
-                    if (Dialogs.Confirm(this, $"{string.Join(", ", admin)} need{(admin.Count == 1 ? "s" : "")} administrator rights.\n\nRestart KUDUCOPY as administrator and start this job?"))
-                        RestartAsAdmin(spec);
-                    return;
+                    var admin = spec.Switches.Where(s => RoboOptions.Find(s.Switch)?.NeedsAdmin == true).Select(s => s.Switch).ToList();
+                    if (spec.Switches.Any(s => s.Switch == "/COPY" && (s.Value ?? string.Empty).ToUpperInvariant().IndexOfAny(new[] { 'O', 'U' }) >= 0)) admin.Add("/COPY:O or U");
+                    if (admin.Count > 0 && !Admin.IsAdmin)
+                    {
+                        if (Dialogs.Confirm(this, $"{string.Join(", ", admin)} need{(admin.Count == 1 ? "s" : "")} administrator rights.\n\nRestart KUDUCOPY as administrator and start this job?"))
+                            RestartAsAdmin(spec);
+                        return null;
+                    }
+                    var deleting = spec.Switches.Where(s => RoboOptions.Find(s.Switch)?.Deletes == true).Select(s => s.Switch).ToList();
+                    if (deleting.Count > 0 &&
+                        !Dialogs.Confirm(this, $"{string.Join(" and ", deleting)} will DELETE files and folders in {spec.Destination} that aren't in the source.\n\n" +
+                                               "Use Preview to see which ones. Start anyway?"))
+                        return null;
                 }
-                var deleting = spec.Switches.Where(s => RoboOptions.Find(s.Switch)?.Deletes == true).Select(s => s.Switch).ToList();
-                if (deleting.Count > 0 &&
-                    !Dialogs.Confirm(this, $"{string.Join(" and ", deleting)} will DELETE files and folders in {spec.Destination} that aren't in the source.\n\nStart anyway?"))
-                    return;
             }
-
-            Settings.LastDestination = spec.Destination;
-            App.StartJob(spec, this);
-            Draft.Sources = new List<string>();
-            _sizes.Clear();
-            RefreshSources();
-            SetStatus($"Started: {spec.Verb.ToLowerInvariant()} to {spec.Destination}. You can add another job now.");
+            return spec;
         }
 
         private void RestartAsAdmin(JobSpec spec)

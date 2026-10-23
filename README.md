@@ -21,6 +21,7 @@
 - **Verify copies** (off by default): compares MD5, SHA-1, SHA-256 or CRC32 checksums after copying, and can save them to a checksum file. When moving with verify on, originals are only removed after their copies check out.
 - **Queue**: jobs to the same drive wait their turn; jobs to different drives run at the same time.
 - **Favourite folders**, **History** with failed files and logs, and **when finished**: close, play a sound, sleep or shut down.
+- **Preview** before copying: see which files are new, which will be replaced and why, which are skipped or kept as copies, and (with `/MIR` or `/PURGE` in Advanced mode) which files would be deleted. Nothing is copied until you press Start.
 - **Free space check** before copying, **light and dark mode**, and an **update check**.
 
 **Advanced mode** — every Robocopy option:
@@ -76,7 +77,7 @@ dotnet build src/KUDUCOPY/KUDUCOPY.csproj -c Release -o out/KUDUCOPY
 out\KUDUCOPY\KUDUCOPY.exe --self-test
 ```
 
-`--self-test` makes real copies with Robocopy in a temporary folder (conflicts, keep both, move, verify, a locked file and retry, advanced options, cancel), opens every window in both themes, writes `self-test.log` and exits. To build the installer, install [Inno Setup 6](https://jrsoftware.org/isinfo.php) and compile `installer/KUDUCOPY.iss`.
+`--self-test` makes real copies with Robocopy in a temporary folder (conflicts, keep both, move, verify, a locked file and retry, advanced options, cancel, preview), opens every window in both themes, writes `self-test.log` and exits. To build the installer, install [Inno Setup 6](https://jrsoftware.org/isinfo.php) and compile `installer/KUDUCOPY.iss`.
 
 ## Publishing a new version
 
