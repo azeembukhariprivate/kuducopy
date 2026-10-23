@@ -170,7 +170,7 @@ namespace Kuducopy.Views
             _content.RowDefinitions.Add(new RowDefinition());
             _content.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto });
 
-            var verb = _spec.Mode == CopyMode.Move ? "Move" : "Copy";
+            var verb = _spec.Verb;
             _content.Children.Add(Ui.Column(
                 Ui.Text($"Preview: {verb.ToLowerInvariant()} {_spec.SourceSummary} to {_spec.Destination}", 16, bold: true),
                 Ui.Subtle("Nothing has been copied yet. This is what Start would do" + (_spec.Advanced ? " with your Advanced options." : "."), 12.5)).At(0));
@@ -197,7 +197,8 @@ namespace Kuducopy.Views
             if (space != null) notes.Children.Add(space);
             if (r.Count(PreviewAction.Delete) > 0)
                 notes.Children.Add(Ui.Banner("IconWarn", Ui.Text($"{Format.Count(r.Count(PreviewAction.Delete), "file")} in {_spec.Destination} " +
-                    "will be DELETED because /MIR or /PURGE is on. They aren't in the source.", 12.5, wrap: true), "BadBg", "BadText").Margin(0, 8, 0, 0));
+                    (_spec.Mode == CopyMode.Mirror ? "will be DELETED by Mirror, because they aren't in the source." : "will be DELETED because /MIR or /PURGE is on. They aren't in the source."),
+                    12.5, wrap: true), "BadBg", "BadText").Margin(0, 8, 0, 0));
             if (_spec.Mode == CopyMode.Move)
                 notes.Children.Add(Ui.Subtle("Moving: the originals are removed after they're copied" + (_spec.Verify ? " and verified." : "."), 12.5).Margin(0, 8, 0, 0));
             _content.Children.Add(notes.At(2));
@@ -228,8 +229,9 @@ namespace Kuducopy.Views
             _content.Children.Add(card.At(4));
             FillList();
 
-            var start = Ui.Button(_spec.Mode == CopyMode.Move ? "Start moving" : "Start copying", _spec.Mode == CopyMode.Move ? "IconMove" : "IconCopy", "PrimaryButton", (s, e) => StartJob());
+            var start = Ui.Button("Start " + _spec.Verbing.ToLowerInvariant(), _spec.Mode == CopyMode.Move ? "IconMove" : "IconCopy", "PrimaryButton", (s, e) => StartJob());
             start.IsEnabled = r.Entries.Any(e => e.Action != PreviewAction.Skip);
+            if (!start.IsEnabled) start.ToolTip = "Nothing to do: the destination is already up to date.";
             var copy = Ui.Button("Copy list", "IconCopy", click: (s, e) =>
                 Ui.Copy(string.Join(Environment.NewLine, _rows.Select(x => $"{x.ActionText}\t{Path.Combine(x.Folder, x.Name)}\t{x.SizeText}\t{x.Note}"))));
             var close = Ui.Button("Close", null, "GhostButton", (s, e) => Close());

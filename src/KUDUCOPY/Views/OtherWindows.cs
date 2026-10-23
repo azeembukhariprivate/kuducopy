@@ -83,7 +83,7 @@ namespace Kuducopy.Views
             {
                 var g = Ui.Columns(Widths);
                 g.Children.Add(Ui.Text(r.WhenText, 12.5).Margin(14, 0, 0, 0).At(0, 0));
-                g.Children.Add(Ui.Chip(r.Mode == CopyMode.Move ? "Move" : "Copy", Tone.Neutral).At(0, 1));
+                g.Children.Add(Ui.Chip(r.Mode == CopyMode.Move ? "Move" : r.Mode == CopyMode.Mirror ? "Mirror" : "Copy", Tone.Neutral).At(0, 1));
                 g.Children.Add(Ui.Text(r.From, 12.5).Margin(0, 0, 8, 0).At(0, 2));
                 g.Children.Add(Ui.Mono(r.To, 12).Margin(0, 0, 8, 0).At(0, 3));
                 g.Children.Add(Ui.Subtle($"{Format.Count(r.Files, "file")} · {Format.Size(r.Bytes)}", 12.5, false).At(0, 4));
@@ -100,9 +100,10 @@ namespace Kuducopy.Views
         {
             _detail.Children.Clear();
             if (r == null) return;
-            var verb = r.Mode == CopyMode.Move ? "Move" : "Copy";
+            var verb = r.Mode == CopyMode.Move ? "Move" : r.Mode == CopyMode.Mirror ? "Mirror" : "Copy";
             var head = Ui.Row(Ui.Text($"{verb} · {r.From} → {r.To}", 13.5, bold: true),
                 Ui.Subtle($"   {r.WhenText} · {r.Copied:N0} of {Format.Count(r.Files, "file")} {(r.Mode == CopyMode.Move ? "moved" : "copied")}" +
+                          (r.Deleted > 0 ? $" · {r.Deleted:N0} deleted" : string.Empty) +
                           (string.IsNullOrEmpty(r.Message) || r.Message == "Done" ? string.Empty : " · " + r.Message), 12, false));
             var body = Ui.Column(head);
             foreach (var f in r.Failed.Take(4))

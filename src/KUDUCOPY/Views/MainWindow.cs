@@ -26,6 +26,9 @@ namespace Kuducopy.Views
         private readonly TextBlock _statusRight = Ui.Subtle(string.Empty, 12, false);
         private readonly RadioButton _copy = Seg("Copy");
         private readonly RadioButton _move = Seg("Move");
+        private readonly RadioButton _mirror = Seg("Mirror");
+        private readonly TextBlock _modeNote = Ui.Subtle(string.Empty, 11.5);
+        private Border _conflictBox;
         private readonly RadioButton _standard = Seg("Standard");
         private readonly RadioButton _advanced = Seg("Advanced");
 
@@ -141,12 +144,14 @@ namespace Kuducopy.Views
         {
             _copy.GroupName = "mode";
             _move.GroupName = "mode";
+            _mirror.GroupName = "mode";
+            _mirror.ToolTip = "Make the destination folder an exact copy of the source folder. Files that are only in the destination are deleted.";
             _standard.GroupName = "level";
             _advanced.GroupName = "level";
 
             var grid = Ui.Columns(Ui.Auto, Ui.Auto, Ui.Star(), Ui.Auto, Ui.Auto, Ui.Auto, Ui.Auto, Ui.Auto);
             grid.Margin = new Thickness(16, 12, 16, 12);
-            grid.Children.Add(Segments(_copy, _move).At(0, 0));
+            grid.Children.Add(Segments(_copy, _move, _mirror).At(0, 0));
             grid.Children.Add(Ui.Subtle("files and folders", 13, false).Margin(12, 0, 0, 0).At(0, 1));
             grid.Children.Add(Segments(_standard, _advanced).At(0, 3));
             grid.Children.Add(Ui.Divider(true).Margin(12, 6, 8, 6).At(0, 4));
@@ -308,7 +313,8 @@ namespace Kuducopy.Views
             return Ui.Card(Ui.Column(
                 Ui.Heading("Options", 14).Margin(0, 0, 0, 10),
                 Ui.Subtle("If a file already exists", 12, false).Margin(0, 0, 0, 6),
-                FillSegments(_conflict, "conflict", "Ask me", "Overwrite", "Replace if newer", "Skip", "Keep both"),
+                _conflictBox = FillSegments(_conflict, "conflict", "Ask me", "Overwrite", "Replace if newer", "Skip", "Keep both"),
+                _modeNote.Margin(0, 6, 0, 0),
                 verifyRow.Margin(0, 14, 0, 0),
                 _verifyHelp.Margin(46, 0, 0, 0),
                 _keepGoing.Margin(0, 10, 0, 0),
@@ -545,7 +551,7 @@ namespace Kuducopy.Views
         private void LoadDraft()
         {
             _loading = true;
-            (Draft.Mode == CopyMode.Move ? _move : _copy).IsChecked = true;
+            (Draft.Mode == CopyMode.Move ? _move : Draft.Mode == CopyMode.Mirror ? _mirror : _copy).IsChecked = true;
             (Draft.Advanced ? _advanced : _standard).IsChecked = true;
             _dest.Text = Draft.Destination ?? string.Empty;
             var c = Draft.Conflict;
@@ -564,8 +570,9 @@ namespace Kuducopy.Views
 
         private void HookEvents()
         {
-            _copy.Checked += (s, e) => { Draft.Mode = CopyMode.Copy; RefreshSummary(); };
-            _move.Checked += (s, e) => { Draft.Mode = CopyMode.Move; RefreshSummary(); };
+            _copy.Checked += (s, e) => { Draft.Mode = CopyMode.Copy; RefreshMode(); };
+            _move.Checked += (s, e) => { Draft.Mode = CopyMode.Move; RefreshMode(); };
+            _mirror.Checked += (s, e) => { Draft.Mode = CopyMode.Mirror; RefreshMode(); };
             _standard.Checked += (s, e) => { if (!_loading) { Draft.Advanced = false; Settings.Advanced = false; ShowMode(); } };
             _advanced.Checked += (s, e) => { if (!_loading) { Draft.Advanced = true; Settings.Advanced = true; ShowMode(); } };
             _dest.TextChanged += (s, e) =>
@@ -685,7 +692,20 @@ namespace Kuducopy.Views
             if (added > 0) RefreshSources();
         }
 
-        public void SetMode(CopyMode mode) => (mode == CopyMode.Move ? _move : _copy).IsChecked = true;
+        public void SetMode(CopyMode mode) => (mode == CopyMode.Move ? _move : mode == CopyMode.Mirror ? _mirror : _copy).IsChecked = true;
+
+        private void RefreshMode()
+        {
+            var mirror = Draft.Mode == CopyMode.Mirror;
+            if (_conflictBox != null) _conflictBox.IsEnabled = !mirror;
+            _modeNote.Text = mirror
+                ? "Mirror replaces changed files and DELETES files that are only in the destination folder. You'll see a preview first."
+                : string.Empty;
+            _modeNote.Res(TextBlock.ForegroundProperty, mirror ? "BadText" : "SubtleText");
+            _modeNote.Visibility = mirror ? Visibility.Visible : Visibility.Collapsed;
+            RefreshAdvanced();
+            RefreshSummary();
+        }
 
         public void FocusDestination()
         {
@@ -968,6 +988,7 @@ namespace Kuducopy.Views
             if (!Draft.Advanced) return;
             var task = PreviewTask();
             var args = Planner.Build(Draft, task, false, Conflict.Overwrite, Draft.Mode == CopyMode.Move && !Draft.Verify);
+            if (_command == null) return;
             _command.Inlines.Clear();
             _command.Inlines.Add(new Run("robocopy ") { FontWeight = FontWeights.SemiBold }.Brush("LinkText"));
             foreach (var a in args)
@@ -1089,6 +1110,12 @@ namespace Kuducopy.Views
                 _summary.Text = "Add files or folders to " + Draft.Verb.ToLowerInvariant();
                 _summaryNote.Text = "Drag them in, use Add files / Add folder, or paste with Ctrl+V.";
             }
+            else if (Draft.Mode == CopyMode.Mirror)
+            {
+                var names = string.Join(", ", Draft.Sources.Select(Planner.DisplayName).Take(2)) + (count > 2 ? $" and {count - 2} more" : string.Empty);
+                _summary.Text = $"Mirror {names} to {dest}";
+                _summaryNote.Text = "The destination folder becomes an exact copy. Files only there are deleted. You'll see a preview first.";
+            }
             else
             {
                 var counted = Draft.Sources.All(p => _sizes.ContainsKey(p));
@@ -1101,11 +1128,19 @@ namespace Kuducopy.Views
                                     (Draft.Advanced ? $"Advanced mode · {Format.Count(Draft.Switches.Count, "option")}" : string.Empty) +
                                     (Draft.Verify ? (Draft.Advanced ? " · " : string.Empty) + "verify on (" + Checksums.Name(Draft.Hash) + ")" : string.Empty);
             }
-            _start.Content = Ui.Label(Draft.Mode == CopyMode.Move ? "IconMove" : "IconCopy", Draft.Mode == CopyMode.Move ? "Start moving" : "Start copying");
+            _start.Content = Draft.Mode == CopyMode.Mirror
+                ? Ui.Label("IconList", "Preview mirror…")
+                : Ui.Label(Draft.Mode == CopyMode.Move ? "IconMove" : "IconCopy", Draft.Mode == CopyMode.Move ? "Start moving" : "Start copying");
         }
 
         private void Start()
         {
+            if (Draft.Mode == CopyMode.Mirror)
+            {
+                // Mirror can delete files: always show what will happen first.
+                Preview();
+                return;
+            }
             var spec = Prepare(false);
             if (spec == null) return;
             Settings.LastDestination = spec.Destination;
@@ -1144,6 +1179,11 @@ namespace Kuducopy.Views
             }
 
             var spec = Draft.Clone();
+            if (spec.Mode == CopyMode.Mirror && spec.Sources.Any(File.Exists))
+            {
+                Dialogs.Info(this, "Mirror works with folders. Remove the files from the list, or choose Copy.");
+                return null;
+            }
             try
             {
                 Planner.Tasks(spec); // friendly errors (into itself, missing files) before anything starts

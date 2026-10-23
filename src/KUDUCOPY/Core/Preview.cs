@@ -43,7 +43,7 @@ namespace Kuducopy.Core
                     e.Action = PreviewAction.Copy;
                     e.Note = "New";
                 }
-                else if (spec.Advanced)
+                else if (spec.RobocopyDecides)
                 {
                     e.Action = PreviewAction.Replace;
                 }

@@ -86,6 +86,9 @@ namespace Kuducopy.Core
         [DataMember] public long Bytes { get; set; }
         [DataMember] public int Copied { get; set; }
         [DataMember] public int Skipped { get; set; }
+
+        /// <summary>Files deleted from the destination (Mirror, or /MIR and /PURGE).</summary>
+        [DataMember] public int Deleted { get; set; }
         [DataMember] public bool Verified { get; set; }
         [DataMember] public JobResult Result { get; set; }
         [DataMember] public string Message { get; set; } = string.Empty;
@@ -112,7 +115,7 @@ namespace Kuducopy.Core
             {
                 switch (Result)
                 {
-                    case JobResult.Done: return Verified ? "Done · verified" : "Done";
+                    case JobResult.Done: return (Verified ? "Done · verified" : "Done") + (Deleted > 0 ? $" · {Deleted} deleted" : string.Empty);
                     case JobResult.DoneWithProblems: return Failed.Count == 1 ? "1 failed" : Failed.Count + " failed";
                     case JobResult.Cancelled: return "Cancelled";
                     default: return "Failed";

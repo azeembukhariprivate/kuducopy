@@ -517,7 +517,7 @@ namespace Kuducopy.Views
             icon.Res(TextElement.ForegroundProperty, ok ? "OkText" : r.Result == JobResult.Cancelled ? "SubtleText" : "WarnText");
             ((FrameworkElement)icon.Child).HorizontalAlignment = HorizontalAlignment.Center;
 
-            var verb = _job.Spec.Mode == CopyMode.Move ? "Moved" : "Copied";
+            var verb = _job.Spec.Verbed;
             string title;
             switch (r.Result)
             {
@@ -535,7 +535,8 @@ namespace Kuducopy.Views
                     break;
             }
             var subtitle = r.Result == JobResult.Done
-                ? (r.Verified ? "Every copy was verified." : r.Skipped > 0 ? $"{Format.Count(r.Skipped, "file")} already there or skipped." : "Everything was copied.")
+                ? (r.Deleted > 0 ? $"{Format.Count(r.Deleted, "file")} that only existed in the destination {(r.Deleted == 1 ? "was" : "were")} deleted. " : string.Empty) +
+                  (r.Verified ? "Every copy was verified." : r.Skipped > 0 ? $"{Format.Count(r.Skipped, "file")} already there or skipped." : "Everything was copied.")
                 : r.Message;
 
             var head = Ui.Columns(Ui.Auto, Ui.Star());
@@ -552,6 +553,7 @@ namespace Kuducopy.Views
             if (_job.Spec.Verify) Stat(_job.Items.Count(i => i.State == FileState.Verified).ToString("N0"), $"verified ({Checksums.Name(_job.Spec.Hash)}) ✓", "OkText");
             else Stat(r.Skipped.ToString("N0"), "skipped or already there", "Text");
             Stat(r.Failed.Count.ToString("N0"), "couldn't be copied", r.Failed.Count > 0 ? "BadText" : "Text");
+            if (_job.Spec.Deletes) Stat(r.Deleted.ToString("N0"), "deleted from the destination", r.Deleted > 0 ? "WarnText" : "Text");
             var seconds = Math.Max(elapsed.TotalSeconds, 0.001);
             Stat(Format.Duration(elapsed), r.Bytes > 0 ? "at " + Format.Speed(r.Bytes / seconds) + " average" : "in total", "Text");
             ((FrameworkElement)stats.Children[stats.Children.Count - 1]).Margin = new Thickness(0);

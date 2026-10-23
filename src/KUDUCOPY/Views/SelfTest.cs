@@ -48,6 +48,7 @@ namespace Kuducopy.Views
             Step("Cancel a copy", CancelCopy);
             Step("Single files", SingleFiles);
             Step("Preview: standard and /MIR", PreviewJob);
+            Step("Mirror a folder", MirrorFolder);
 
             Step("Load themes and styles", () => ThemeManager.Init(ThemeMode.Light));
             Step("Theme keys exist", () =>
@@ -385,6 +386,33 @@ namespace Kuducopy.Views
                 "the extra file is listed for deletion, got " + mirror.Count(PreviewAction.Delete));
             Expect(File.Exists(extra), "preview deleted nothing");
             _log.AppendLine($"      Preview: {standard.Count(PreviewAction.Copy)} new, {standard.Count(PreviewAction.Replace)} replace, {standard.Count(PreviewAction.Skip)} skip; /MIR: {mirror.Count(PreviewAction.Delete)} delete");
+        }
+
+        private static void MirrorFolder()
+        {
+            var src = Folder("mirror");
+            var dest = Path.Combine(_temp, "out12");
+            RunJob(new JobSpec { Sources = { src }, Destination = dest });
+            File.WriteAllText(Path.Combine(src, "notes.txt"), "Changed");
+            File.SetLastWriteTimeUtc(Path.Combine(src, "notes.txt"), DateTime.UtcNow.AddHours(1));
+            var extra = Path.Combine(dest, "mirror", "March", "only here.txt");
+            File.WriteAllText(extra, "will be removed");
+
+            var spec = new JobSpec { Sources = { src }, Destination = dest, Mode = CopyMode.Mirror };
+            var preview = new CopyJob(spec).PreviewAsync().Result;
+            Expect(preview.Count(PreviewAction.Delete) == 1, "mirror preview lists 1 delete, got " + preview.Count(PreviewAction.Delete));
+            Expect(File.Exists(extra), "preview deleted nothing");
+
+            var job = RunJob(spec);
+            Expect(job.Record.Result == JobResult.Done, "Done, got " + job.Record.Result + ": " + job.Record.Message);
+            Expect(!File.Exists(extra), "extra file deleted");
+            Expect(job.Record.Deleted == 1, "1 deleted, got " + job.Record.Deleted);
+            Expect(Read(Path.Combine(dest, "mirror", "notes.txt")) == "Changed", "changed file replaced");
+
+            var rejected = false;
+            try { Planner.Tasks(new JobSpec { Sources = { Path.Combine(src, "notes.txt") }, Destination = dest, Mode = CopyMode.Mirror }); }
+            catch (Exception) { rejected = true; }
+            Expect(rejected, "mirror rejects single files");
         }
 
         // ================================================================== windows

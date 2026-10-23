@@ -69,6 +69,7 @@ namespace Kuducopy.Core
         private readonly Dictionary<string, int> _errors = new Dictionary<string, int>(StringComparer.OrdinalIgnoreCase);
         private readonly List<(DateTime Time, long Bytes)> _samples = new List<(DateTime, long)>();
         private readonly Dictionary<string, string> _hashes = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+        private readonly List<PlannedFile> _extras = new List<PlannedFile>();
         private StreamWriter _log;
         private Process _process;
         private volatile bool _paused;
@@ -174,8 +175,7 @@ namespace Kuducopy.Core
         {
             var planned = new List<PlannedFile>();
             var extras = new List<PlannedFile>();
-            var deletes = Spec.Advanced && (Spec.Switches ?? new List<SwitchValue>())
-                .Any(s => s.Switch.Equals("/MIR", StringComparison.OrdinalIgnoreCase) || s.Switch.Equals("/PURGE", StringComparison.OrdinalIgnoreCase));
+            var deletes = Spec.Deletes;
             if (!File.Exists(RobocopyPath)) throw new InvalidOperationException("Robocopy wasn't found in " + Environment.SystemDirectory + ".");
             foreach (var task in Planner.Tasks(Spec))
             {
@@ -241,16 +241,17 @@ namespace Kuducopy.Core
             foreach (var task in tasks)
             {
                 _cancel.Token.ThrowIfCancellationRequested();
-                planned.AddRange(Scan(task));
+                planned.AddRange(Scan(task, Spec.Deletes ? _extras : null));
             }
+            if (_extras.Count > 0) Log($"{_extras.Count} files are only in the destination and will be deleted.");
             Log($"Found {planned.Count} files ({Format.Size(planned.Sum(p => p.Size))}).");
 
             // 2. Existing files.
-            var policy = Spec.Advanced ? Conflict.Overwrite : Spec.Conflict;
+            var policy = Spec.RobocopyDecides ? Conflict.Overwrite : Spec.Conflict;
             var manual = new Dictionary<PlannedFile, Conflict>();
-            var conflicts = Spec.Advanced ? new List<PlannedFile>() : planned.Where(p => p.Exists).ToList();
+            var conflicts = Spec.RobocopyDecides ? new List<PlannedFile>() : planned.Where(p => p.Exists).ToList();
 
-            if (!Spec.Advanced && policy == Conflict.Ask && conflicts.Count > 0)
+            if (!Spec.RobocopyDecides && policy == Conflict.Ask && conflicts.Count > 0)
             {
                 var answer = AskConflicts?.Invoke(new ConflictQuestion { Conflicts = conflicts, Destination = Spec.Destination })
                              ?? new ConflictAnswer { Policy = Conflict.Skip };
@@ -260,20 +261,20 @@ namespace Kuducopy.Core
             }
             if (policy == Conflict.Ask) policy = Conflict.Skip; // nothing exists, so any rule copies everything
 
-            if (!Spec.Advanced && policy == Conflict.Decide && conflicts.Count > 0)
+            if (!Spec.RobocopyDecides && policy == Conflict.Decide && conflicts.Count > 0)
             {
                 var decided = DecideEach?.Invoke(conflicts);
                 if (decided == null) throw new OperationCanceledException();
                 foreach (var pair in decided)
                     if (pair.Value == Conflict.Overwrite || pair.Value == Conflict.KeepBoth) manual[pair.Key] = pair.Value;
             }
-            else if (!Spec.Advanced && policy == Conflict.KeepBoth)
+            else if (!Spec.RobocopyDecides && policy == Conflict.KeepBoth)
             {
                 foreach (var c in conflicts) manual[c] = Conflict.KeepBoth;
             }
 
             var robocopyPolicy = policy == Conflict.KeepBoth || policy == Conflict.Decide ? Conflict.Skip : policy;
-            Log("Existing files: " + (Spec.Advanced ? "Advanced options decide" : policy.ToString()));
+            Log("Existing files: " + (Spec.Mode == CopyMode.Mirror ? "Mirror replaces changed files" : Spec.Advanced ? "Advanced options decide" : policy.ToString()));
 
             // 3. The files that will actually be copied.
             foreach (var p in planned)
@@ -282,7 +283,7 @@ namespace Kuducopy.Core
                 {
                     Add(new FileItem { File = p, Manual = choice });
                 }
-                else if (Spec.Advanced || p.CopiedBy(robocopyPolicy))
+                else if (Spec.RobocopyDecides || p.CopiedBy(robocopyPolicy))
                 {
                     Add(new FileItem { File = p });
                 }
@@ -324,8 +325,9 @@ namespace Kuducopy.Core
                 }
             }
 
-            // 7. Check every file arrived.
+            // 7. Check every file arrived, and count the files deleted from the destination.
             Confirm(Spec.Mode == CopyMode.Move && !Spec.Verify);
+            Record.Deleted = _extras.Count(x => !File.Exists(x.Dest));
 
             // 8. Verify, and for moves with verify: remove the originals that checked out.
             if (Spec.Verify) VerifyAll();

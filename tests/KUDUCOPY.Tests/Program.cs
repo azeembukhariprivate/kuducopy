@@ -32,6 +32,7 @@ namespace Kuducopy.Tests
             Run("Formats sizes", FormatsSizes);
             Run("Reads job files", ReadsJobFiles);
             Run("Preview sorts files by what will happen", PreviewSorts);
+            Run("Mirror", MirrorRules);
 
             Console.WriteLine();
             Console.WriteLine($"{_passes} passed, {_failures} failed");
@@ -383,6 +384,41 @@ Microsoft Windows [Version 10.0.19045.4529]";
         }
 
         private static string P(params string[] parts) => Path.Combine(parts);
+
+        private static void MirrorRules()
+        {
+            var spec = new JobSpec { Destination = @"D:\Backup", Mode = CopyMode.Mirror };
+            Equal($"\"C:\\Users\\Azeem\\Pictures\\Photos 2026\" \"D:\\Backup\\Photos 2026\" /MIR /COPY:DAT /DCOPY:T /R:3 /W:5 {Out}",
+                Cmd(spec, Folder, false, Conflict.Skip), "mirror run");
+            Equal($"\"C:\\Users\\Azeem\\Pictures\\Photos 2026\" \"D:\\Backup\\Photos 2026\" /MIR /COPY:DAT /DCOPY:T /R:3 /W:5 /L {Out}",
+                Cmd(spec, Folder, true, Conflict.Skip), "mirror scan lists copies and deletes, not identical files");
+            Check(spec.RobocopyDecides && spec.Deletes, "mirror: robocopy decides, files may be deleted");
+            Equal("Mirroring", spec.Verbing, "verb");
+
+            var adv = new JobSpec { Destination = @"D:\Backup", Mode = CopyMode.Mirror, Advanced = true, Switches = { new SwitchValue("/MT", "8") } };
+            Check(Cmd(adv, Folder, false, Conflict.Overwrite).Contains("/MT:8 /MIR"), "advanced mirror adds /MIR");
+            Check(!new JobSpec { Advanced = true }.Deletes, "advanced without /MIR doesn't delete");
+            Check(new JobSpec { Advanced = true, Switches = { new SwitchValue("/PURGE") } }.Deletes, "/PURGE deletes");
+
+            var root = Path.Combine(Path.GetTempPath(), "kuducopy-mirror-" + Guid.NewGuid().ToString("N"));
+            try
+            {
+                Directory.CreateDirectory(Path.Combine(root, "Photos"));
+                File.WriteAllText(Path.Combine(root, "a.txt"), "a");
+                var ok = Planner.Tasks(new JobSpec { Mode = CopyMode.Mirror, Destination = Path.Combine(root, "dest"), Sources = { Path.Combine(root, "Photos") } });
+                Equal(Path.Combine(root, "dest", "Photos"), ok[0].DestDir, "mirror into a folder of the same name, never the destination itself");
+                Throws(() => Planner.Tasks(new JobSpec { Mode = CopyMode.Mirror, Destination = Path.Combine(root, "dest"), Sources = { Path.Combine(root, "a.txt") } }), "Mirror works with folders");
+            }
+            finally
+            {
+                try { Directory.Delete(root, true); } catch { }
+            }
+
+            var files = new List<PlannedFile> { new PlannedFile { Source = "a", Existing = Existing.None }, new PlannedFile { Source = "b", Existing = Existing.SourceOlder } };
+            var preview = PreviewResult.Build(spec, files, new[] { new PlannedFile { Dest = "x" } });
+            Equal("Copy,Replace,Delete", string.Join(",", preview.Entries.Select(e => e.Action)), "mirror preview");
+            Equal("Done · 3 deleted", new JobRecord { Result = JobResult.Done, Deleted = 3 }.ResultText, "history text");
+        }
 
         private static void PreviewSorts()
         {

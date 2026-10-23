@@ -6,7 +6,8 @@ using System.Runtime.Serialization;
 
 namespace Kuducopy.Core
 {
-    public enum CopyMode { Copy, Move }
+    /// <summary>Mirror makes a destination folder an exact copy of a source folder, deleting files that are only in the destination.</summary>
+    public enum CopyMode { Copy, Move, Mirror }
 
     public enum Conflict { Ask, Overwrite, ReplaceIfNewer, Skip, KeepBoth, Decide }
 
@@ -42,8 +43,17 @@ namespace Kuducopy.Core
             return c;
         }
 
-        public string Verb => Mode == CopyMode.Move ? "Move" : "Copy";
-        public string Verbing => Mode == CopyMode.Move ? "Moving" : "Copying";
+        public string Verb => Mode == CopyMode.Move ? "Move" : Mode == CopyMode.Mirror ? "Mirror" : "Copy";
+        public string Verbing => Mode == CopyMode.Move ? "Moving" : Mode == CopyMode.Mirror ? "Mirroring" : "Copying";
+        public string Verbed => Mode == CopyMode.Move ? "Moved" : Mode == CopyMode.Mirror ? "Mirrored" : "Copied";
+
+        /// <summary>Robocopy decides everything (Advanced options, or Mirror): no "already exists" question.</summary>
+        public bool RobocopyDecides => Advanced || Mode == CopyMode.Mirror;
+
+        /// <summary>Files only in the destination may be deleted (Mirror, or /MIR or /PURGE in Advanced mode).</summary>
+        public bool Deletes => Mode == CopyMode.Mirror ||
+                               (Advanced && (Switches ?? new List<SwitchValue>()).Any(s => s.Switch.Equals("/MIR", StringComparison.OrdinalIgnoreCase) ||
+                                                                                          s.Switch.Equals("/PURGE", StringComparison.OrdinalIgnoreCase)));
 
         public string SourceSummary
         {
@@ -107,6 +117,10 @@ namespace Kuducopy.Core
                     if (IsSameOrInside(dest, source))
                         throw new InvalidOperationException($"Can't copy \"{DisplayName(source)}\" into itself. Choose a destination outside that folder.");
                     tasks.Add(new RoboTask { SourceDir = source, DestDir = target });
+                }
+                else if (File.Exists(source) && spec.Mode == CopyMode.Mirror)
+                {
+                    throw new InvalidOperationException($"Mirror works with folders. \"{Path.GetFileName(source)}\" is a file: use Copy for files.");
                 }
                 else if (File.Exists(source))
                 {
@@ -173,6 +187,16 @@ namespace Kuducopy.Core
                     a.Add(extra);
                 }
             }
+            else if (spec.Mode == CopyMode.Mirror)
+            {
+                // Copy new and changed files and delete files that are only in the destination.
+                // The list-only scan uses the same options, so it shows exactly what will be copied and deleted.
+                a.Add("/MIR");
+                a.Add("/COPY:DAT");
+                a.Add("/DCOPY:T");
+                a.Add(spec.KeepGoing ? "/R:3" : "/R:0");
+                a.Add(spec.KeepGoing ? "/W:5" : "/W:0");
+            }
             else
             {
                 if (task.IsFolder) a.Add("/E");
@@ -193,6 +217,7 @@ namespace Kuducopy.Core
             }
 
             if (!scan && moveWithRobocopy) a.Add(task.IsFolder ? "/MOVE" : "/MOV");
+            if (spec.Mode == CopyMode.Mirror && spec.Advanced && task.IsFolder && !a.Contains("/MIR", StringComparer.OrdinalIgnoreCase)) a.Add("/MIR");
 
             if (excludeFiles != null)
             {
