@@ -99,7 +99,7 @@ namespace Kuducopy.Tests
         private static string Cmd(JobSpec spec, RoboTask task, bool scan, Conflict policy, bool move = false, IEnumerable<string> exclude = null) =>
             Args.Join(Planner.Build(spec, task, scan, policy, move, exclude));
 
-        private const string Out = "/BYTES /FP /NC /NDL /NJH /NJS /UNICODE";
+        private const string Out = "/BYTES /FP /NC /NDL /NJH /NJS";
 
         private static void BuildsStandardCommands()
         {
@@ -132,8 +132,8 @@ namespace Kuducopy.Tests
                 ExtraOptions = "/XA:H /MOT:5"
             };
             var run = Cmd(spec, Folder, false, Conflict.Overwrite);
-            Equal($"\"C:\\Users\\Azeem\\Pictures\\Photos 2026\" \"D:\\Backup\\Photos 2026\" /MIR /MT:16 /COPY:DATS /XF *.tmp Thumbs.db /MON:1 \"/LOG:C:\\logs\\copy log.txt\" /XA:H /MOT:5 /TEE {Out}",
-                run, "advanced run (internal /L and /MOVE dropped, /TEE added for /LOG)");
+            Equal($"\"C:\\Users\\Azeem\\Pictures\\Photos 2026\" \"D:\\Backup\\Photos 2026\" /MIR /MT:16 /COPY:DATS /XF *.tmp Thumbs.db /MON:1 /XA:H /MOT:5 {Out}",
+                run, "advanced run (internal /L and /MOVE dropped; KUDUCOPY writes the /LOG file itself)");
 
             var scan = Cmd(spec, Folder, true, Conflict.Overwrite);
             Check(!scan.Contains("/MON") && !scan.Contains("/MOT") && !scan.Contains("/LOG") && !scan.Contains("/TEE"), "scan drops monitor and log options: " + scan);

@@ -197,7 +197,11 @@ namespace Kuducopy.Core
         /// Added by KUDUCOPY so it can read the output. Not shown in Advanced mode, and neither are /MOV and /MOVE:
         /// the Move switch at the top of the window adds those.
         /// </summary>
-        public static readonly string[] OutputSwitches = { "/BYTES", "/FP", "/NC", "/NDL", "/NJH", "/NJS", "/UNICODE" };
+        /// The text is read from a Unicode log file (/UNILOG), because robocopy's console output can't show every file name.
+        public static readonly string[] OutputSwitches = { "/BYTES", "/FP", "/NC", "/NDL", "/NJH", "/NJS" };
+
+        public static bool IsLogOption(string sw) =>
+            sw != null && (sw.StartsWith("/LOG", StringComparison.OrdinalIgnoreCase) || sw.StartsWith("/UNILOG", StringComparison.OrdinalIgnoreCase));
 
         private static readonly HashSet<string> Internal = new HashSet<string>(
             new[] { "/L", "/MOV", "/MOVE", "/BYTES", "/FP", "/NC", "/NDL", "/NJH", "/NJS", "/UNICODE", "/TEE", "/JOB", "/SAVE", "/QUIT", "/NOSD", "/NODD", "/IF", "/SD", "/DD" },

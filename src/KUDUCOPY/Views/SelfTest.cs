@@ -37,7 +37,6 @@ namespace Kuducopy.Views
             AppPaths.Root = Path.Combine(_temp, "appdata");
 
             Step("Robocopy is available", () => Expect(File.Exists(CopyJob.RobocopyPath), "robocopy.exe at " + CopyJob.RobocopyPath));
-            Step("Robocopy output (diagnostic)", Diagnose);
             Step("Copy a folder tree with verify", CopyTree);
             Step("Existing files: replace if newer", ReplaceIfNewer);
             Step("Existing files: keep both", KeepBoth);
@@ -147,40 +146,6 @@ namespace Kuducopy.Views
             File.WriteAllText(Path.Combine(root, "March", "Week 1", "deep file.csv"), "a,b,c\n1,2,3");
             File.WriteAllBytes(Path.Combine(root, "March", "photo.bin"), Enumerable.Range(0, 300000).Select(i => (byte)(i * 7)).ToArray());
             return root;
-        }
-
-        /// <summary>Records exactly what robocopy writes when its output is captured, in three modes.</summary>
-        private static void Diagnose()
-        {
-            var src = Folder("diag");
-            var dest = Path.Combine(_temp, "diag-out");
-            var log = Path.Combine(_temp, "diag.log");
-            foreach (var extra in new[] { "/UNICODE", "", "/UNILOG:\"" + log + "\" /TEE" })
-            {
-                var args = "\"" + src + "\" \"" + dest + "\" /E /IS /IT /L /BYTES /FP /NC /NDL /NJH /NJS " + extra;
-                var psi = new System.Diagnostics.ProcessStartInfo(CopyJob.RobocopyPath, args)
-                {
-                    UseShellExecute = false, CreateNoWindow = true, RedirectStandardOutput = true
-                };
-                using (var p = System.Diagnostics.Process.Start(psi))
-                using (var ms = new MemoryStream())
-                {
-                    p.StandardOutput.BaseStream.CopyTo(ms);
-                    p.WaitForExit();
-                    var bytes = ms.ToArray();
-                    _log.AppendLine($"      [{extra}] exit {p.ExitCode}, {bytes.Length} bytes: " +
-                                    BitConverter.ToString(bytes.Take(96).ToArray()));
-                    _log.AppendLine("      as UTF-16: " + Encoding.Unicode.GetString(bytes).Replace("\r", "\\r").Replace("\n", "\\n").Replace("\t", "\\t").Substring(0, Math.Min(400, bytes.Length / 2)));
-                    _log.AppendLine("      as OEM:    " + Encoding.GetEncoding(System.Globalization.CultureInfo.CurrentCulture.TextInfo.OEMCodePage)
-                        .GetString(bytes).Replace("\r", "\\r").Replace("\n", "\\n").Replace("\t", "\\t").Substring(0, Math.Min(400, bytes.Length)));
-                }
-            }
-            if (File.Exists(log))
-            {
-                var bytes = File.ReadAllBytes(log);
-                _log.AppendLine($"      UNILOG file {bytes.Length} bytes: " + BitConverter.ToString(bytes.Take(64).ToArray()));
-                _log.AppendLine("      UNILOG text: " + Encoding.Unicode.GetString(bytes).Replace("\r", "\\r").Replace("\n", "\\n").Replace("\t", "\\t").Substring(0, Math.Min(500, bytes.Length / 2)));
-            }
         }
 
         private static CopyJob RunJob(JobSpec spec, Action<CopyJob> whileRunning = null)
@@ -327,9 +292,14 @@ namespace Kuducopy.Views
             var spec = new JobSpec
             {
                 Sources = { src }, Destination = dest, Advanced = true,
-                Switches = new List<SwitchValue> { new SwitchValue("/MIR"), new SwitchValue("/XF", "*.tmp"), new SwitchValue("/MT", "4"), new SwitchValue("/R", "1"), new SwitchValue("/W", "1") }
+                Switches = new List<SwitchValue>
+                {
+                    new SwitchValue("/MIR"), new SwitchValue("/XF", "*.tmp"), new SwitchValue("/MT", "4"), new SwitchValue("/R", "1"), new SwitchValue("/W", "1"),
+                    new SwitchValue("/UNILOG", Path.Combine(_temp, "my log.txt"))
+                }
             };
             var job = RunJob(spec);
+            Expect(File.Exists(Path.Combine(_temp, "my log.txt")) && File.ReadAllText(Path.Combine(_temp, "my log.txt")).Contains("photo.bin"), "/UNILOG file written");
             Expect(job.Record.Result == JobResult.Done, "Done, got " + job.Record.Result + ": " + job.Record.Message);
             Expect(!File.Exists(Path.Combine(dest, "advanced", "skip me.tmp")), "/XF skipped *.tmp");
             Expect(!File.Exists(extra), "/MIR removed the extra file");

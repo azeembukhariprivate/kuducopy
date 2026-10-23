@@ -367,6 +367,8 @@ namespace Kuducopy.Core
 
         // ================================================================== copy (robocopy)
 
+        private bool _userLogStarted;
+
         private void RunRobocopy(RoboTask task, Conflict policy, bool move)
         {
             var excluded = new List<string>();
@@ -382,7 +384,17 @@ namespace Kuducopy.Core
                 }
                 Log("Copying: robocopy " + Args.Join(args));
 
-                var exit = RunProcess(args, OnCopyLine);
+                var output = new StringBuilder();
+                var exit = RunProcess(args, line =>
+                {
+                    if (RoboOutput.Parse(line).Kind != LineKind.Percent) output.AppendLine(line.TrimEnd());
+                    OnCopyLine(line);
+                });
+                if (output.Length > 0)
+                {
+                    WriteUserLog($"robocopy {Args.Join(args)}\r\n{output}\r\n", !_userLogStarted);
+                    _userLogStarted = true;
+                }
 
                 if (IsCancelled)
                 {
@@ -497,33 +509,123 @@ namespace Kuducopy.Core
             catch { /* leave it */ }
         }
 
+        /// <summary>
+        /// Runs robocopy and feeds its output line by line. The output is read from a Unicode log file (/UNILOG) while
+        /// robocopy writes it: robocopy's console output replaces characters outside the console code page with "?".
+        /// </summary>
         private int RunProcess(List<string> args, Action<string> onLine)
         {
-            var psi = new ProcessStartInfo(RobocopyPath, Args.Join(args))
+            var logFile = Path.Combine(AppPaths.Temp, "robocopy-" + Guid.NewGuid().ToString("N") + ".log");
+            var allArgs = new List<string>(args) { "/UNILOG:" + logFile };
+            var psi = new ProcessStartInfo(RobocopyPath, Args.Join(allArgs))
             {
                 UseShellExecute = false,
                 CreateNoWindow = true,
                 RedirectStandardOutput = true,
-                RedirectStandardError = true,
-                StandardOutputEncoding = Encoding.Unicode, // /UNICODE
-                StandardErrorEncoding = Encoding.Unicode
+                RedirectStandardError = true
             };
 
-            using (var p = new Process { StartInfo = psi })
+            try
             {
-                p.OutputDataReceived += (s, e) => Line(e.Data, onLine);
-                p.ErrorDataReceived += (s, e) => Line(e.Data, onLine);
-                p.Start();
-                _process = p;
-                if (_paused) { try { NtSuspendProcess(p.Handle); } catch { /* ignore */ } }
-                p.BeginOutputReadLine();
-                p.BeginErrorReadLine();
-                using (_cancel.Token.Register(KillProcess))
+                using (var p = new Process { StartInfo = psi })
                 {
-                    p.WaitForExit();
+                    p.OutputDataReceived += (s, e) => { };
+                    p.ErrorDataReceived += (s, e) => { if (e.Data != null) Log(e.Data); };
+                    p.Start();
+                    _process = p;
+                    if (_paused) { try { NtSuspendProcess(p.Handle); } catch { /* ignore */ } }
+                    p.BeginOutputReadLine();
+                    p.BeginErrorReadLine();
+                    using (_cancel.Token.Register(KillProcess))
+                    {
+                        TailLog(logFile, p, onLine);
+                        p.WaitForExit();
+                    }
+                    _process = null;
+                    return p.ExitCode;
                 }
-                _process = null;
-                return p.ExitCode;
+            }
+            finally
+            {
+                TryDelete(logFile);
+            }
+        }
+
+        /// <summary>Reads a UTF-16 log file while it grows, until the process has exited and everything is read.</summary>
+        private void TailLog(string path, Process p, Action<string> onLine)
+        {
+            var decoder = Encoding.Unicode.GetDecoder();
+            var bytes = new byte[64 * 1024];
+            var chars = new char[bytes.Length];
+            var pending = new StringBuilder();
+            FileStream stream = null;
+            try
+            {
+                while (true)
+                {
+                    var exited = p.HasExited;
+                    if (stream == null && File.Exists(path))
+                    {
+                        try { stream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite | FileShare.Delete); }
+                        catch (IOException) { /* robocopy is creating it; try again */ }
+                    }
+
+                    var read = 0;
+                    if (stream != null)
+                    {
+                        read = stream.Read(bytes, 0, bytes.Length);
+                        if (read > 0)
+                        {
+                            var n = decoder.GetChars(bytes, 0, read, chars, 0);
+                            for (var i = 0; i < n; i++)
+                            {
+                                var c = chars[i];
+                                if (c == '\r' || c == '\n')
+                                {
+                                    if (pending.Length > 0) Line(pending.ToString(), onLine);
+                                    pending.Clear();
+                                }
+                                else
+                                {
+                                    pending.Append(c);
+                                }
+                            }
+                        }
+                    }
+
+                    if (read == 0)
+                    {
+                        if (exited) break; // the process had already ended before this read, so nothing more is coming
+                        Thread.Sleep(60);
+                    }
+                }
+                if (pending.Length > 0) Line(pending.ToString(), onLine);
+            }
+            finally
+            {
+                stream?.Dispose();
+            }
+        }
+
+        /// <summary>Advanced mode: the user's own /LOG, /LOG+, /UNILOG or /UNILOG+ file, written from KUDUCOPY's log.</summary>
+        private void WriteUserLog(string text, bool first)
+        {
+            foreach (var sv in (Spec.Advanced ? Spec.Switches : new List<SwitchValue>()).Where(s => RoboOptions.IsLogOption(s.Switch)))
+            {
+                var path = (sv.Value ?? string.Empty).Trim().Trim('"');
+                if (path.Length == 0) continue;
+                try
+                {
+                    var append = sv.Switch.EndsWith("+", StringComparison.Ordinal) || !first;
+                    var unicode = sv.Switch.StartsWith("/UNILOG", StringComparison.OrdinalIgnoreCase);
+                    var encoding = unicode ? (Encoding)new UnicodeEncoding(false, true) : Encoding.Default;
+                    if (append) File.AppendAllText(path, text, encoding);
+                    else File.WriteAllText(path, text, encoding);
+                }
+                catch (Exception ex)
+                {
+                    Log("Couldn't write the log file " + path + ": " + ex.Message);
+                }
             }
         }
 

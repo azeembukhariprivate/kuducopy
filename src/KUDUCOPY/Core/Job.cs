@@ -161,20 +161,17 @@ namespace Kuducopy.Core
                 {
                     var def = RoboOptions.Find(sv.Switch);
                     if (RoboOptions.IsInternal(sv.Switch)) continue;
+                    if (RoboOptions.IsLogOption(sv.Switch)) continue; // KUDUCOPY writes the user's log file itself (see CopyJob)
                     if (def != null && def.FolderOnly && !task.IsFolder) continue; // never walk or purge folders for single files
                     if (def != null && def.SkipInScan && scan) continue;
-                    if (scan && sv.Switch.StartsWith("/LOG", StringComparison.OrdinalIgnoreCase)) continue;
-                    if (scan && sv.Switch.StartsWith("/UNILOG", StringComparison.OrdinalIgnoreCase)) continue;
                     a.AddRange(RoboOptions.ToArgs(sv));
                 }
                 foreach (var extra in Args.Split(spec.ExtraOptions))
                 {
-                    if (scan && Regex(extra, "^/(MON|MOT|RH|LOG|UNILOG)")) continue;
+                    if (Regex(extra, "^/(LOG|UNILOG|TEE|UNICODE)")) continue;
+                    if (scan && Regex(extra, "^/(MON|MOT|RH)")) continue;
                     a.Add(extra);
                 }
-                if (spec.Switches != null && spec.Switches.Any(s => s.Switch.StartsWith("/LOG", StringComparison.OrdinalIgnoreCase) ||
-                                                                     s.Switch.StartsWith("/UNILOG", StringComparison.OrdinalIgnoreCase)) && !scan)
-                    a.Add("/TEE");
             }
             else
             {
