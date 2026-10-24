@@ -6,6 +6,12 @@
 
 <p align="center">Fast, reliable file copying for Windows, built on Windows' own Robocopy.</p>
 
+<p align="center">
+  <a href="https://github.com/azeembukhariprivate/kuducopy/releases/latest/download/KUDUCOPY-setup.exe"><img src="https://img.shields.io/badge/Download-KUDUCOPY%20for%20Windows-2ea44f?style=for-the-badge" alt="Download KUDUCOPY for Windows"></a>
+  <br>
+  <sub>The installer for Windows 10 and 11, always the latest version · <a href="https://github.com/azeembukhariprivate/kuducopy/releases/latest">portable zip and what's new</a></sub>
+</p>
+
 ---
 
 ## Features
@@ -39,7 +45,7 @@ KUDUCOPY runs `robocopy.exe`, which is part of Windows, to do the copying. First
 
 ## Download
 
-Get the latest version from the [Releases page](https://github.com/azeembukhariprivate/kuducopy/releases/latest):
+**[Download the installer](https://github.com/azeembukhariprivate/kuducopy/releases/latest/download/KUDUCOPY-setup.exe)** (`KUDUCOPY-setup.exe`, always the latest version), or get any of these from the [Releases page](https://github.com/azeembukhariprivate/kuducopy/releases/latest):
 
 - `KUDUCOPY-x.y.z-setup.exe`: installs for your user account, adds a Start menu entry and (optionally) the right-click menu.
 - `KUDUCOPY-x.y.z-portable.zip`: unzip anywhere and run `KUDUCOPY.exe`.
