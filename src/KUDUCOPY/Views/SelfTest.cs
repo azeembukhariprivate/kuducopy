@@ -95,8 +95,10 @@ namespace Kuducopy.Views
             {
                 ThemeManager.Apply(ThemeMode.Dark);
                 Pump();
+                Screenshots.All("Dark theme");
                 main.SelectAdvanced(true);
                 Pump();
+                Screenshots.All("Dark theme");
                 main.SelectAdvanced(false);
                 ThemeManager.Apply(ThemeMode.Light);
             });
@@ -144,6 +146,7 @@ namespace Kuducopy.Views
             {
                 action();
                 Pump();
+                Screenshots.All(name);
                 if (Errors.Count > before) throw new Exception(string.Join(" | ", Errors.Skip(before)));
                 _log.AppendLine($"ok    {name} ({(DateTime.UtcNow - started).TotalSeconds:0.0}s)");
             }
@@ -472,6 +475,7 @@ namespace Kuducopy.Views
             OffScreen(w);
             w.Show();
             Pump();
+            Screenshots.One(w, w.Title);
             w.Close();
         }
 
