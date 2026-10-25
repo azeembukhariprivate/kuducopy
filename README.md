@@ -87,6 +87,14 @@ out\KUDUCOPY\KUDUCOPY.exe --self-test
 
 `--self-test` makes real copies with Robocopy in a temporary folder (conflicts, keep both, move, verify, a locked file and retry, advanced options, cancel, preview, mirror, compare), opens every window in both themes, writes `self-test.log` and exits. To build the installer, install [Inno Setup 6](https://jrsoftware.org/isinfo.php) and compile `installer/KUDUCOPY.iss`.
 
+
+### Shared code
+
+Some files (the look, dialogs, the update check, administrator helpers) are shared by the KUDU apps and come from
+[kudu-common](https://github.com/azeembukhariprivate/kudu-common); each starts with a comment saying so, and `.kudu-common`
+lists them. You don't need kudu-common to build this app, but change those files there, not here: the build checks that
+they match.
+
 ## Publishing a new version
 
 1. Change `<Version>` in `src/KUDUCOPY/KUDUCOPY.csproj` (and `MyAppVersion` in `installer/KUDUCOPY.iss`).
