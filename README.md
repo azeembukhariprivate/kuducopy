@@ -12,6 +12,12 @@
   <sub>The installer for Windows 10 and 11, always the latest version · <a href="https://github.com/azeembukhariprivate/kuducopy/releases/latest">portable zip and what's new</a></sub>
 </p>
 
+<p align="center">
+  <img src="docs/screenshot-1.png" alt="KUDUCOPY's main window: what to copy, where to, and what to do when a file is already there" width="820">
+  <br><br>
+  <img src="docs/screenshot-2.png" alt="KUDUCOPY in its dark look" width="820">
+</p>
+
 ---
 
 ## Features
