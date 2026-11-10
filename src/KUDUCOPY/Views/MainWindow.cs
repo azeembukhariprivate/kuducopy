@@ -464,7 +464,9 @@ namespace Kuducopy.Views
             var error = Ui.Text(string.Empty, 11.5, "BadText", wrap: true);
             error.Visibility = Visibility.Collapsed;
 
-            var extras = new StackPanel { Orientation = Orientation.Horizontal, VerticalAlignment = VerticalAlignment.Center };
+            // The value box and the marks sit under the description. Beside it, they left the description a few
+            // letters a line when the window wasn't wide.
+            var extras = new WrapPanel { Orientation = Orientation.Horizontal, HorizontalAlignment = HorizontalAlignment.Left };
             TextBox value = null;
             if (o.Kind != OptionKind.Flag)
             {
@@ -477,10 +479,11 @@ namespace Kuducopy.Views
                     ToolTip = o.Kind == OptionKind.Letters || o.Kind == OptionKind.Attributes ? o.LetterHelp : "Default: " + (o.Default.Length == 0 ? "none" : o.Default)
                 };
                 value.Res(Control.FontFamilyProperty, "MonoFont");
+                value.Margin = new Thickness(0, 0, 8, 0);
                 extras.Children.Add(value);
             }
-            if (o.NeedsAdmin) extras.Children.Add(Ui.Chip("Needs admin", Tone.Warn, "IconShield").Margin(8, 0, 0, 0));
-            if (o.Deletes) extras.Children.Add(Ui.Chip("Deletes files", Tone.Bad, "IconWarn").Margin(8, 0, 0, 0));
+            if (o.NeedsAdmin) extras.Children.Add(Ui.Chip("Needs admin", Tone.Warn, "IconShield").Margin(0, 0, 8, 0));
+            if (o.Deletes) extras.Children.Add(Ui.Chip("Deletes files", Tone.Bad, "IconWarn").Margin(0, 0, 8, 0));
 
             var descCol = Ui.Column(desc, error);
             if ((o.Kind == OptionKind.Letters || o.Kind == OptionKind.Attributes) && !string.IsNullOrEmpty(o.LetterHelp))
@@ -488,11 +491,12 @@ namespace Kuducopy.Views
             if (o.Kind == OptionKind.Number || o.Kind == OptionKind.Text)
                 descCol.Children.Insert(1, Ui.Subtle("Empty uses " + (o.Default.Length == 0 ? "Robocopy's default" : o.Default), 11.5));
 
-            var g = Ui.Columns(Ui.Auto, Ui.Px(110), Ui.Star(), Ui.Auto);
+            if (extras.Children.Count > 0) descCol.Children.Add(extras.Margin(0, 6, 0, 0));
+
+            var g = Ui.Columns(Ui.Auto, Ui.Px(110), Ui.Star());
             g.Children.Add(box.Margin(0, 0, 10, 0).At(0, 0));
             g.Children.Add(label.At(0, 1));
             g.Children.Add(descCol.Margin(0, 0, 10, 0).At(0, 2));
-            g.Children.Add(extras.At(0, 3));
             g.ToolTip = o.Warning;
 
             void Apply()
