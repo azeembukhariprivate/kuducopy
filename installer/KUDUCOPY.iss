@@ -2,7 +2,7 @@
 ; Installs for the current Windows user only, so it never asks for administrator rights.
 
 #ifndef MyAppVersion
-  #define MyAppVersion "1.3.3"
+  #define MyAppVersion "1.4.0"
 #endif
 #ifndef SourceDir
   #define SourceDir "..\out\KUDUCOPY"

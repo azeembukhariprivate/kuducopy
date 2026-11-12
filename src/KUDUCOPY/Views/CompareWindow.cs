@@ -352,9 +352,9 @@ namespace Kuducopy.Views
             var target = toRight ? _result.Right : _result.Left;
             var newer = FolderCompare.ReplacesNewer(entries, toRight);
             var replaced = entries.Count(e => e.OnLeft && e.OnRight);
-            var message = $"Copy {Format.Count(entries.Count, "file")} to {target}?";
-            if (replaced > 0) message += $"\n\n{Format.Count(replaced, "file")} there will be replaced.";
-            if (newer > 0) message += $"\n{Format.Count(newer, "of them is", "of them are")} NEWER than the file you're copying over it.";
+            var message = Lang.T("Copy {0} to {1}?", Format.Count(entries.Count, "file"), target);
+            if (replaced > 0) message += "\n\n" + Lang.T("{0} there will be replaced.", Format.Count(replaced, "file"));
+            if (newer > 0) message += "\n" + Lang.T(newer == 1 ? "{0} of them is NEWER than the file you're copying over it." : "{0} of them are NEWER than the file you're copying over it.", newer.ToString("N0"));
             if (!Dialogs.Confirm(this, message)) return;
 
             var spec = FolderCompare.CopySpec(_result, entries, toRight);

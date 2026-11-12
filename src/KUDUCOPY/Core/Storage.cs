@@ -115,10 +115,10 @@ namespace Kuducopy.Core
             {
                 switch (Result)
                 {
-                    case JobResult.Done: return (Verified ? "Done · verified" : "Done") + (Deleted > 0 ? $" · {Deleted} deleted" : string.Empty);
-                    case JobResult.DoneWithProblems: return Failed.Count == 1 ? "1 failed" : Failed.Count + " failed";
-                    case JobResult.Cancelled: return "Cancelled";
-                    default: return "Failed";
+                    case JobResult.Done: return Lang.T(Verified ? "Done · verified" : "Done") + (Deleted > 0 ? Lang.T(" · {0} deleted", Deleted) : string.Empty); // shown only
+                    case JobResult.DoneWithProblems: return Failed.Count == 1 ? Lang.T("1 failed") : Lang.T("{0} failed", Failed.Count);
+                    case JobResult.Cancelled: return Lang.T("Cancelled");
+                    default: return Lang.T("Failed");
                 }
             }
         }

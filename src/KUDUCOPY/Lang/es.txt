@@ -1,0 +1,598 @@
+There's nothing to paste. Copy (Ctrl+C) or cut (Ctrl+X) files in File Explorer first.	No hay nada que pegar. Primero copia (Ctrl+C) o corta (Ctrl+X) archivos en el Explorador de archivos.
+That destination can't be used:\n\n{0}	Ese destino no se puede usar:\n\n{0}
+Something went wrong:\n\n{0}	Algo salió mal:\n\n{0}
+Azeem Bukhari	Azeem Bukhari
+less than a second	menos de un segundo
+{0} h {1} min	{0} h {1} min
+{0} min {1} s	{0} min {1} s
+KUDUCOPY checksums {0}	KUDUCOPY checksums {0}
+Created by KUDUCOPY on	Created by KUDUCOPY on
+"{0}" can't be found.	No se encuentra "{0}".
+Choose two separate folders: one of them is inside the other.	Elige dos carpetas separadas: una está dentro de la otra.
+Only on the left	Solo a la izquierda
+Only on the right	Solo a la derecha
+Left is newer	La de la izquierda es más reciente
+Right is newer	La de la derecha es más reciente
+Different	Distinto
+Same	Igual
+Left:\t{0}	Left:\t{0}
+Right:\t{0}	Right:\t{0}
+Compared:\t{0}	Compared:\t{0}
+size, date and contents	tamaño, fecha y contenido
+size and date	tamaño y fecha
+State\tFile\tLeft size\tLeft modified\tRight size\tRight modified	State\tFile\tLeft size\tLeft modified\tRight size\tRight modified
+Couldn't read\t{0}	Couldn't read\t{0}
+Starting…	Empezando…
+Paused	En pausa
+Robocopy wasn't found in {0}.	No se encontró Robocopy en {0}.
+KUDUCOPY {0} · {1} {2} → {3} · started {4}	KUDUCOPY {0} · {1} {2} → {3} · started {4}
+Cancelled	Cancelado
+Finished {0}: {1} · {2} copied, {3} failed, {4} skipped. {5}	Finished {0}: {1} · {2} copied, {3} failed, {4} skipped. {5}
+{0} files are only in the destination and will be deleted.	{0} archivos están solo en el destino y se eliminarán.
+Found {0} files ({1}).	Se encontraron {0} archivos ({1}).
+Existing files: {0}	Archivos existentes: {0}
+Mirror replaces changed files	Espejo reemplaza los archivos cambiados
+Advanced options decide	Deciden las opciones avanzadas
+Listing: robocopy {0}	Listing: robocopy {0}
+Robocopy couldn't read "{0}" (exit code {1}). See the log for details.	Robocopy no pudo leer "{0}" (exit code {1}). Mira el registro para más detalles.
+Copying: robocopy {0}	Copying: robocopy {0}
+Skipped by you	Omitido por ti
+Robocopy stopped with exit code {0} while copying "{1}".	Robocopy se detuvo con exit code {0} al copiar "{1}".
+· retrying	· reintentando
+Stopped at the first error, because "Keep going if a file can't be copied" is off.	Se detuvo en el primer error, porque "Seguir si un archivo no se puede copiar" está desactivado.
+{0}.log	{0}.log
+Couldn't write the log file {0}: {1}	No se pudo escribir el archivo de registro {0}: {1}
+Couldn't read output line: {0}	No se pudo leer la línea de salida: {0}
+Copying ({0}): {1} → {2}	Copiando ({0}): {1} → {2}
+Failed: {0}: {1}	Falló: {0}: {1}
+Access is denied	Acceso denegado
+Not copied: the job stopped early	No copiado: el trabajo se detuvo antes
+Not copied	No copiado
+Copied, but the original couldn't be removed	Copiado, pero no se pudo quitar el original
+The copy doesn't match the original ({0} differs)	La copia no coincide con el original ({0} distinto)
+Couldn't verify: {0}	No se pudo comprobar: {0}
+Copied, but the original couldn't be removed: {0}	Copiado, pero no se pudo quitar el original: {0}
+The drive {0} isn't ready. Is it plugged in?	La unidad {0} no está lista. ¿Está conectada?
+Not enough space on {0}: this needs {1}, but only {2} is free.	No hay espacio suficiente en {0}: hace falta {1}, pero solo hay {2} libres.
+1 file couldn't be copied.	1 archivo no se pudo copiar.
+{0} files couldn't be copied.	{0} archivos no se pudieron copiar.
+Nothing to copy: every file was already there.	Nada que copiar: todos los archivos ya estaban allí.
+Nothing to copy.	Nada que copiar.
+Done	Hecho
+Finding files…	Buscando archivos…
+Waiting for another job on {0} to finish…	Esperando a que termine otro trabajo en {0}…
+{0} files you chose to keep or replace…	{0} archivos que elegiste conservar o reemplazar…
+Verifying copies ({0})…	Comprobando copias ({0})…
+Removing the originals…	Quitando los originales…
+user	user
+KUDUCOPY hub	KUDUCOPY hub
+Move	Mover
+Mirror	Espejo
+Copy	Copiar
+Moving	Moviendo
+Mirroring	Haciendo espejo
+Copying	Copiando
+Moved	Movido
+Mirrored	Espejo hecho
+Copied	Copiado
+{0} and {1}	{0} y {1}
+{0}, {1} and {2} more	{0}, {1} y {2} más
+Drive {0}	Unidad {0}
+Add some files or folders to copy first.	Primero añade algunos archivos o carpetas que copiar.
+Choose where to copy them to.	Elige dónde copiarlos.
+Can't copy "{0}" into itself. Choose a destination outside that folder.	No se puede copiar "{0}" dentro de sí mismo. Elige un destino fuera de esa carpeta.
+Mirror works with folders. "{0}" is a file: use Copy for files.	Espejo funciona con carpetas. "{0}" es un archivo: usa Copiar para archivos.
+"{0}" is already in {1}. Choose a different destination.	"{0}" ya está en {1}. Elige otro destino.
+"{0}" can't be found. It may have been moved or deleted.	No se encuentra "{0}". Puede que se haya movido o eliminado.
+robocopy {0}	robocopy {0}
+/s /t 60 /c "KUDUCOPY finished copying. Windows will shut down in 60 seconds."	/s /t 60 /c "KUDUCOPY finished copying. Windows will shut down in 60 seconds."
+New	Nuevo
+Only in the destination	Solo en el destino
+Already there, identical	Ya está allí, idéntico
+Yours is newer	El tuyo es más reciente
+The one there is newer	El que hay allí es más reciente
+Same date, different size	Misma fecha, distinto tamaño
+Files to include / skip	Archivos que incluir / omitir
+Retry & errors	Reintentos y errores
+Speed & threads	Velocidad e hilos
+Logging	Registro
+Monitor & schedule	Vigilancia y horario
+D data, A attributes, T timestamps, S security (permissions), O owner, U auditing, X skip alternate data streams	D datos, A atributos, T marcas de tiempo, S seguridad (permisos), O propietario, U auditoría, X omitir flujos de datos alternativos
+D data, A attributes, T timestamps, E extended attributes, X skip alternate data streams	D datos, A atributos, T marcas de tiempo, E atributos extendidos, X omitir flujos de datos alternativos
+R read-only, A archive, S system, H hidden, C compressed, N not indexed, E encrypted, T temporary, O offline	R solo lectura, A archivo, S sistema, H oculto, C comprimido, N sin indexar, E cifrado, T temporal, O sin conexión
+Copy subfolders, but not empty ones	Copiar subcarpetas, pero no las vacías
+Copy subfolders, including empty ones	Copiar subcarpetas, también las vacías
+Only copy the top n levels of folders	Copiar solo los n primeros niveles de carpetas
+Restartable mode: a broken copy continues where it stopped (slower for small files)	Modo reiniciable: una copia interrumpida sigue donde se quedó (más lento con archivos pequeños)
+Backup mode: copy files even without permission to read them	Modo de copia de seguridad: copiar archivos aunque no haya permiso para leerlos
+Restartable mode, switching to backup mode when access is denied	Modo reiniciable, pasando a modo de copia de seguridad si se deniega el acceso
+Unbuffered copy. Faster for very large files	Copia sin búfer. Más rápida para archivos muy grandes
+Copy encrypted files in their encrypted form	Copiar los archivos cifrados tal como están cifrados
+What to copy for files	Qué copiar de los archivos
+What to copy for folders	Qué copiar de las carpetas
+Copy files with security (same as /COPY:DATS)	Copiar archivos con seguridad (igual que /COPY:DATS)
+Copy all file information (same as /COPY:DATSOU)	Copiar toda la información del archivo (igual que /COPY:DATSOU)
+Copy no file information (use with /PURGE)	No copiar información del archivo (usar con /PURGE)
+Fix security on all files, even skipped ones	Corregir la seguridad de todos los archivos, incluso los omitidos
+Fix timestamps on all files, even skipped ones	Corregir las marcas de tiempo de todos los archivos, incluso los omitidos
+Copy no folder information	No copiar información de carpetas
+Copy files without Windows copy offload	Copiar archivos sin la descarga de copia de Windows
+Compress data while it travels over the network	Comprimir los datos mientras viajan por la red
+Keep sparse files sparse	Mantener dispersos los archivos dispersos
+Don't use block cloning (ReFS / Dev Drive)	No usar la clonación de bloques (ReFS / Dev Drive)
+Copy symbolic links as links, not the files they point to	Copiar los enlaces simbólicos como enlaces, no los archivos a los que apuntan
+Copy junctions as junctions, not the folders they point to	Copiar las uniones como uniones, no las carpetas a las que apuntan
+Create the folder tree and empty (zero-length) files only	Crear solo el árbol de carpetas y archivos vacíos (de longitud cero)
+Create destination files with 8.3 FAT names only	Crear los archivos de destino solo con nombres FAT 8.3
+Turn off support for very long paths (over 256 characters)	Desactivar las rutas muy largas (más de 256 caracteres)
+Add these attributes to copied files	Añadir estos atributos a los archivos copiados
+Remove these attributes from copied files	Quitar estos atributos de los archivos copiados
+Delete files and folders in the destination that aren't in the source	Eliminar del destino los archivos y carpetas que no están en el origen
+Purge DELETES files and folders in the destination that aren't in the source.	Purge ELIMINA del destino los archivos y carpetas que no están en el origen.
+Mirror a folder: copy everything and DELETE extra files in the destination	Hacer espejo de una carpeta: copiar todo y ELIMINAR los archivos de más del destino
+Mirror DELETES files and folders in the destination that aren't in the source.	Espejo ELIMINA del destino los archivos y carpetas que no están en el origen.
+Skip files matching these names, paths or wildcards (e.g. *.tmp)	Omitir los archivos que coincidan con estos nombres, rutas o comodines (p. ej. *.tmp)
+Skip folders matching these names or paths	Omitir las carpetas que coincidan con estos nombres o rutas
+Only copy files with the Archive attribute set	Copiar solo los archivos con el atributo Archive activado
+Only copy files with the Archive attribute, and reset it	Copiar solo los archivos con el atributo Archive, y quitarlo
+Only include files with any of these attributes	Incluir solo archivos con alguno de estos atributos
+Skip files with any of these attributes	Omitir archivos con alguno de estos atributos
+Skip changed files (same time, different size)	Omitir archivos cambiados (misma hora, distinto tamaño)
+Skip files that are newer in the source	Omitir archivos que son más recientes en el origen
+Skip files that are older in the source	Omitir archivos que son más antiguos en el origen
+Skip extra files and folders (only in the destination). Keeps /PURGE from deleting them	Omitir archivos y carpetas de más (solo en el destino). Evita que /PURGE los elimine
+Skip lonely files and folders (only in the source)	Omitir archivos y carpetas sueltos (solo en el origen)
+Include modified files (different change time)	Incluir archivos modificados (distinta hora de cambio)
+Include same files (copy even if identical)	Incluir archivos iguales (copiar aunque sean idénticos)
+Include tweaked files (same size and time, different attributes)	Incluir archivos retocados (mismo tamaño y hora, distintos atributos)
+Skip files bigger than n bytes	Omitir archivos de más de n bytes
+Skip files smaller than n bytes	Omitir archivos de menos de n bytes
+Skip files older than n days (or a date as YYYYMMDD)	Omitir archivos de más de n días (o una fecha como AAAAMMDD)
+Skip files newer than n days (or a date as YYYYMMDD)	Omitir archivos de menos de n días (o una fecha como AAAAMMDD)
+Skip files not used since n days (or a date as YYYYMMDD)	Omitir archivos sin usar desde hace n días (o una fecha como AAAAMMDD)
+Skip files used since n days (or a date as YYYYMMDD)	Omitir archivos usados en los últimos n días (o una fecha como AAAAMMDD)
+Skip junction points and symbolic links	Omitir puntos de unión y enlaces simbólicos
+Skip symbolic links to folders and junctions	Omitir enlaces simbólicos a carpetas y uniones
+Skip symbolic links to files	Omitir enlaces simbólicos a archivos
+Assume FAT file times (2-second precision). Useful for NAS and USB drives	Usar horas de archivo FAT (precisión de 2 segundos). Útil para NAS y unidades USB
+Allow for 1-hour daylight saving time differences	Permitir diferencias de 1 hora por el horario de verano
+Retries when a file can't be copied	Reintentos cuando un archivo no se puede copiar
+Seconds to wait between retries	Segundos de espera entre reintentos
+Save the /R and /W values as Robocopy's defaults in the registry	Guardar los valores /R y /W como predeterminados de Robocopy en el registro
+Wait for network share names to be defined (retry error 67)	Esperar a que se definan los nombres de recursos de red (reintentar el error 67)
+Low free space mode: pause when the destination is nearly full	Modo de poco espacio libre: pausar cuando el destino está casi lleno
+Copy with this many threads at once (1 to 128). Much faster for many small files	Copiar con estos hilos a la vez (1 a 128). Mucho más rápido con muchos archivos pequeños
+Wait this many milliseconds between packets, to leave bandwidth for others	Esperar estos milisegundos entre paquetes, para dejar ancho de banda a los demás
+Largest read/write size per copy cycle (e.g. 1m)	Mayor tamaño de lectura/escritura por ciclo de copia (p. ej. 1m)
+Limit the copy speed (e.g. 50m = 50 MB per second)	Limitar la velocidad de copia (p. ej. 50m = 50 MB por segundo)
+Only throttle files bigger than this (e.g. 100m)	Limitar solo los archivos mayores que esto (p. ej. 100m)
+Write the log to this file (replaces it)	Escribir el registro en este archivo (lo reemplaza)
+Add the log to the end of this file	Añadir el registro al final de este archivo
+Write the log as Unicode to this file (replaces it)	Escribir el registro en Unicode en este archivo (lo reemplaza)
+Add the Unicode log to the end of this file	Añadir el registro Unicode al final de este archivo
+Verbose: also list skipped files	Detallado: listar también los archivos omitidos
+Report all extra files, not just selected ones	Informar de todos los archivos de más, no solo los seleccionados
+Show source file timestamps	Mostrar las marcas de tiempo del archivo de origen
+Don't log file sizes	No registrar los tamaños de archivo
+Don't log file names	No registrar los nombres de archivo
+With /NFL KUDUCOPY can't show which file is being copied.	Con /NFL KUDUCOPY no puede mostrar qué archivo se está copiando.
+Don't show per-file progress	No mostrar el progreso por archivo
+With /NP KUDUCOPY can only show progress when each file finishes.	Con /NP KUDUCOPY solo puede mostrar el progreso cuando termina cada archivo.
+Show the estimated time of arrival for each file	Mostrar la hora estimada de llegada de cada archivo
+Keep watching the source and copy again after n changes	Seguir vigilando el origen y copiar de nuevo tras n cambios
+Monitoring keeps running until you press Cancel.	La vigilancia sigue hasta que pulses Cancelar.
+Keep watching the source and copy again every n minutes if it changed	Seguir vigilando el origen y copiar de nuevo cada n minutos si cambió
+Only copy between these times of day (hhmm-hhmm, e.g. 2200-0600)	Copiar solo entre estas horas del día (hhmm-hhmm, p. ej. 2200-0600)
+Check the run hours per file, not per pass	Comprobar las horas de funcionamiento por archivo, no por pasada
+{0} needs a whole number.	{0} necesita un número entero.
+/MT must be between 1 and 128 threads.	/MT debe estar entre 1 y 128 hilos.
+{0} needs at least one attribute letter.	{0} necesita al menos una letra de atributo.
+{0} doesn't know the letter(s) {1}. Use {2}.	{0} no conoce la(s) letra(s) {1}. Usa {2}.
+/RH needs two times like 2200-0600.	/RH necesita dos horas como 2200-0600.
+In use by another program	Lo está usando otro programa
+Part of the file is locked by another program	Parte del archivo está bloqueada por otro programa
+Not enough space on the destination	No hay espacio suficiente en el destino
+The name isn't valid on the destination	El nombre no es válido en el destino
+The name or path is too long	El nombre o la ruta es demasiado largo
+The file or folder is damaged and can't be read	El archivo o la carpeta está dañado y no se puede leer
+Error {0}	Error {0}
+Theme	Tema
+Advanced	Avanzado
+Conflict	Conflicto
+Verify	Comprobar
+Hash	Hash
+Favourites	Favoritos
+Switches	Switches
+Player	Player
+Paste with KUDUCOPY	Pegar con KUDUCOPY
+{0} --paste "%V"	{0} --paste "%V"
+Paste into this folder with KUDUCOPY	Pegar en esta carpeta con KUDUCOPY
+{0} --paste "%1"	{0} --paste "%1"
+Directory	Directory
+Copy to…	Copiar a…
+Move to…	Mover a…
+Choose a folder…	Elegir una carpeta…
+{1} {0}-ask "%1"	{1} {0}-ask "%1"
+{0}.tmp	{0}.tmp
+{0}.json	{0}.json
+Today, {0}	Hoy, {0}
+Yesterday, {0}	Ayer, {0}
+Done · verified	Hecho · comprobado
+ · {0} deleted	 · {0} eliminados
+1 failed	1 falló
+{0} failed	{0} fallaron
+Failed	Falló
+Missing theme resource {0}	Missing theme resource {0}
+Light	Claro
+Styles	Styles
+Dark	Oscuro
+Application	Application
+Preferred DropEffect	Preferred DropEffect
+Also compare file contents (slower)	Comparar también el contenido de los archivos (más lento)
+Compare folders · KUDUCOPY	Comparar carpetas · KUDUCOPY
+Reads files of the same size on both sides and compares their checksums, to find changes that kept the same size and date.	Lee los archivos del mismo tamaño en ambos lados y compara sus sumas de comprobación, para encontrar cambios que mantuvieron el tamaño y la fecha.
+Compare	Comparar
+Copy selected to the right	Copiar lo seleccionado a la derecha
+Copy selected to the left	Copiar lo seleccionado a la izquierda
+Copy list	Copiar lista
+Save report…	Guardar informe…
+Compare two folders	Comparar dos carpetas
+See which files are only on one side, newer, or different. Nothing is copied unless you choose to.	Mira qué archivos están solo en un lado, son más recientes o son distintos. No se copia nada salvo que lo elijas.
+Browse…	Examinar…
+Choose the {0} folder	Elige la carpeta {0}
+Left	Izquierda
+Right	Derecha
+Swap	Intercambiar
+Files	Archivos
+State	Estado
+Name	Nombre
+Folder	Carpeta
+Close	Cerrar
+Choose two folders and press Compare.	Elige dos carpetas y pulsa Comparar.
+Choose a folder for both sides first.	Primero elige una carpeta para cada lado.
+Stop	Detener
+Comparing, and reading files to compare their contents…	Comparando, y leyendo los archivos para comparar su contenido…
+Comparing…	Comparando…
+Stopped. Press Compare to start again.	Detenido. Pulsa Comparar para empezar de nuevo.
+The folders couldn't be compared:\n{0}	No se pudieron comparar las carpetas:\n{0}
+Compared size, date and contents.	Se compararon tamaño, fecha y contenido.
+Compared size and date. Files whose dates are within 2 seconds count as the same.	Se compararon tamaño y fecha. Los archivos con fechas a menos de 2 segundos cuentan como iguales.
+Only left	Solo izquierda
+Only right	Solo derecha
+Left newer	Izquierda más reciente
+Right newer	Derecha más reciente
+Same content	Mismo contenido
+The folders match: {0}, all the same.	Las carpetas coinciden: {0}, todos iguales.
+{0} couldn't be read, so the comparison may be incomplete. First: {1}	{0} no se pudieron leer, así que la comparación puede estar incompleta. El primero: {1}
+Both folders are empty.	Las dos carpetas están vacías.
+All	Todo
+Copy {0} to the right	Copiar {0} a la derecha
+Copy {0} to the left	Copiar {0} a la izquierda
+Select files to copy them across (Ctrl+A selects everything shown, Shift or Ctrl+click for more).	Selecciona archivos para copiarlos al otro lado (Ctrl+A selecciona todo lo mostrado; Mayús o Ctrl+clic para más).
+Copy {0} to {1}?	¿Copiar {0} a {1}?
+{0} there will be replaced.	Se reemplazarán {0} allí.
+{0} of them is NEWER than the file you're copying over it.	{0} de ellos es MÁS RECIENTE que el archivo que vas a copiar encima.
+{0} of them are NEWER than the file you're copying over it.	{0} de ellos son MÁS RECIENTES que el archivo que vas a copiar encima.
+Copying in a separate window. Press Compare again when it's finished to see the result.	Copiando en otra ventana. Pulsa Comparar de nuevo cuando termine para ver el resultado.
+Save the comparison	Guardar la comparación
+Compare {0} and {1}.txt	Comparar {0} y {1}.txt
+Text file (tab separated)	Archivo de texto (separado por tabulaciones)
+All files	Todos los archivos
+The report couldn't be saved:\n\n{0}	No se pudo guardar el informe:\n\n{0}
+Theirs is newer	El de allí es más reciente
+Different size	Distinto tamaño
+{0} already exists in {1}	{0} ya existe en {1}
+{0} already exist in {1}	{0} ya existen en {1}
+File	Archivo
+You're copying	Lo que copias
+Already there	Ya está allí
+and {0} more…	y {0} más…
+Overwrite all	Reemplazar todo
+Replace the {0} files in {1} with these ones.	Reemplazar los {0} archivos de {1} por estos.
+Replace if newer	Reemplazar si es más reciente
+Only replace files where the one you're copying is newer. {0} of {1}.	Reemplazar solo los archivos en los que el que copias es más reciente. {0} de {1}.
+Skip all	Omitir todo
+Keep the files already there. Copy everything else.	Conservar los archivos que ya están allí. Copiar todo lo demás.
+Keep both	Conservar ambos
+Copy these as new files, e.g. "photo (2).jpg".	Copiar estos como archivos nuevos, p. ej. "photo (2).jpg".
+Let me decide for each file	Dejarme decidir en cada archivo
+See the {0} files side by side and choose one by one.	Ver los {0} archivos uno al lado del otro y elegir uno a uno.
+Remember this choice for future copies (change it in the main window)	Recordar esta elección para próximas copias (se cambia en la ventana principal)
+Found before copying started. Nothing has been changed yet.	Encontrado antes de empezar a copiar. Aún no se ha cambiado nada.
+Continue	Continuar
+Cancel job	Cancelar trabajo
+Files already exist · KUDUCOPY	Los archivos ya existen · KUDUCOPY
+Yours: {0}	El tuyo: {0}
+There: {0}	Allí: {0}
+Replace	Reemplazar
+Skip	Omitir
+For all files:	Para todos los archivos:
+Replace only newer	Reemplazar solo los más recientes
+Showing the first {0} of {1}. "For all files" applies to every file.	Se muestran los primeros {0} de {1}. "Para todos los archivos" se aplica a todos.
+Choose for each of the {0}	Elegir en cada uno de los {0}
+Choose for each file · KUDUCOPY	Elegir en cada archivo · KUDUCOPY
+Error message shown: {0}	Error message shown: {0}
+Save	Guardar
+Cancel	Cancelar
+Copied as {0}	Copiado como {0}
+Copied · verified	Copiado · comprobado
+Skipped	Omitido
+Waiting · keep both	Esperando · conservar ambos
+Waiting · replace	Esperando · reemplazar
+Waiting	Esperando
+{0} · KUDUCOPY	{0} · KUDUCOPY
+Pause	Pausar
+Skip this file	Omitir este archivo
+{0} {1} to {2}	{0} {1} a {2}
+From {0}	Desde {0}
+Advanced options	Opciones avanzadas
+Play a sound	Reproducir un sonido
+Sleep	Suspender
+Shut down	Apagar
+Do nothing	No hacer nada
+Now:	Ahora:
+When finished:	Al terminar:
+Size	Tamaño
+Status	Estado
+Verifying · {0} of {1} checked	Comprobando · {0} de {1} comprobados
+{0} of {1} · {2} of {3}	{0} de {1} · {2} de {3}
+Press Resume to continue	Pulsa Reanudar para continuar
+About {0} left	Quedan unos {0}
+{0} of {1}	{0} de {1}
+Waiting in queue	En cola
+Finding files	Buscando archivos
+Verifying	Comprobando
+done	hecho
+copied	copiado
+copying	copiando
+retrying	reintentando
+failed	falló
+skipped	omitido
+waiting	esperando
+already there	ya está allí
+Resume	Reanudar
+Stop this job? Files already copied stay where they are.	¿Detener este trabajo? Los archivos ya copiados se quedan donde están.
+This job is still running. Stop it and close?	Este trabajo sigue en marcha. ¿Detenerlo y cerrar?
+Finished · KUDUCOPY	Terminado · KUDUCOPY
+Finished · saved in History	Terminado · guardado en el historial
+Not going to sleep or shutting down: other jobs are still running.	No se suspende ni se apaga: hay otros trabajos en marcha.
+{0} {1} of {2} to {3}	{0} {1} de {2} a {3}
+Cancelled · {0} of {1} {2}	Cancelado · {0} de {1} {2}
+moved	movidos
+mirrored	con espejo
+The job couldn't finish	El trabajo no pudo terminar
+{0} that only existed in the destination was deleted.	{0} que solo estaba en el destino se eliminó.
+{0} that only existed in the destination were deleted.	{0} que solo estaban en el destino se eliminaron.
+Every copy was verified.	Todas las copias se comprobaron.
+{0} already there or skipped.	{0} ya estaban o se omitieron.
+Everything was copied.	Se copió todo.
+verified ({0}) ✓	comprobado ({0}) ✓
+skipped or already there	omitidos o ya estaban
+couldn't be copied	no se pudieron copiar
+deleted from the destination	eliminados del destino
+at {0} average	a {0} de media
+in total	en total
+Couldn't be copied	No se pudieron copiar
+Close any programs using these files, then retry.	Cierra los programas que usan estos archivos y vuelve a intentarlo.
+Retry {0}	Reintentar {0}
+Open destination	Abrir destino
+Save checksums…	Guardar sumas de comprobación…
+View log	Ver registro
+Windows will shut down in 60 seconds.	Windows se apagará en 60 segundos.
+Cancel shutdown	Cancelar el apagado
+Saved {0}	Guardado {0}
+Couldn't save the checksum file:\n\n{0}	No se pudo guardar el archivo de sumas de comprobación:\n\n{0}
+Standard	Estándar
+Verify copies	Comprobar copias
+Keep going if a file can't be copied	Seguir si un archivo no se puede copiar
+KUDUCOPY	KUDUCOPY
+Start copying	Empezar a copiar
+Make the destination folder an exact copy of the source folder. Files that are only in the destination are deleted.	Hacer que la carpeta de destino sea una copia exacta de la de origen. Los archivos que solo están en el destino se eliminan.
+files and folders	archivos y carpetas
+Compare two folders and see which files are only on one side, newer or different	Comparar dos carpetas y ver qué archivos están solo en un lado, son más recientes o distintos
+History	Historial
+Settings	Ajustes
+Preview	Vista previa
+See what will be copied, replaced, skipped or deleted, before anything happens	Ver qué se copiará, reemplazará, omitirá o eliminará, antes de que pase nada
+From	Desde
+Add files	Añadir archivos
+Choose files to copy	Elegir archivos para copiar
+Add folder	Añadir carpeta
+Choose a folder to copy	Elegir una carpeta para copiar
+Drop files or folders here, or press	Suelta aquí archivos o carpetas, o pulsa
+to paste files you copied in File Explorer	para pegar archivos que copiaste en el Explorador de archivos
+Choose where to copy to	Elige dónde copiar
+Add this folder to favourites	Añadir esta carpeta a favoritos
+To	A
+Options	Opciones
+If a file already exists	Si un archivo ya existe
+Ask me	Preguntarme
+Overwrite	Reemplazar
+Tries 3 times, then skips the file and lists it at the end so you can retry. When off, the job stops at the first problem.	Lo intenta 3 veces, luego omite el archivo y lo muestra al final para que puedas reintentarlo. Si está desactivado, el trabajo se detiene en el primer problema.
+When finished	Al terminar
+Robocopy options	Opciones de Robocopy
+Search all options…	Buscar en todas las opciones…
+Change	Cambiar
+Files, folders and destination are chosen in Standard mode. Verify and When finished apply here too.	Los archivos, carpetas y destino se eligen en el modo estándar. Comprobar y Al terminar también se aplican aquí.
+Robocopy command	Comando de Robocopy
+Extra options	Opciones extra
+Anything typed here is added to the command as it is, e.g. /XA:H /MAXAGE:30	Lo que escribas aquí se añade al comando tal cual, p. ej. /XA:H /MAXAGE:30
+Job files	Archivos de trabajo
+Load .rcj…	Cargar .rcj…
+Save as .rcj…	Guardar como .rcj…
+Robocopy job files can also be run from a script or Task Scheduler: robocopy /JOB:file	Los archivos de trabajo de Robocopy también se pueden ejecutar desde un script o el Programador de tareas: robocopy /JOB:file
+Reset to the default options	Volver a las opciones predeterminadas
+{0} on · {1}	{0} activadas · {1}
+{0} options available	{0} opciones disponibles
+Robocopy {0} · {1} options available on this PC	Robocopy {0} · {1} opciones disponibles en este PC
+Search	Buscar
+Options matching "{0}"	Opciones que coinciden con "{0}"
+No options match.	Ninguna opción coincide.
+How files and folders are copied	Cómo se copian archivos y carpetas
+Which files are copied	Qué archivos se copian
+What happens when a file can't be copied	Qué pasa cuando un archivo no se puede copiar
+Threads and bandwidth	Hilos y ancho de banda
+Robocopy's own log file	El registro propio de Robocopy
+Keep copying as things change	Seguir copiando según cambien las cosas
+Default: {0}	Predeterminado: {0}
+none	ninguno
+Needs admin	Necesita administrador
+Deletes files	Elimina archivos
+Empty uses {0}	Vacío usa {0}
+Robocopy's default	Predeterminado de Robocopy
+Advanced mode · every option maps to a Robocopy switch	Modo avanzado · cada opción corresponde a un parámetro de Robocopy
+Standard mode · switch to Advanced for every Robocopy option	Modo estándar · cambia a Avanzado para ver todas las opciones de Robocopy
+On. After copying, KUDUCOPY reads every file again and compares {0} checksums. Slower, but proves each copy is identical.	Activado. Después de copiar, KUDUCOPY vuelve a leer cada archivo y compara sumas {0}. Más lento, pero demuestra que cada copia es idéntica.
+Off. When on, KUDUCOPY compares checksums after copying. Slower, but proves each copy is identical.	Desactivado. Si se activa, KUDUCOPY compara sumas de comprobación tras copiar. Más lento, pero demuestra que cada copia es idéntica.
+Mirror replaces changed files and DELETES files that are only in the destination folder. You'll see a preview first.	Espejo reemplaza los archivos cambiados y ELIMINA los que solo están en la carpeta de destino. Verás una vista previa primero.
+Nothing to paste. Copy or cut files in File Explorer first.	Nada que pegar. Primero copia o corta archivos en el Explorador de archivos.
+Added {0} from the clipboard (cut, so Move is selected).	Se añadieron {0} del portapapeles (cortados, así que se eligió Mover).
+Added {0} from the clipboard.	Se añadieron {0} del portapapeles.
+Remove from the list	Quitar de la lista
+Counting…	Contando…
+· counting…	· contando…
+Copy to {0}. Right-click to remove.	Copiar a {0}. Clic derecho para quitar.
+Remove from favourites	Quitar de favoritos
+Choose an existing folder first, then add it to favourites.	Primero elige una carpeta existente y luego añádela a favoritos.
+{0} added to favourites.	{0} se añadió a favoritos.
+Network folder	Carpeta de red
+Free space can't be checked in advance for network folders.	El espacio libre no se puede comprobar de antemano en carpetas de red.
+Local Disk	Disco local
+{0} free of {1}	{0} libres de {1}
+After copying: about {0} free. Enough space ✓	Después de copiar: unos {0} libres. Hay espacio suficiente ✓
+Not enough space: about {0} more is needed.	No hay espacio suficiente: faltan unos {0}.
+Ready · uses Windows' built-in Robocopy{0}	Listo · usa el Robocopy que trae Windows{0}
+Robocopy wasn't found on this PC. It's part of Windows; check {0}	No se encontró Robocopy en este PC. Forma parte de Windows; revisa {0}
+One command per source ({0} in total). 	Un comando por origen ({0} en total). 
+{0}Grey options are added by KUDUCOPY to show progress. Options this PC's Robocopy doesn't support are hidden.	{0}Las opciones en gris las añade KUDUCOPY para mostrar el progreso. Las opciones que el Robocopy de este PC no admite están ocultas.
+Robocopy command copied. Paste it into a terminal to run the same copy without KUDUCOPY.	Comando de Robocopy copiado. Pégalo en una terminal para hacer la misma copia sin KUDUCOPY.
+Save a Robocopy job file	Guardar un archivo de trabajo de Robocopy
+KUDUCOPY job.rcj	KUDUCOPY job.rcj
+Robocopy job	Trabajo de Robocopy
+Add a folder to copy and choose a destination first. A job file contains them.	Primero añade una carpeta que copiar y elige un destino. El archivo de trabajo los contiene.
+Robocopy didn't create the job file.	Robocopy no creó el archivo de trabajo.
+Couldn't save the job file:\n\n{0}	No se pudo guardar el archivo de trabajo:\n\n{0}
+Load a Robocopy job file	Cargar un archivo de trabajo de Robocopy
+Loaded {0} · {1} options	Cargado {0} · {1} opciones
+Couldn't read the job file:\n\n{0}	No se pudo leer el archivo de trabajo:\n\n{0}
+Add files or folders to {0}	Añade archivos o carpetas para {0}
+Drag them in, use Add files / Add folder, or paste with Ctrl+V.	Arrástralos, usa Añadir archivos / Añadir carpeta, o pega con Ctrl+V.
+ and {0} more	 y {0} más
+Mirror {0} to {1}	Espejo de {0} en {1}
+The destination folder becomes an exact copy. Files only there are deleted. You'll see a preview first.	La carpeta de destino se convierte en una copia exacta. Los archivos que solo están allí se eliminan. Verás una vista previa primero.
+{0} {1} ({2}) to {3}	{0} {1} ({2}) a {3}
+Another job is copying to {0}; this one will wait its turn.	Otro trabajo está copiando a {0}; este esperará su turno.
+Advanced mode · {0}	Modo avanzado · {0}
+verify on ({0})	comprobación activada ({0})
+Preview mirror…	Vista previa del espejo…
+Start moving	Empezar a mover
+Started: {0} to {1}. You can add another job now.	Empezado: {0} a {1}. Ya puedes añadir otro trabajo.
+Add some files or folders to copy first. Drag them in, use Add files / Add folder, or paste with Ctrl+V.	Primero añade algunos archivos o carpetas que copiar. Arrástralos, usa Añadir archivos / Añadir carpeta, o pega con Ctrl+V.
+Choose where to copy to.	Elige dónde copiar.
+Mirror works with folders. Remove the files from the list, or choose Copy.	Espejo funciona con carpetas. Quita los archivos de la lista o elige Copiar.
+Fix these options first:\n\n{0}	Primero corrige estas opciones:\n\n{0}
+/COPY:O or U	/COPY:O or U
+{0} needs administrator rights.\n\nRestart KUDUCOPY as administrator and start this job?	{0} necesita permisos de administrador.\n\n¿Reiniciar KUDUCOPY como administrador y empezar este trabajo?
+{0} need administrator rights.\n\nRestart KUDUCOPY as administrator and start this job?	{0} necesitan permisos de administrador.\n\n¿Reiniciar KUDUCOPY como administrador y empezar este trabajo?
+{0} will DELETE files and folders in {1} that aren't in the source.\n\nUse Preview to see which ones. Start anyway?	{0} ELIMINARÁ los archivos y carpetas de {1} que no están en el origen.\n\nUsa la vista previa para ver cuáles. ¿Empezar de todos modos?
+Restart as administrator was cancelled.	Se canceló el reinicio como administrador.
+Couldn't restart as administrator:\n\n{0}	No se pudo reiniciar como administrador:\n\n{0}
+KUDUCOPY {0} is available. Open Settings → About to download it.	KUDUCOPY {0} está disponible. Abre Ajustes → Acerca de para descargarlo.
+History · KUDUCOPY	Historial · KUDUCOPY
+Search…	Buscar…
+When	Cuándo
+Result	Resultado
+No jobs yet. Every finished job is saved here.	Aún no hay trabajos. Cada trabajo terminado se guarda aquí.
+{0} · kept on this computer only	{0} · guardado solo en este ordenador
+{0} · {1} of {2} moved	{0} · {1} de {2} movidos
+{0} · {1} of {2} copied	{0} · {1} de {2} copiados
+and {0} more	y {0} más
+Run this job again	Repetir este trabajo
+View Robocopy log	Ver el registro de Robocopy
+Delete	Eliminar
+Remove this job from History? The copied files aren't touched.	¿Quitar este trabajo del historial? Los archivos copiados no se tocan.
+Favourites · KUDUCOPY	Favoritos · KUDUCOPY
+Favourite folders	Carpetas favoritas
+One click to copy there from the main window, and listed under "Copy to…" and "Move to…" when you right-click files in File Explorer.	Un clic para copiar allí desde la ventana principal, y aparecen en "Copiar a…" y "Mover a…" al hacer clic derecho en archivos en el Explorador de archivos.
+Add folder…	Añadir carpeta…
+Choose a favourite folder	Elegir una carpeta favorita
+Move up	Subir
+Move down	Bajar
+Remove	Quitar
+No favourites yet. Add the folders you copy to most often.	Aún no hay favoritos. Añade las carpetas a las que más copias.
+Settings · KUDUCOPY	Ajustes · KUDUCOPY
+Appearance	Apariencia
+Same as Windows	Igual que Windows
+Language	Idioma
+File Explorer	Explorador de archivos
+Add "Paste with KUDUCOPY", "Copy to…" and "Move to…" to the right-click menu	Añadir "Paste with KUDUCOPY", "Copy to…" y "Move to…" al menú del clic derecho
+For your Windows account only, no administrator rights needed. On Windows 11 they're under "Show more options".	Solo para tu cuenta de Windows, sin permisos de administrador. En Windows 11 están en "Mostrar más opciones".
+When files already exist, KUDUCOPY asks you.	Si los archivos ya existen, KUDUCOPY te pregunta.
+When files already exist: {0} (remembered).	Si los archivos ya existen: {0} (recordado).
+Ask me again	Volver a preguntarme
+Copy history and logs are saved on this computer only, in {0}	El historial de copias y los registros se guardan solo en este ordenador, en {0}
+Open the History folder	Abrir la carpeta del historial
+Updates	Actualizaciones
+Check for a new KUDUCOPY version when it starts	Buscar una nueva versión de KUDUCOPY al iniciar
+Only asks GitHub for the latest version number. Nothing is downloaded without asking.	Solo pregunta a GitHub el número de la última versión. No se descarga nada sin preguntar.
+About KUDUCOPY	Acerca de KUDUCOPY
+replace if newer	reemplazar si es más reciente
+keep both	conservar ambos
+Version {0} · Fast, reliable file copying	Versión {0} · Copia de archivos rápida y fiable
+Azeem, with Claude and	Azeem, with Claude and
+Made by	Made by
+Licence	Licencia
+MIT · free and open source	MIT · libre y de código abierto
+View	Ver
+Source code	Código fuente
+Copy engine	Motor de copia
+Robocopy (built into Windows)	Robocopy (incluido en Windows)
+Robocopy {0} (built into Windows)	Robocopy {0} (incluido en Windows)
+Third-party	De terceros
+Third-party notices	Avisos de terceros
+KUDUCOPY runs Robocopy, which is part of Windows, and doesn't include or change it. KUDUCOPY is not affiliated with, sponsored or endorsed by Microsoft. Windows and Robocopy are names of Microsoft.	KUDUCOPY ejecuta Robocopy, que forma parte de Windows, y no lo incluye ni lo cambia. KUDUCOPY no está afiliado, patrocinado ni respaldado por Microsoft. Windows y Robocopy son nombres de Microsoft.
+Check for updates	Buscar actualizaciones
+Couldn't find any published version yet.	Aún no se ha encontrado ninguna versión publicada.
+KUDUCOPY {0} is available. Open the download page?	KUDUCOPY {0} está disponible. ¿Abrir la página de descarga?
+You have the latest version.	Tienes la última versión.
+Couldn't check for updates. Check your internet connection and try again.	No se pudieron buscar actualizaciones. Revisa tu conexión a internet e inténtalo de nuevo.
+Preview · KUDUCOPY	Vista previa · KUDUCOPY
+Listing what would be copied…	Listando lo que se copiaría…
+Robocopy is checking the files in list-only mode. Nothing is copied.	Robocopy está revisando los archivos en modo de solo lista. No se copia nada.
+The preview couldn't be made	No se pudo hacer la vista previa
+You'll be asked	Se te preguntará
+Deleted from {0}	Eliminado de {0}
+Preview: {0} {1} to {2}	Vista previa: {0} {1} a {2}
+move	mover
+mirror	hacer espejo de
+copy	copiar
+Nothing has been copied yet. This is what Start would do with your Advanced options.	Aún no se ha copiado nada. Esto es lo que haría Empezar con tus opciones avanzadas.
+Nothing has been copied yet. This is what Start would do.	Aún no se ha copiado nada. Esto es lo que haría Empezar.
+new files	archivos nuevos
+will be replaced	se reemplazarán
+kept as new copies	se conservan como copias nuevas
+already there (you'll be asked)	ya están allí (se te preguntará)
+DELETED from the destination	ELIMINADOS del destino
+{0} in {1} will be DELETED by Mirror, because they aren't in the source.	{0} en {1} se ELIMINARÁN con Espejo, porque no están en el origen.
+{0} in {1} will be DELETED because /MIR or /PURGE is on. They aren't in the source.	{0} en {1} se ELIMINARÁN porque /MIR o /PURGE está activado. No están en el origen.
+Moving: the originals are removed after they're copied and verified.	Mover: los originales se quitan después de copiarlos y comprobarlos.
+Moving: the originals are removed after they're copied.	Mover: los originales se quitan después de copiarlos.
+What happens	Qué pasa
+Why	Por qué
+Nothing to copy: the sources are empty, or everything was left out by your options.	Nada que copiar: los orígenes están vacíos, o tus opciones lo dejaron todo fuera.
+Start {0}	Empezar a {0}
+Nothing to do: the destination is already up to date.	Nada que hacer: el destino ya está al día.
+Writes up to {0}. {1} has {2} free, so there's enough space ✓	Escribe hasta {0}. {1} tiene {2} libres, así que hay espacio suficiente ✓
+Not enough space: this writes up to {0}, but {1} only has {2} free.	No hay espacio suficiente: esto escribe hasta {0}, pero {1} solo tiene {2} libres.
+{0} in {1} will be DELETED. Start anyway?	Se ELIMINARÁN {0} en {1}. ¿Empezar de todos modos?
+{0} ran into a problem it couldn't get past, and has to close.	{0} ha encontrado un problema que no ha podido superar y tiene que cerrarse.
+{0} file	{0} archivo
+{0} files	{0} archivos
+{0} item	{0} elemento
+{0} items	{0} elementos
+{0} failed file	{0} archivo fallido
+{0} failed files	{0} archivos fallidos
+{0} option	{0} opción
+{0} options	{0} opciones
+{0} job	{0} trabajo
+{0} jobs	{0} trabajos

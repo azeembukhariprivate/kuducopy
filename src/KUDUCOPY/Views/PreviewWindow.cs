@@ -172,8 +172,8 @@ namespace Kuducopy.Views
 
             var verb = _spec.Verb;
             _content.Children.Add(Ui.Column(
-                Ui.Text($"Preview: {verb.ToLowerInvariant()} {_spec.SourceSummary} to {_spec.Destination}", 16, bold: true),
-                Ui.Subtle("Nothing has been copied yet. This is what Start would do" + (_spec.Advanced ? " with your Advanced options." : "."), 12.5)).At(0));
+                Ui.Text(Lang.T("Preview: {0} {1} to {2}", _spec.Mode == CopyMode.Move ? Lang.T("move") : _spec.Mode == CopyMode.Mirror ? Lang.T("mirror") : Lang.T("copy"), _spec.SourceSummary, _spec.Destination), 16, bold: true),
+                Ui.Subtle(_spec.Advanced ? "Nothing has been copied yet. This is what Start would do with your Advanced options." : "Nothing has been copied yet. This is what Start would do.", 12.5)).At(0));
 
             var stats = new UniformGrid { Rows = 1, Margin = new Thickness(0, 14, 0, 0) };
             void Stat(PreviewAction a, string label, string brush)
@@ -196,11 +196,11 @@ namespace Kuducopy.Views
             var space = SpaceNote(r.BytesToWrite);
             if (space != null) notes.Children.Add(space);
             if (r.Count(PreviewAction.Delete) > 0)
-                notes.Children.Add(Ui.Banner("IconWarn", Ui.Text($"{Format.Count(r.Count(PreviewAction.Delete), "file")} in {_spec.Destination} " +
-                    (_spec.Mode == CopyMode.Mirror ? "will be DELETED by Mirror, because they aren't in the source." : "will be DELETED because /MIR or /PURGE is on. They aren't in the source."),
+                notes.Children.Add(Ui.Banner("IconWarn", Ui.Text(Lang.T(_spec.Mode == CopyMode.Mirror ? "{0} in {1} will be DELETED by Mirror, because they aren't in the source." : "{0} in {1} will be DELETED because /MIR or /PURGE is on. They aren't in the source.",
+                    Format.Count(r.Count(PreviewAction.Delete), "file"), _spec.Destination),
                     12.5, wrap: true), "BadBg", "BadText").Margin(0, 8, 0, 0));
             if (_spec.Mode == CopyMode.Move)
-                notes.Children.Add(Ui.Subtle("Moving: the originals are removed after they're copied" + (_spec.Verify ? " and verified." : "."), 12.5).Margin(0, 8, 0, 0));
+                notes.Children.Add(Ui.Subtle(_spec.Verify ? "Moving: the originals are removed after they're copied and verified." : "Moving: the originals are removed after they're copied.", 12.5).Margin(0, 8, 0, 0));
             _content.Children.Add(notes.At(2));
 
             BuildFilters();

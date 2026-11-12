@@ -1,0 +1,598 @@
+There's nothing to paste. Copy (Ctrl+C) or cut (Ctrl+X) files in File Explorer first.	ഒട്ടിക്കാൻ ഒന്നുമില്ല. ആദ്യം File Explorer-ൽ ഫയലുകൾ പകർത്തുക (Ctrl+C) അല്ലെങ്കിൽ മുറിക്കുക (Ctrl+X).
+That destination can't be used:\n\n{0}	ആ ലക്ഷ്യസ്ഥാനം ഉപയോഗിക്കാനാകില്ല:\n\n{0}
+Something went wrong:\n\n{0}	എന്തോ കുഴപ്പം സംഭവിച്ചു:\n\n{0}
+Azeem Bukhari	Azeem Bukhari
+less than a second	ഒരു സെക്കൻഡിൽ താഴെ
+{0} h {1} min	{0} മണി {1} മിനിറ്റ്
+{0} min {1} s	{0} മിനിറ്റ് {1} സെ
+KUDUCOPY checksums {0}	KUDUCOPY checksums {0}
+Created by KUDUCOPY on	Created by KUDUCOPY on
+"{0}" can't be found.	"{0}" കണ്ടെത്താനാകുന്നില്ല.
+Choose two separate folders: one of them is inside the other.	വേറിട്ട രണ്ട് ഫോൾഡറുകൾ തിരഞ്ഞെടുക്കുക: ഒന്ന് മറ്റേതിനുള്ളിലാണ്.
+Only on the left	ഇടതുഭാഗത്ത് മാത്രം
+Only on the right	വലതുഭാഗത്ത് മാത്രം
+Left is newer	ഇടതുഭാഗത്തേത് പുതിയത്
+Right is newer	വലതുഭാഗത്തേത് പുതിയത്
+Different	വ്യത്യസ്തം
+Same	ഒരുപോലെ
+Left:\t{0}	Left:\t{0}
+Right:\t{0}	Right:\t{0}
+Compared:\t{0}	Compared:\t{0}
+size, date and contents	വലിപ്പം, തീയതി, ഉള്ളടക്കം
+size and date	വലിപ്പവും തീയതിയും
+State\tFile\tLeft size\tLeft modified\tRight size\tRight modified	State\tFile\tLeft size\tLeft modified\tRight size\tRight modified
+Couldn't read\t{0}	Couldn't read\t{0}
+Starting…	തുടങ്ങുന്നു…
+Paused	താൽക്കാലികമായി നിർത്തി
+Robocopy wasn't found in {0}.	{0}-ൽ Robocopy കണ്ടെത്തിയില്ല.
+KUDUCOPY {0} · {1} {2} → {3} · started {4}	KUDUCOPY {0} · {1} {2} → {3} · started {4}
+Cancelled	റദ്ദാക്കി
+Finished {0}: {1} · {2} copied, {3} failed, {4} skipped. {5}	Finished {0}: {1} · {2} copied, {3} failed, {4} skipped. {5}
+{0} files are only in the destination and will be deleted.	{0} ഫയലുകൾ ലക്ഷ്യസ്ഥാനത്ത് മാത്രമേയുള്ളൂ, അവ ഇല്ലാതാക്കും.
+Found {0} files ({1}).	{0} ഫയലുകൾ കണ്ടെത്തി ({1}).
+Existing files: {0}	നിലവിലുള്ള ഫയലുകൾ: {0}
+Mirror replaces changed files	മിറർ മാറിയ ഫയലുകൾ മാറ്റിവെക്കുന്നു
+Advanced options decide	വിപുലമായ ഓപ്ഷനുകൾ തീരുമാനിക്കുന്നു
+Listing: robocopy {0}	Listing: robocopy {0}
+Robocopy couldn't read "{0}" (exit code {1}). See the log for details.	Robocopy-ക്ക് "{0}" വായിക്കാൻ കഴിഞ്ഞില്ല (exit code {1}). വിശദാംശങ്ങൾക്ക് ലോഗ് കാണുക.
+Copying: robocopy {0}	Copying: robocopy {0}
+Skipped by you	നിങ്ങൾ ഒഴിവാക്കി
+Robocopy stopped with exit code {0} while copying "{1}".	"{1}" പകർത്തുമ്പോൾ Robocopy exit code {0} ഓടെ നിന്നു.
+· retrying	· വീണ്ടും ശ്രമിക്കുന്നു
+Stopped at the first error, because "Keep going if a file can't be copied" is off.	ആദ്യ പിശകിൽ നിന്നു, കാരണം "ഒരു ഫയൽ പകർത്താനായില്ലെങ്കിലും തുടരുക" ഓഫാണ്.
+{0}.log	{0}.log
+Couldn't write the log file {0}: {1}	ലോഗ് ഫയൽ {0} എഴുതാൻ കഴിഞ്ഞില്ല: {1}
+Couldn't read output line: {0}	ഔട്ട്പുട്ട് വരി വായിക്കാൻ കഴിഞ്ഞില്ല: {0}
+Copying ({0}): {1} → {2}	പകർത്തുന്നു ({0}): {1} → {2}
+Failed: {0}: {1}	പരാജയപ്പെട്ടു: {0}: {1}
+Access is denied	അനുമതി നിഷേധിച്ചു
+Not copied: the job stopped early	പകർത്തിയില്ല: ജോലി നേരത്തേ നിന്നു
+Not copied	പകർത്തിയില്ല
+Copied, but the original couldn't be removed	പകർത്തി, പക്ഷേ മൂലഫയൽ നീക്കം ചെയ്യാനായില്ല
+The copy doesn't match the original ({0} differs)	പകർപ്പ് മൂലവുമായി യോജിക്കുന്നില്ല ({0} വ്യത്യസ്തം)
+Couldn't verify: {0}	പരിശോധിക്കാൻ കഴിഞ്ഞില്ല: {0}
+Copied, but the original couldn't be removed: {0}	പകർത്തി, പക്ഷേ മൂലഫയൽ നീക്കം ചെയ്യാനായില്ല: {0}
+The drive {0} isn't ready. Is it plugged in?	ഡ്രൈവ് {0} തയ്യാറല്ല. അത് ഘടിപ്പിച്ചിട്ടുണ്ടോ?
+Not enough space on {0}: this needs {1}, but only {2} is free.	{0}-ൽ മതിയായ ഇടമില്ല: ഇതിന് {1} വേണം, പക്ഷേ {2} മാത്രമേ ഒഴിവുള്ളൂ.
+1 file couldn't be copied.	1 ഫയൽ പകർത്താനായില്ല.
+{0} files couldn't be copied.	{0} ഫയലുകൾ പകർത്താനായില്ല.
+Nothing to copy: every file was already there.	പകർത്താൻ ഒന്നുമില്ല: എല്ലാ ഫയലുകളും ഇതിനകം അവിടെയുണ്ട്.
+Nothing to copy.	പകർത്താൻ ഒന്നുമില്ല.
+Done	കഴിഞ്ഞു
+Finding files…	ഫയലുകൾ കണ്ടെത്തുന്നു…
+Waiting for another job on {0} to finish…	{0}-ലെ മറ്റൊരു ജോലി കഴിയാൻ കാത്തിരിക്കുന്നു…
+{0} files you chose to keep or replace…	സൂക്ഷിക്കാനോ മാറ്റിവെക്കാനോ നിങ്ങൾ തിരഞ്ഞെടുത്ത {0} ഫയലുകൾ…
+Verifying copies ({0})…	പകർപ്പുകൾ പരിശോധിക്കുന്നു ({0})…
+Removing the originals…	മൂലഫയലുകൾ നീക്കം ചെയ്യുന്നു…
+user	user
+KUDUCOPY hub	KUDUCOPY hub
+Move	നീക്കുക
+Mirror	മിറർ
+Copy	പകർത്തുക
+Moving	നീക്കുന്നു
+Mirroring	മിറർ ചെയ്യുന്നു
+Copying	പകർത്തുന്നു
+Moved	നീക്കി
+Mirrored	മിറർ ചെയ്തു
+Copied	പകർത്തി
+{0} and {1}	{0}, {1}
+{0}, {1} and {2} more	{0}, {1}, കൂടാതെ {2} എണ്ണം കൂടി
+Drive {0}	ഡ്രൈവ് {0}
+Add some files or folders to copy first.	ആദ്യം പകർത്താൻ ചില ഫയലുകളോ ഫോൾഡറുകളോ ചേർക്കുക.
+Choose where to copy them to.	എവിടേക്ക് പകർത്തണമെന്ന് തിരഞ്ഞെടുക്കുക.
+Can't copy "{0}" into itself. Choose a destination outside that folder.	"{0}" അതിനുള്ളിലേക്ക് തന്നെ പകർത്താനാകില്ല. ആ ഫോൾഡറിന് പുറത്തുള്ള ലക്ഷ്യസ്ഥാനം തിരഞ്ഞെടുക്കുക.
+Mirror works with folders. "{0}" is a file: use Copy for files.	മിറർ ഫോൾഡറുകളിൽ മാത്രം പ്രവർത്തിക്കും. "{0}" ഒരു ഫയലാണ്: ഫയലുകൾക്ക് പകർത്തുക ഉപയോഗിക്കുക.
+"{0}" is already in {1}. Choose a different destination.	"{0}" ഇതിനകം {1}-ലുണ്ട്. മറ്റൊരു ലക്ഷ്യസ്ഥാനം തിരഞ്ഞെടുക്കുക.
+"{0}" can't be found. It may have been moved or deleted.	"{0}" കണ്ടെത്താനാകുന്നില്ല. അത് നീക്കുകയോ ഇല്ലാതാക്കുകയോ ചെയ്തിരിക്കാം.
+robocopy {0}	robocopy {0}
+/s /t 60 /c "KUDUCOPY finished copying. Windows will shut down in 60 seconds."	/s /t 60 /c "KUDUCOPY finished copying. Windows will shut down in 60 seconds."
+New	പുതിയത്
+Only in the destination	ലക്ഷ്യസ്ഥാനത്ത് മാത്രം
+Already there, identical	ഇതിനകം അവിടെയുണ്ട്, ഒരുപോലെ
+Yours is newer	നിങ്ങളുടേത് പുതിയത്
+The one there is newer	അവിടെയുള്ളത് പുതിയത്
+Same date, different size	ഒരേ തീയതി, വ്യത്യസ്ത വലിപ്പം
+Files to include / skip	ഉൾപ്പെടുത്തേണ്ട / ഒഴിവാക്കേണ്ട ഫയലുകൾ
+Retry & errors	വീണ്ടും ശ്രമിക്കലും പിശകുകളും
+Speed & threads	വേഗതയും ത്രെഡുകളും
+Logging	ലോഗിംഗ്
+Monitor & schedule	നിരീക്ഷണവും സമയക്രമവും
+D data, A attributes, T timestamps, S security (permissions), O owner, U auditing, X skip alternate data streams	D ഡാറ്റ, A ആട്രിബ്യൂട്ടുകൾ, T സമയമുദ്രകൾ, S സുരക്ഷ (അനുമതികൾ), O ഉടമ, U ഓഡിറ്റിംഗ്, X ഇതര ഡാറ്റ സ്ട്രീമുകൾ ഒഴിവാക്കുക
+D data, A attributes, T timestamps, E extended attributes, X skip alternate data streams	D ഡാറ്റ, A ആട്രിബ്യൂട്ടുകൾ, T സമയമുദ്രകൾ, E വിപുലമായ ആട്രിബ്യൂട്ടുകൾ, X ഇതര ഡാറ്റ സ്ട്രീമുകൾ ഒഴിവാക്കുക
+R read-only, A archive, S system, H hidden, C compressed, N not indexed, E encrypted, T temporary, O offline	R വായിക്കാൻ മാത്രം, A ആർക്കൈവ്, S സിസ്റ്റം, H മറച്ചത്, C ചുരുക്കിയത്, N സൂചികയില്ലാത്തത്, E എൻക്രിപ്റ്റ് ചെയ്തത്, T താൽക്കാലികം, O ഓഫ്‌ലൈൻ
+Copy subfolders, but not empty ones	ഉപഫോൾഡറുകൾ പകർത്തുക, ശൂന്യമായവ ഒഴികെ
+Copy subfolders, including empty ones	ശൂന്യമായവ ഉൾപ്പെടെ ഉപഫോൾഡറുകൾ പകർത്തുക
+Only copy the top n levels of folders	ഫോൾഡറുകളുടെ മുകളിലെ n തലങ്ങൾ മാത്രം പകർത്തുക
+Restartable mode: a broken copy continues where it stopped (slower for small files)	പുനരാരംഭിക്കാവുന്ന രീതി: മുറിഞ്ഞ പകർത്തൽ നിന്നിടത്തുനിന്ന് തുടരും (ചെറിയ ഫയലുകൾക്ക് പതുക്കെ)
+Backup mode: copy files even without permission to read them	ബാക്കപ്പ് രീതി: വായിക്കാൻ അനുമതിയില്ലെങ്കിലും ഫയലുകൾ പകർത്തുക
+Restartable mode, switching to backup mode when access is denied	പുനരാരംഭിക്കാവുന്ന രീതി, അനുമതി നിഷേധിക്കുമ്പോൾ ബാക്കപ്പ് രീതിയിലേക്ക് മാറുന്നു
+Unbuffered copy. Faster for very large files	ബഫറില്ലാത്ത പകർത്തൽ. വളരെ വലിയ ഫയലുകൾക്ക് വേഗം കൂടും
+Copy encrypted files in their encrypted form	എൻക്രിപ്റ്റ് ചെയ്ത ഫയലുകൾ എൻക്രിപ്റ്റ് ചെയ്ത രൂപത്തിൽ തന്നെ പകർത്തുക
+What to copy for files	ഫയലുകൾക്ക് എന്തൊക്കെ പകർത്തണം
+What to copy for folders	ഫോൾഡറുകൾക്ക് എന്തൊക്കെ പകർത്തണം
+Copy files with security (same as /COPY:DATS)	സുരക്ഷയോടെ ഫയലുകൾ പകർത്തുക (/COPY:DATS പോലെ)
+Copy all file information (same as /COPY:DATSOU)	ഫയലിന്റെ എല്ലാ വിവരങ്ങളും പകർത്തുക (/COPY:DATSOU പോലെ)
+Copy no file information (use with /PURGE)	ഫയൽ വിവരങ്ങളൊന്നും പകർത്തരുത് (/PURGE-നൊപ്പം ഉപയോഗിക്കുക)
+Fix security on all files, even skipped ones	ഒഴിവാക്കിയവ ഉൾപ്പെടെ എല്ലാ ഫയലുകളുടെയും സുരക്ഷ ശരിയാക്കുക
+Fix timestamps on all files, even skipped ones	ഒഴിവാക്കിയവ ഉൾപ്പെടെ എല്ലാ ഫയലുകളുടെയും സമയമുദ്രകൾ ശരിയാക്കുക
+Copy no folder information	ഫോൾഡർ വിവരങ്ങളൊന്നും പകർത്തരുത്
+Copy files without Windows copy offload	Windows copy offload ഇല്ലാതെ ഫയലുകൾ പകർത്തുക
+Compress data while it travels over the network	നെറ്റ്‌വർക്കിലൂടെ പോകുമ്പോൾ ഡാറ്റ ചുരുക്കുക
+Keep sparse files sparse	സ്പാർസ് ഫയലുകൾ സ്പാർസ് ആയി തന്നെ സൂക്ഷിക്കുക
+Don't use block cloning (ReFS / Dev Drive)	ബ്ലോക്ക് ക്ലോണിംഗ് ഉപയോഗിക്കരുത് (ReFS / Dev Drive)
+Copy symbolic links as links, not the files they point to	സിംബോളിക് ലിങ്കുകൾ അവ ചൂണ്ടുന്ന ഫയലുകളായല്ല, ലിങ്കുകളായി പകർത്തുക
+Copy junctions as junctions, not the folders they point to	ജംഗ്ഷനുകൾ അവ ചൂണ്ടുന്ന ഫോൾഡറുകളായല്ല, ജംഗ്ഷനുകളായി പകർത്തുക
+Create the folder tree and empty (zero-length) files only	ഫോൾഡർ ഘടനയും ശൂന്യമായ (പൂജ്യം നീളമുള്ള) ഫയലുകളും മാത്രം ഉണ്ടാക്കുക
+Create destination files with 8.3 FAT names only	ലക്ഷ്യ ഫയലുകൾ 8.3 FAT പേരുകളിൽ മാത്രം ഉണ്ടാക്കുക
+Turn off support for very long paths (over 256 characters)	വളരെ നീളമുള്ള പാതകൾക്കുള്ള (256 അക്ഷരത്തിന് മുകളിൽ) പിന്തുണ ഓഫാക്കുക
+Add these attributes to copied files	പകർത്തിയ ഫയലുകളിൽ ഈ ആട്രിബ്യൂട്ടുകൾ ചേർക്കുക
+Remove these attributes from copied files	പകർത്തിയ ഫയലുകളിൽ നിന്ന് ഈ ആട്രിബ്യൂട്ടുകൾ നീക്കുക
+Delete files and folders in the destination that aren't in the source	ഉറവിടത്തിൽ ഇല്ലാത്ത ഫയലുകളും ഫോൾഡറുകളും ലക്ഷ്യസ്ഥാനത്ത് നിന്ന് ഇല്ലാതാക്കുക
+Purge DELETES files and folders in the destination that aren't in the source.	ഉറവിടത്തിൽ ഇല്ലാത്ത ഫയലുകളും ഫോൾഡറുകളും Purge ലക്ഷ്യസ്ഥാനത്ത് നിന്ന് ഇല്ലാതാക്കുന്നു.
+Mirror a folder: copy everything and DELETE extra files in the destination	ഒരു ഫോൾഡർ മിറർ ചെയ്യുക: എല്ലാം പകർത്തി ലക്ഷ്യസ്ഥാനത്തെ അധിക ഫയലുകൾ ഇല്ലാതാക്കുക
+Mirror DELETES files and folders in the destination that aren't in the source.	ഉറവിടത്തിൽ ഇല്ലാത്ത ഫയലുകളും ഫോൾഡറുകളും മിറർ ലക്ഷ്യസ്ഥാനത്ത് നിന്ന് ഇല്ലാതാക്കുന്നു.
+Skip files matching these names, paths or wildcards (e.g. *.tmp)	ഈ പേരുകളോ പാതകളോ വൈൽഡ്കാർഡുകളോ യോജിക്കുന്ന ഫയലുകൾ ഒഴിവാക്കുക (ഉദാ. *.tmp)
+Skip folders matching these names or paths	ഈ പേരുകളോ പാതകളോ യോജിക്കുന്ന ഫോൾഡറുകൾ ഒഴിവാക്കുക
+Only copy files with the Archive attribute set	Archive ആട്രിബ്യൂട്ടുള്ള ഫയലുകൾ മാത്രം പകർത്തുക
+Only copy files with the Archive attribute, and reset it	Archive ആട്രിബ്യൂട്ടുള്ള ഫയലുകൾ മാത്രം പകർത്തി, അത് മായ്ക്കുക
+Only include files with any of these attributes	ഈ ആട്രിബ്യൂട്ടുകളിൽ ഏതെങ്കിലുമുള്ള ഫയലുകൾ മാത്രം ഉൾപ്പെടുത്തുക
+Skip files with any of these attributes	ഈ ആട്രിബ്യൂട്ടുകളിൽ ഏതെങ്കിലുമുള്ള ഫയലുകൾ ഒഴിവാക്കുക
+Skip changed files (same time, different size)	മാറിയ ഫയലുകൾ ഒഴിവാക്കുക (ഒരേ സമയം, വ്യത്യസ്ത വലിപ്പം)
+Skip files that are newer in the source	ഉറവിടത്തിൽ പുതിയതായ ഫയലുകൾ ഒഴിവാക്കുക
+Skip files that are older in the source	ഉറവിടത്തിൽ പഴയതായ ഫയലുകൾ ഒഴിവാക്കുക
+Skip extra files and folders (only in the destination). Keeps /PURGE from deleting them	അധിക ഫയലുകളും ഫോൾഡറുകളും ഒഴിവാക്കുക (ലക്ഷ്യസ്ഥാനത്ത് മാത്രമുള്ളവ). /PURGE അവ ഇല്ലാതാക്കുന്നത് തടയുന്നു
+Skip lonely files and folders (only in the source)	ഒറ്റപ്പെട്ട ഫയലുകളും ഫോൾഡറുകളും ഒഴിവാക്കുക (ഉറവിടത്തിൽ മാത്രമുള്ളവ)
+Include modified files (different change time)	മാറ്റം വന്ന ഫയലുകൾ ഉൾപ്പെടുത്തുക (വ്യത്യസ്ത മാറ്റ സമയം)
+Include same files (copy even if identical)	ഒരുപോലെയുള്ള ഫയലുകൾ ഉൾപ്പെടുത്തുക (ഒരുപോലെയാണെങ്കിലും പകർത്തുക)
+Include tweaked files (same size and time, different attributes)	ചെറുതായി മാറിയ ഫയലുകൾ ഉൾപ്പെടുത്തുക (ഒരേ വലിപ്പവും സമയവും, വ്യത്യസ്ത ആട്രിബ്യൂട്ടുകൾ)
+Skip files bigger than n bytes	n ബൈറ്റിനേക്കാൾ വലിയ ഫയലുകൾ ഒഴിവാക്കുക
+Skip files smaller than n bytes	n ബൈറ്റിനേക്കാൾ ചെറിയ ഫയലുകൾ ഒഴിവാക്കുക
+Skip files older than n days (or a date as YYYYMMDD)	n ദിവസത്തേക്കാൾ പഴയ ഫയലുകൾ ഒഴിവാക്കുക (അല്ലെങ്കിൽ YYYYMMDD ആയി ഒരു തീയതി)
+Skip files newer than n days (or a date as YYYYMMDD)	n ദിവസത്തേക്കാൾ പുതിയ ഫയലുകൾ ഒഴിവാക്കുക (അല്ലെങ്കിൽ YYYYMMDD ആയി ഒരു തീയതി)
+Skip files not used since n days (or a date as YYYYMMDD)	n ദിവസമായി ഉപയോഗിക്കാത്ത ഫയലുകൾ ഒഴിവാക്കുക (അല്ലെങ്കിൽ YYYYMMDD ആയി ഒരു തീയതി)
+Skip files used since n days (or a date as YYYYMMDD)	n ദിവസത്തിനുള്ളിൽ ഉപയോഗിച്ച ഫയലുകൾ ഒഴിവാക്കുക (അല്ലെങ്കിൽ YYYYMMDD ആയി ഒരു തീയതി)
+Skip junction points and symbolic links	ജംഗ്ഷൻ പോയിന്റുകളും സിംബോളിക് ലിങ്കുകളും ഒഴിവാക്കുക
+Skip symbolic links to folders and junctions	ഫോൾഡറുകളിലേക്കുള്ള സിംബോളിക് ലിങ്കുകളും ജംഗ്ഷനുകളും ഒഴിവാക്കുക
+Skip symbolic links to files	ഫയലുകളിലേക്കുള്ള സിംബോളിക് ലിങ്കുകൾ ഒഴിവാക്കുക
+Assume FAT file times (2-second precision). Useful for NAS and USB drives	FAT ഫയൽ സമയങ്ങൾ കണക്കാക്കുക (2 സെക്കൻഡ് കൃത്യത). NAS-നും USB ഡ്രൈവുകൾക്കും ഉപകാരപ്രദം
+Allow for 1-hour daylight saving time differences	1 മണിക്കൂർ പകൽ ലാഭ സമയ വ്യത്യാസങ്ങൾ അനുവദിക്കുക
+Retries when a file can't be copied	ഒരു ഫയൽ പകർത്താനാകാത്തപ്പോൾ എത്ര തവണ വീണ്ടും ശ്രമിക്കണം
+Seconds to wait between retries	ശ്രമങ്ങൾക്കിടയിൽ കാത്തിരിക്കേണ്ട സെക്കൻഡുകൾ
+Save the /R and /W values as Robocopy's defaults in the registry	/R, /W മൂല്യങ്ങൾ Robocopy-യുടെ സാധാരണ മൂല്യങ്ങളായി രജിസ്ട്രിയിൽ സേവ് ചെയ്യുക
+Wait for network share names to be defined (retry error 67)	നെറ്റ്‌വർക്ക് ഷെയർ പേരുകൾ നിർവചിക്കപ്പെടാൻ കാത്തിരിക്കുക (പിശക് 67 വീണ്ടും ശ്രമിക്കുക)
+Low free space mode: pause when the destination is nearly full	കുറഞ്ഞ ഒഴിവിടം രീതി: ലക്ഷ്യസ്ഥാനം ഏതാണ്ട് നിറയുമ്പോൾ നിർത്തിവെക്കുക
+Copy with this many threads at once (1 to 128). Much faster for many small files	ഒരേസമയം ഇത്രയും ത്രെഡുകളിൽ പകർത്തുക (1 മുതൽ 128 വരെ). ധാരാളം ചെറിയ ഫയലുകൾക്ക് വളരെ വേഗം
+Wait this many milliseconds between packets, to leave bandwidth for others	മറ്റുള്ളവർക്ക് ബാൻഡ്‌വിഡ്ത്ത് വിടാൻ പാക്കറ്റുകൾക്കിടയിൽ ഇത്ര മില്ലിസെക്കൻഡ് കാത്തിരിക്കുക
+Largest read/write size per copy cycle (e.g. 1m)	ഓരോ പകർത്തൽ ചക്രത്തിലും ഏറ്റവും വലിയ വായന/എഴുത്ത് വലിപ്പം (ഉദാ. 1m)
+Limit the copy speed (e.g. 50m = 50 MB per second)	പകർത്തൽ വേഗത പരിമിതപ്പെടുത്തുക (ഉദാ. 50m = സെക്കൻഡിൽ 50 MB)
+Only throttle files bigger than this (e.g. 100m)	ഇതിനേക്കാൾ വലിയ ഫയലുകൾക്ക് മാത്രം വേഗത കുറയ്ക്കുക (ഉദാ. 100m)
+Write the log to this file (replaces it)	ലോഗ് ഈ ഫയലിലേക്ക് എഴുതുക (അതിനെ മാറ്റിവെക്കുന്നു)
+Add the log to the end of this file	ലോഗ് ഈ ഫയലിന്റെ അവസാനം ചേർക്കുക
+Write the log as Unicode to this file (replaces it)	ലോഗ് Unicode ആയി ഈ ഫയലിലേക്ക് എഴുതുക (അതിനെ മാറ്റിവെക്കുന്നു)
+Add the Unicode log to the end of this file	Unicode ലോഗ് ഈ ഫയലിന്റെ അവസാനം ചേർക്കുക
+Verbose: also list skipped files	വിശദമായി: ഒഴിവാക്കിയ ഫയലുകളും പട്ടികപ്പെടുത്തുക
+Report all extra files, not just selected ones	തിരഞ്ഞെടുത്തവ മാത്രമല്ല, എല്ലാ അധിക ഫയലുകളും റിപ്പോർട്ട് ചെയ്യുക
+Show source file timestamps	ഉറവിട ഫയലിന്റെ സമയമുദ്രകൾ കാണിക്കുക
+Don't log file sizes	ഫയൽ വലിപ്പങ്ങൾ ലോഗ് ചെയ്യരുത്
+Don't log file names	ഫയൽ പേരുകൾ ലോഗ് ചെയ്യരുത്
+With /NFL KUDUCOPY can't show which file is being copied.	/NFL ഉള്ളപ്പോൾ ഏത് ഫയലാണ് പകർത്തുന്നതെന്ന് KUDUCOPY-ക്ക് കാണിക്കാനാകില്ല.
+Don't show per-file progress	ഓരോ ഫയലിന്റെയും പുരോഗതി കാണിക്കരുത്
+With /NP KUDUCOPY can only show progress when each file finishes.	/NP ഉള്ളപ്പോൾ ഓരോ ഫയലും കഴിയുമ്പോൾ മാത്രമേ KUDUCOPY-ക്ക് പുരോഗതി കാണിക്കാനാകൂ.
+Show the estimated time of arrival for each file	ഓരോ ഫയലും എത്തുന്ന ഏകദേശ സമയം കാണിക്കുക
+Keep watching the source and copy again after n changes	ഉറവിടം നിരീക്ഷിച്ചുകൊണ്ടിരുന്ന് n മാറ്റങ്ങൾക്ക് ശേഷം വീണ്ടും പകർത്തുക
+Monitoring keeps running until you press Cancel.	റദ്ദാക്കുക അമർത്തുന്നതുവരെ നിരീക്ഷണം തുടരും.
+Keep watching the source and copy again every n minutes if it changed	ഉറവിടം നിരീക്ഷിച്ചുകൊണ്ടിരുന്ന് മാറിയാൽ ഓരോ n മിനിറ്റിലും വീണ്ടും പകർത്തുക
+Only copy between these times of day (hhmm-hhmm, e.g. 2200-0600)	ദിവസത്തിലെ ഈ സമയങ്ങൾക്കിടയിൽ മാത്രം പകർത്തുക (hhmm-hhmm, ഉദാ. 2200-0600)
+Check the run hours per file, not per pass	പ്രവർത്തന സമയം ഓരോ ഘട്ടത്തിനല്ല, ഓരോ ഫയലിനും പരിശോധിക്കുക
+{0} needs a whole number.	{0}-ന് ഒരു പൂർണ്ണസംഖ്യ വേണം.
+/MT must be between 1 and 128 threads.	/MT 1-നും 128-നും ഇടയിലുള്ള ത്രെഡുകളായിരിക്കണം.
+{0} needs at least one attribute letter.	{0}-ന് കുറഞ്ഞത് ഒരു ആട്രിബ്യൂട്ട് അക്ഷരം വേണം.
+{0} doesn't know the letter(s) {1}. Use {2}.	{0}-ന് {1} എന്ന അക്ഷരം(ങ്ങൾ) അറിയില്ല. {2} ഉപയോഗിക്കുക.
+/RH needs two times like 2200-0600.	/RH-ന് 2200-0600 പോലെ രണ്ട് സമയങ്ങൾ വേണം.
+In use by another program	മറ്റൊരു പ്രോഗ്രാം ഉപയോഗിക്കുന്നു
+Part of the file is locked by another program	ഫയലിന്റെ ഒരു ഭാഗം മറ്റൊരു പ്രോഗ്രാം പൂട്ടിയിരിക്കുന്നു
+Not enough space on the destination	ലക്ഷ്യസ്ഥാനത്ത് മതിയായ ഇടമില്ല
+The name isn't valid on the destination	ഈ പേര് ലക്ഷ്യസ്ഥാനത്ത് സാധുവല്ല
+The name or path is too long	പേരോ പാതയോ വളരെ നീളമുള്ളതാണ്
+The file or folder is damaged and can't be read	ഫയലോ ഫോൾഡറോ കേടായതിനാൽ വായിക്കാനാകില്ല
+Error {0}	പിശക് {0}
+Theme	തീം
+Advanced	വിപുലം
+Conflict	തർക്കം
+Verify	പരിശോധിക്കുക
+Hash	Hash
+Favourites	പ്രിയപ്പെട്ടവ
+Switches	Switches
+Player	Player
+Paste with KUDUCOPY	KUDUCOPY ഉപയോഗിച്ച് ഒട്ടിക്കുക
+{0} --paste "%V"	{0} --paste "%V"
+Paste into this folder with KUDUCOPY	KUDUCOPY ഉപയോഗിച്ച് ഈ ഫോൾഡറിലേക്ക് ഒട്ടിക്കുക
+{0} --paste "%1"	{0} --paste "%1"
+Directory	Directory
+Copy to…	ഇവിടേക്ക് പകർത്തുക…
+Move to…	ഇവിടേക്ക് നീക്കുക…
+Choose a folder…	ഒരു ഫോൾഡർ തിരഞ്ഞെടുക്കുക…
+{1} {0}-ask "%1"	{1} {0}-ask "%1"
+{0}.tmp	{0}.tmp
+{0}.json	{0}.json
+Today, {0}	ഇന്ന്, {0}
+Yesterday, {0}	ഇന്നലെ, {0}
+Done · verified	കഴിഞ്ഞു · പരിശോധിച്ചു
+ · {0} deleted	 · {0} ഇല്ലാതാക്കി
+1 failed	1 പരാജയപ്പെട്ടു
+{0} failed	{0} പരാജയപ്പെട്ടു
+Failed	പരാജയപ്പെട്ടു
+Missing theme resource {0}	Missing theme resource {0}
+Light	ലൈറ്റ്
+Styles	Styles
+Dark	ഡാർക്ക്
+Application	Application
+Preferred DropEffect	Preferred DropEffect
+Also compare file contents (slower)	ഫയലിന്റെ ഉള്ളടക്കവും താരതമ്യം ചെയ്യുക (പതുക്കെ)
+Compare folders · KUDUCOPY	ഫോൾഡറുകൾ താരതമ്യം ചെയ്യുക · KUDUCOPY
+Reads files of the same size on both sides and compares their checksums, to find changes that kept the same size and date.	രണ്ടുഭാഗത്തും ഒരേ വലിപ്പമുള്ള ഫയലുകൾ വായിച്ച് അവയുടെ ചെക്ക്സങ്ങൾ താരതമ്യം ചെയ്യുന്നു, വലിപ്പവും തീയതിയും മാറാത്ത മാറ്റങ്ങൾ കണ്ടെത്താൻ.
+Compare	താരതമ്യം ചെയ്യുക
+Copy selected to the right	തിരഞ്ഞെടുത്തവ വലത്തേക്ക് പകർത്തുക
+Copy selected to the left	തിരഞ്ഞെടുത്തവ ഇടത്തേക്ക് പകർത്തുക
+Copy list	പട്ടിക പകർത്തുക
+Save report…	റിപ്പോർട്ട് സേവ് ചെയ്യുക…
+Compare two folders	രണ്ട് ഫോൾഡറുകൾ താരതമ്യം ചെയ്യുക
+See which files are only on one side, newer, or different. Nothing is copied unless you choose to.	ഏതൊക്കെ ഫയലുകൾ ഒരുഭാഗത്ത് മാത്രം, പുതിയത്, അല്ലെങ്കിൽ വ്യത്യസ്തം എന്ന് കാണുക. നിങ്ങൾ തിരഞ്ഞെടുക്കാതെ ഒന്നും പകർത്തില്ല.
+Browse…	തിരയുക…
+Choose the {0} folder	{0} ഫോൾഡർ തിരഞ്ഞെടുക്കുക
+Left	ഇടത്
+Right	വലത്
+Swap	മാറ്റിവെക്കുക
+Files	ഫയലുകൾ
+State	നില
+Name	പേര്
+Folder	ഫോൾഡർ
+Close	അടയ്ക്കുക
+Choose two folders and press Compare.	രണ്ട് ഫോൾഡറുകൾ തിരഞ്ഞെടുത്ത് താരതമ്യം ചെയ്യുക അമർത്തുക.
+Choose a folder for both sides first.	ആദ്യം രണ്ടുഭാഗത്തേക്കും ഒരു ഫോൾഡർ തിരഞ്ഞെടുക്കുക.
+Stop	നിർത്തുക
+Comparing, and reading files to compare their contents…	താരതമ്യം ചെയ്യുന്നു, ഉള്ളടക്കം താരതമ്യം ചെയ്യാൻ ഫയലുകൾ വായിക്കുന്നു…
+Comparing…	താരതമ്യം ചെയ്യുന്നു…
+Stopped. Press Compare to start again.	നിർത്തി. വീണ്ടും തുടങ്ങാൻ താരതമ്യം ചെയ്യുക അമർത്തുക.
+The folders couldn't be compared:\n{0}	ഫോൾഡറുകൾ താരതമ്യം ചെയ്യാനായില്ല:\n{0}
+Compared size, date and contents.	വലിപ്പം, തീയതി, ഉള്ളടക്കം എന്നിവ താരതമ്യം ചെയ്തു.
+Compared size and date. Files whose dates are within 2 seconds count as the same.	വലിപ്പവും തീയതിയും താരതമ്യം ചെയ്തു. തീയതികൾ 2 സെക്കൻഡിനുള്ളിലുള്ള ഫയലുകൾ ഒരുപോലെയായി കണക്കാക്കുന്നു.
+Only left	ഇടത്ത് മാത്രം
+Only right	വലത്ത് മാത്രം
+Left newer	ഇടത്തേത് പുതിയത്
+Right newer	വലത്തേത് പുതിയത്
+Same content	ഒരേ ഉള്ളടക്കം
+The folders match: {0}, all the same.	ഫോൾഡറുകൾ ഒരുപോലെ: {0}, എല്ലാം ഒരുപോലെ.
+{0} couldn't be read, so the comparison may be incomplete. First: {1}	{0} വായിക്കാനായില്ല, അതിനാൽ താരതമ്യം അപൂർണ്ണമായിരിക്കാം. ആദ്യത്തേത്: {1}
+Both folders are empty.	രണ്ട് ഫോൾഡറുകളും ശൂന്യമാണ്.
+All	എല്ലാം
+Copy {0} to the right	{0} വലത്തേക്ക് പകർത്തുക
+Copy {0} to the left	{0} ഇടത്തേക്ക് പകർത്തുക
+Select files to copy them across (Ctrl+A selects everything shown, Shift or Ctrl+click for more).	ഫയലുകൾ മറുഭാഗത്തേക്ക് പകർത്താൻ തിരഞ്ഞെടുക്കുക (Ctrl+A കാണിച്ചതെല്ലാം തിരഞ്ഞെടുക്കും, കൂടുതലിന് Shift അല്ലെങ്കിൽ Ctrl+ക്ലിക്ക്).
+Copy {0} to {1}?	{0} {1}-ലേക്ക് പകർത്തണോ?
+{0} there will be replaced.	അവിടെയുള്ള {0} മാറ്റിവെക്കപ്പെടും.
+{0} of them is NEWER than the file you're copying over it.	അവയിൽ {0} എണ്ണം നിങ്ങൾ മുകളിൽ പകർത്തുന്ന ഫയലിനേക്കാൾ പുതിയതാണ്.
+{0} of them are NEWER than the file you're copying over it.	അവയിൽ {0} എണ്ണം നിങ്ങൾ മുകളിൽ പകർത്തുന്ന ഫയലിനേക്കാൾ പുതിയതാണ്.
+Copying in a separate window. Press Compare again when it's finished to see the result.	വേറൊരു ജാലകത്തിൽ പകർത്തുന്നു. ഫലം കാണാൻ കഴിയുമ്പോൾ വീണ്ടും താരതമ്യം ചെയ്യുക അമർത്തുക.
+Save the comparison	താരതമ്യം സേവ് ചെയ്യുക
+Compare {0} and {1}.txt	{0}-ഉം {1}-ഉം താരതമ്യം.txt
+Text file (tab separated)	ടെക്സ്റ്റ് ഫയൽ (ടാബ് കൊണ്ട് വേർതിരിച്ചത്)
+All files	എല്ലാ ഫയലുകളും
+The report couldn't be saved:\n\n{0}	റിപ്പോർട്ട് സേവ് ചെയ്യാനായില്ല:\n\n{0}
+Theirs is newer	അവരുടേത് പുതിയത്
+Different size	വ്യത്യസ്ത വലിപ്പം
+{0} already exists in {1}	{0} ഇതിനകം {1}-ലുണ്ട്
+{0} already exist in {1}	{0} ഇതിനകം {1}-ലുണ്ട്
+File	ഫയൽ
+You're copying	നിങ്ങൾ പകർത്തുന്നത്
+Already there	ഇതിനകം അവിടെയുള്ളത്
+and {0} more…	കൂടാതെ {0} എണ്ണം കൂടി…
+Overwrite all	എല്ലാം മാറ്റിവെക്കുക
+Replace the {0} files in {1} with these ones.	{1}-ലെ {0} ഫയലുകൾ ഇവ കൊണ്ട് മാറ്റിവെക്കുക.
+Replace if newer	പുതിയതാണെങ്കിൽ മാറ്റിവെക്കുക
+Only replace files where the one you're copying is newer. {0} of {1}.	നിങ്ങൾ പകർത്തുന്നത് പുതിയതാണെങ്കിൽ മാത്രം ഫയലുകൾ മാറ്റിവെക്കുക. {1}-ൽ {0}.
+Skip all	എല്ലാം ഒഴിവാക്കുക
+Keep the files already there. Copy everything else.	ഇതിനകം അവിടെയുള്ള ഫയലുകൾ സൂക്ഷിക്കുക. ബാക്കിയെല്ലാം പകർത്തുക.
+Keep both	രണ്ടും സൂക്ഷിക്കുക
+Copy these as new files, e.g. "photo (2).jpg".	ഇവ പുതിയ ഫയലുകളായി പകർത്തുക, ഉദാ. "photo (2).jpg".
+Let me decide for each file	ഓരോ ഫയലിനും ഞാൻ തീരുമാനിക്കാം
+See the {0} files side by side and choose one by one.	{0} ഫയലുകൾ അടുത്തടുത്ത് കണ്ട് ഓരോന്നായി തിരഞ്ഞെടുക്കുക.
+Remember this choice for future copies (change it in the main window)	ഭാവിയിലെ പകർത്തലുകൾക്കും ഈ തിരഞ്ഞെടുപ്പ് ഓർക്കുക (പ്രധാന ജാലകത്തിൽ മാറ്റാം)
+Found before copying started. Nothing has been changed yet.	പകർത്തൽ തുടങ്ങും മുമ്പ് കണ്ടെത്തിയത്. ഇതുവരെ ഒന്നും മാറ്റിയിട്ടില്ല.
+Continue	തുടരുക
+Cancel job	ജോലി റദ്ദാക്കുക
+Files already exist · KUDUCOPY	ഫയലുകൾ ഇതിനകം ഉണ്ട് · KUDUCOPY
+Yours: {0}	നിങ്ങളുടേത്: {0}
+There: {0}	അവിടെ: {0}
+Replace	മാറ്റിവെക്കുക
+Skip	ഒഴിവാക്കുക
+For all files:	എല്ലാ ഫയലുകൾക്കും:
+Replace only newer	പുതിയത് മാത്രം മാറ്റിവെക്കുക
+Showing the first {0} of {1}. "For all files" applies to every file.	{1}-ൽ ആദ്യത്തെ {0} കാണിക്കുന്നു. "എല്ലാ ഫയലുകൾക്കും" ഓരോ ഫയലിനും ബാധകം.
+Choose for each of the {0}	{0} ഓരോന്നിനും തിരഞ്ഞെടുക്കുക
+Choose for each file · KUDUCOPY	ഓരോ ഫയലിനും തിരഞ്ഞെടുക്കുക · KUDUCOPY
+Error message shown: {0}	Error message shown: {0}
+Save	സേവ് ചെയ്യുക
+Cancel	റദ്ദാക്കുക
+Copied as {0}	{0} ആയി പകർത്തി
+Copied · verified	പകർത്തി · പരിശോധിച്ചു
+Skipped	ഒഴിവാക്കി
+Waiting · keep both	കാത്തിരിക്കുന്നു · രണ്ടും സൂക്ഷിക്കുക
+Waiting · replace	കാത്തിരിക്കുന്നു · മാറ്റിവെക്കുക
+Waiting	കാത്തിരിക്കുന്നു
+{0} · KUDUCOPY	{0} · KUDUCOPY
+Pause	താൽക്കാലികമായി നിർത്തുക
+Skip this file	ഈ ഫയൽ ഒഴിവാക്കുക
+{0} {1} to {2}	{0}: {1} → {2}
+From {0}	{0}-ൽ നിന്ന്
+Advanced options	വിപുലമായ ഓപ്ഷനുകൾ
+Play a sound	ഒരു ശബ്ദം കേൾപ്പിക്കുക
+Sleep	ഉറങ്ങുക
+Shut down	ഷട്ട് ഡൗൺ ചെയ്യുക
+Do nothing	ഒന്നും ചെയ്യരുത്
+Now:	ഇപ്പോൾ:
+When finished:	കഴിയുമ്പോൾ:
+Size	വലിപ്പം
+Status	നില
+Verifying · {0} of {1} checked	പരിശോധിക്കുന്നു · {1}-ൽ {0} പരിശോധിച്ചു
+{0} of {1} · {2} of {3}	{1}-ൽ {0} · {3}-ൽ {2}
+Press Resume to continue	തുടരാൻ തുടരുക അമർത്തുക
+About {0} left	ഏകദേശം {0} ബാക്കി
+{0} of {1}	{1}-ൽ {0}
+Waiting in queue	ക്യൂവിൽ കാത്തിരിക്കുന്നു
+Finding files	ഫയലുകൾ കണ്ടെത്തുന്നു
+Verifying	പരിശോധിക്കുന്നു
+done	കഴിഞ്ഞു
+copied	പകർത്തി
+copying	പകർത്തുന്നു
+retrying	വീണ്ടും ശ്രമിക്കുന്നു
+failed	പരാജയപ്പെട്ടു
+skipped	ഒഴിവാക്കി
+waiting	കാത്തിരിക്കുന്നു
+already there	ഇതിനകം അവിടെയുണ്ട്
+Resume	തുടരുക
+Stop this job? Files already copied stay where they are.	ഈ ജോലി നിർത്തണോ? ഇതിനകം പകർത്തിയ ഫയലുകൾ അവിടെത്തന്നെയുണ്ടാകും.
+This job is still running. Stop it and close?	ഈ ജോലി ഇപ്പോഴും നടക്കുന്നു. നിർത്തി അടയ്ക്കണോ?
+Finished · KUDUCOPY	കഴിഞ്ഞു · KUDUCOPY
+Finished · saved in History	കഴിഞ്ഞു · ചരിത്രത്തിൽ സേവ് ചെയ്തു
+Not going to sleep or shutting down: other jobs are still running.	ഉറങ്ങുകയോ ഷട്ട് ഡൗൺ ചെയ്യുകയോ ഇല്ല: മറ്റ് ജോലികൾ ഇപ്പോഴും നടക്കുന്നു.
+{0} {1} of {2} to {3}	{0}: {2}-ൽ {1}, {3}-ലേക്ക്
+Cancelled · {0} of {1} {2}	റദ്ദാക്കി · {1}-ൽ {0} {2}
+moved	നീക്കി
+mirrored	മിറർ ചെയ്തു
+The job couldn't finish	ജോലി പൂർത്തിയാക്കാനായില്ല
+{0} that only existed in the destination was deleted.	ലക്ഷ്യസ്ഥാനത്ത് മാത്രമുണ്ടായിരുന്ന {0} ഇല്ലാതാക്കി.
+{0} that only existed in the destination were deleted.	ലക്ഷ്യസ്ഥാനത്ത് മാത്രമുണ്ടായിരുന്ന {0} ഇല്ലാതാക്കി.
+Every copy was verified.	എല്ലാ പകർപ്പുകളും പരിശോധിച്ചു.
+{0} already there or skipped.	{0} ഇതിനകം അവിടെയുണ്ടായിരുന്നു അല്ലെങ്കിൽ ഒഴിവാക്കി.
+Everything was copied.	എല്ലാം പകർത്തി.
+verified ({0}) ✓	പരിശോധിച്ചു ({0}) ✓
+skipped or already there	ഒഴിവാക്കി അല്ലെങ്കിൽ ഇതിനകം അവിടെയുണ്ട്
+couldn't be copied	പകർത്താനായില്ല
+deleted from the destination	ലക്ഷ്യസ്ഥാനത്ത് നിന്ന് ഇല്ലാതാക്കി
+at {0} average	ശരാശരി {0}
+in total	ആകെ
+Couldn't be copied	പകർത്താനായില്ല
+Close any programs using these files, then retry.	ഈ ഫയലുകൾ ഉപയോഗിക്കുന്ന പ്രോഗ്രാമുകൾ അടച്ച് വീണ്ടും ശ്രമിക്കുക.
+Retry {0}	{0} വീണ്ടും ശ്രമിക്കുക
+Open destination	ലക്ഷ്യസ്ഥാനം തുറക്കുക
+Save checksums…	ചെക്ക്സങ്ങൾ സേവ് ചെയ്യുക…
+View log	ലോഗ് കാണുക
+Windows will shut down in 60 seconds.	Windows 60 സെക്കൻഡിനുള്ളിൽ ഷട്ട് ഡൗൺ ആകും.
+Cancel shutdown	ഷട്ട് ഡൗൺ റദ്ദാക്കുക
+Saved {0}	{0} സേവ് ചെയ്തു
+Couldn't save the checksum file:\n\n{0}	ചെക്ക്സം ഫയൽ സേവ് ചെയ്യാനായില്ല:\n\n{0}
+Standard	സാധാരണ
+Verify copies	പകർപ്പുകൾ പരിശോധിക്കുക
+Keep going if a file can't be copied	ഒരു ഫയൽ പകർത്താനായില്ലെങ്കിലും തുടരുക
+KUDUCOPY	KUDUCOPY
+Start copying	പകർത്താൻ തുടങ്ങുക
+Make the destination folder an exact copy of the source folder. Files that are only in the destination are deleted.	ലക്ഷ്യ ഫോൾഡറിനെ ഉറവിട ഫോൾഡറിന്റെ കൃത്യമായ പകർപ്പാക്കുക. ലക്ഷ്യസ്ഥാനത്ത് മാത്രമുള്ള ഫയലുകൾ ഇല്ലാതാക്കും.
+files and folders	ഫയലുകളും ഫോൾഡറുകളും
+Compare two folders and see which files are only on one side, newer or different	രണ്ട് ഫോൾഡറുകൾ താരതമ്യം ചെയ്ത് ഏത് ഫയലുകൾ ഒരുഭാഗത്ത് മാത്രം, പുതിയത്, അല്ലെങ്കിൽ വ്യത്യസ്തം എന്ന് കാണുക
+History	ചരിത്രം
+Settings	ക്രമീകരണങ്ങൾ
+Preview	മുൻകാഴ്ച
+See what will be copied, replaced, skipped or deleted, before anything happens	എന്തെങ്കിലും നടക്കും മുമ്പ്, എന്ത് പകർത്തും, മാറ്റിവെക്കും, ഒഴിവാക്കും, ഇല്ലാതാക്കും എന്ന് കാണുക
+From	എവിടെനിന്ന്
+Add files	ഫയലുകൾ ചേർക്കുക
+Choose files to copy	പകർത്താനുള്ള ഫയലുകൾ തിരഞ്ഞെടുക്കുക
+Add folder	ഫോൾഡർ ചേർക്കുക
+Choose a folder to copy	പകർത്താനുള്ള ഫോൾഡർ തിരഞ്ഞെടുക്കുക
+Drop files or folders here, or press	ഫയലുകളോ ഫോൾഡറുകളോ ഇവിടെ ഇടുക, അല്ലെങ്കിൽ അമർത്തുക
+to paste files you copied in File Explorer	File Explorer-ൽ പകർത്തിയ ഫയലുകൾ ഒട്ടിക്കാൻ
+Choose where to copy to	എവിടേക്ക് പകർത്തണമെന്ന് തിരഞ്ഞെടുക്കുക
+Add this folder to favourites	ഈ ഫോൾഡർ പ്രിയപ്പെട്ടവയിൽ ചേർക്കുക
+To	എവിടേക്ക്
+Options	ഓപ്ഷനുകൾ
+If a file already exists	ഒരു ഫയൽ ഇതിനകം ഉണ്ടെങ്കിൽ
+Ask me	എന്നോട് ചോദിക്കുക
+Overwrite	മാറ്റിവെക്കുക
+Tries 3 times, then skips the file and lists it at the end so you can retry. When off, the job stops at the first problem.	3 തവണ ശ്രമിക്കും, പിന്നെ ആ ഫയൽ ഒഴിവാക്കി അവസാനം പട്ടികയിൽ കാണിക്കും, വീണ്ടും ശ്രമിക്കാൻ. ഓഫാണെങ്കിൽ, ആദ്യ പ്രശ്നത്തിൽ ജോലി നിൽക്കും.
+When finished	കഴിയുമ്പോൾ
+Robocopy options	Robocopy ഓപ്ഷനുകൾ
+Search all options…	എല്ലാ ഓപ്ഷനുകളിലും തിരയുക…
+Change	മാറ്റുക
+Files, folders and destination are chosen in Standard mode. Verify and When finished apply here too.	ഫയലുകളും ഫോൾഡറുകളും ലക്ഷ്യസ്ഥാനവും സാധാരണ രീതിയിൽ തിരഞ്ഞെടുക്കുന്നു. പരിശോധനയും കഴിയുമ്പോൾ എന്നതും ഇവിടെയും ബാധകം.
+Robocopy command	Robocopy കമാൻഡ്
+Extra options	അധിക ഓപ്ഷനുകൾ
+Anything typed here is added to the command as it is, e.g. /XA:H /MAXAGE:30	ഇവിടെ ടൈപ്പ് ചെയ്യുന്നതെന്തും അതുപോലെ കമാൻഡിൽ ചേർക്കും, ഉദാ. /XA:H /MAXAGE:30
+Job files	ജോലി ഫയലുകൾ
+Load .rcj…	.rcj തുറക്കുക…
+Save as .rcj…	.rcj ആയി സേവ് ചെയ്യുക…
+Robocopy job files can also be run from a script or Task Scheduler: robocopy /JOB:file	Robocopy ജോലി ഫയലുകൾ ഒരു സ്ക്രിപ്റ്റിൽ നിന്നോ ടാസ്ക് ഷെഡ്യൂളറിൽ നിന്നോ പ്രവർത്തിപ്പിക്കാം: robocopy /JOB:file
+Reset to the default options	സാധാരണ ഓപ്ഷനുകളിലേക്ക് മടങ്ങുക
+{0} on · {1}	{0} ഓൺ · {1}
+{0} options available	{0} ഓപ്ഷനുകൾ ലഭ്യം
+Robocopy {0} · {1} options available on this PC	Robocopy {0} · ഈ പിസിയിൽ {1} ഓപ്ഷനുകൾ ലഭ്യം
+Search	തിരയുക
+Options matching "{0}"	"{0}" യോജിക്കുന്ന ഓപ്ഷനുകൾ
+No options match.	യോജിക്കുന്ന ഓപ്ഷനുകളില്ല.
+How files and folders are copied	ഫയലുകളും ഫോൾഡറുകളും എങ്ങനെ പകർത്തുന്നു
+Which files are copied	ഏതൊക്കെ ഫയലുകൾ പകർത്തുന്നു
+What happens when a file can't be copied	ഒരു ഫയൽ പകർത്താനാകാത്തപ്പോൾ എന്ത് സംഭവിക്കും
+Threads and bandwidth	ത്രെഡുകളും ബാൻഡ്‌വിഡ്ത്തും
+Robocopy's own log file	Robocopy-യുടെ സ്വന്തം ലോഗ് ഫയൽ
+Keep copying as things change	മാറ്റങ്ങൾക്കൊപ്പം പകർത്തിക്കൊണ്ടിരിക്കുക
+Default: {0}	സാധാരണ: {0}
+none	ഒന്നുമില്ല
+Needs admin	അഡ്മിൻ വേണം
+Deletes files	ഫയലുകൾ ഇല്ലാതാക്കുന്നു
+Empty uses {0}	ശൂന്യമായാൽ {0} ഉപയോഗിക്കും
+Robocopy's default	Robocopy-യുടെ സാധാരണ
+Advanced mode · every option maps to a Robocopy switch	വിപുലമായ രീതി · ഓരോ ഓപ്ഷനും ഒരു Robocopy സ്വിച്ചാണ്
+Standard mode · switch to Advanced for every Robocopy option	സാധാരണ രീതി · എല്ലാ Robocopy ഓപ്ഷനുകൾക്കും വിപുലമായ രീതിയിലേക്ക് മാറുക
+On. After copying, KUDUCOPY reads every file again and compares {0} checksums. Slower, but proves each copy is identical.	ഓൺ. പകർത്തിയശേഷം KUDUCOPY ഓരോ ഫയലും വീണ്ടും വായിച്ച് {0} ചെക്ക്സങ്ങൾ താരതമ്യം ചെയ്യുന്നു. പതുക്കെയാണ്, പക്ഷേ ഓരോ പകർപ്പും ഒരുപോലെയാണെന്ന് തെളിയിക്കുന്നു.
+Off. When on, KUDUCOPY compares checksums after copying. Slower, but proves each copy is identical.	ഓഫ്. ഓണാക്കിയാൽ, പകർത്തിയശേഷം KUDUCOPY ചെക്ക്സങ്ങൾ താരതമ്യം ചെയ്യും. പതുക്കെയാണ്, പക്ഷേ ഓരോ പകർപ്പും ഒരുപോലെയാണെന്ന് തെളിയിക്കുന്നു.
+Mirror replaces changed files and DELETES files that are only in the destination folder. You'll see a preview first.	മിറർ മാറിയ ഫയലുകൾ മാറ്റിവെക്കുകയും ലക്ഷ്യ ഫോൾഡറിൽ മാത്രമുള്ള ഫയലുകൾ ഇല്ലാതാക്കുകയും ചെയ്യുന്നു. ആദ്യം ഒരു മുൻകാഴ്ച കാണാം.
+Nothing to paste. Copy or cut files in File Explorer first.	ഒട്ടിക്കാൻ ഒന്നുമില്ല. ആദ്യം File Explorer-ൽ ഫയലുകൾ പകർത്തുകയോ മുറിക്കുകയോ ചെയ്യുക.
+Added {0} from the clipboard (cut, so Move is selected).	ക്ലിപ്പ്ബോർഡിൽ നിന്ന് {0} ചേർത്തു (മുറിച്ചതിനാൽ നീക്കുക തിരഞ്ഞെടുത്തു).
+Added {0} from the clipboard.	ക്ലിപ്പ്ബോർഡിൽ നിന്ന് {0} ചേർത്തു.
+Remove from the list	പട്ടികയിൽ നിന്ന് നീക്കുക
+Counting…	എണ്ണുന്നു…
+· counting…	· എണ്ണുന്നു…
+Copy to {0}. Right-click to remove.	{0}-ലേക്ക് പകർത്തുക. നീക്കാൻ റൈറ്റ്-ക്ലിക്ക് ചെയ്യുക.
+Remove from favourites	പ്രിയപ്പെട്ടവയിൽ നിന്ന് നീക്കുക
+Choose an existing folder first, then add it to favourites.	ആദ്യം നിലവിലുള്ള ഒരു ഫോൾഡർ തിരഞ്ഞെടുത്ത്, പിന്നെ പ്രിയപ്പെട്ടവയിൽ ചേർക്കുക.
+{0} added to favourites.	{0} പ്രിയപ്പെട്ടവയിൽ ചേർത്തു.
+Network folder	നെറ്റ്‌വർക്ക് ഫോൾഡർ
+Free space can't be checked in advance for network folders.	നെറ്റ്‌വർക്ക് ഫോൾഡറുകൾക്ക് ഒഴിവിടം മുൻകൂട്ടി പരിശോധിക്കാനാകില്ല.
+Local Disk	ലോക്കൽ ഡിസ്ക്
+{0} free of {1}	{1}-ൽ {0} ഒഴിവ്
+After copying: about {0} free. Enough space ✓	പകർത്തിയശേഷം: ഏകദേശം {0} ഒഴിവ്. മതിയായ ഇടമുണ്ട് ✓
+Not enough space: about {0} more is needed.	മതിയായ ഇടമില്ല: ഏകദേശം {0} കൂടി വേണം.
+Ready · uses Windows' built-in Robocopy{0}	തയ്യാർ · Windows-ലെ Robocopy ഉപയോഗിക്കുന്നു{0}
+Robocopy wasn't found on this PC. It's part of Windows; check {0}	ഈ പിസിയിൽ Robocopy കണ്ടെത്തിയില്ല. ഇത് Windows-ന്റെ ഭാഗമാണ്; {0} പരിശോധിക്കുക
+One command per source ({0} in total). 	ഓരോ ഉറവിടത്തിനും ഒരു കമാൻഡ് (ആകെ {0}). 
+{0}Grey options are added by KUDUCOPY to show progress. Options this PC's Robocopy doesn't support are hidden.	{0}പുരോഗതി കാണിക്കാൻ KUDUCOPY ചേർത്തതാണ് ചാരനിറ ഓപ്ഷനുകൾ. ഈ പിസിയിലെ Robocopy പിന്തുണയ്ക്കാത്ത ഓപ്ഷനുകൾ മറച്ചിരിക്കുന്നു.
+Robocopy command copied. Paste it into a terminal to run the same copy without KUDUCOPY.	Robocopy കമാൻഡ് പകർത്തി. KUDUCOPY ഇല്ലാതെ ഇതേ പകർത്തൽ ചെയ്യാൻ ഒരു ടെർമിനലിൽ ഒട്ടിക്കുക.
+Save a Robocopy job file	Robocopy ജോലി ഫയൽ സേവ് ചെയ്യുക
+KUDUCOPY job.rcj	KUDUCOPY job.rcj
+Robocopy job	Robocopy ജോലി
+Add a folder to copy and choose a destination first. A job file contains them.	ആദ്യം പകർത്താൻ ഒരു ഫോൾഡർ ചേർത്ത് ലക്ഷ്യസ്ഥാനം തിരഞ്ഞെടുക്കുക. ജോലി ഫയലിൽ അവ ഉൾപ്പെടുന്നു.
+Robocopy didn't create the job file.	Robocopy ജോലി ഫയൽ ഉണ്ടാക്കിയില്ല.
+Couldn't save the job file:\n\n{0}	ജോലി ഫയൽ സേവ് ചെയ്യാനായില്ല:\n\n{0}
+Load a Robocopy job file	ഒരു Robocopy ജോലി ഫയൽ തുറക്കുക
+Loaded {0} · {1} options	{0} തുറന്നു · {1} ഓപ്ഷനുകൾ
+Couldn't read the job file:\n\n{0}	ജോലി ഫയൽ വായിക്കാനായില്ല:\n\n{0}
+Add files or folders to {0}	{0}-ലേക്ക് ഫയലുകളോ ഫോൾഡറുകളോ ചേർക്കുക
+Drag them in, use Add files / Add folder, or paste with Ctrl+V.	വലിച്ചിടുക, ഫയലുകൾ ചേർക്കുക / ഫോൾഡർ ചേർക്കുക ഉപയോഗിക്കുക, അല്ലെങ്കിൽ Ctrl+V കൊണ്ട് ഒട്ടിക്കുക.
+ and {0} more	 കൂടാതെ {0} എണ്ണം കൂടി
+Mirror {0} to {1}	{0} {1}-ലേക്ക് മിറർ ചെയ്യുക
+The destination folder becomes an exact copy. Files only there are deleted. You'll see a preview first.	ലക്ഷ്യ ഫോൾഡർ കൃത്യമായ പകർപ്പാകും. അവിടെ മാത്രമുള്ള ഫയലുകൾ ഇല്ലാതാക്കും. ആദ്യം ഒരു മുൻകാഴ്ച കാണാം.
+{0} {1} ({2}) to {3}	{0}: {1} ({2}) → {3}
+Another job is copying to {0}; this one will wait its turn.	മറ്റൊരു ജോലി {0}-ലേക്ക് പകർത്തുന്നു; ഇത് ഊഴം കാത്തിരിക്കും.
+Advanced mode · {0}	വിപുലമായ രീതി · {0}
+verify on ({0})	പരിശോധന ഓൺ ({0})
+Preview mirror…	മിറർ മുൻകാഴ്ച…
+Start moving	നീക്കാൻ തുടങ്ങുക
+Started: {0} to {1}. You can add another job now.	തുടങ്ങി: {0} → {1}. ഇപ്പോൾ മറ്റൊരു ജോലി ചേർക്കാം.
+Add some files or folders to copy first. Drag them in, use Add files / Add folder, or paste with Ctrl+V.	ആദ്യം പകർത്താൻ ചില ഫയലുകളോ ഫോൾഡറുകളോ ചേർക്കുക. വലിച്ചിടുക, ഫയലുകൾ ചേർക്കുക / ഫോൾഡർ ചേർക്കുക ഉപയോഗിക്കുക, അല്ലെങ്കിൽ Ctrl+V കൊണ്ട് ഒട്ടിക്കുക.
+Choose where to copy to.	എവിടേക്ക് പകർത്തണമെന്ന് തിരഞ്ഞെടുക്കുക.
+Mirror works with folders. Remove the files from the list, or choose Copy.	മിറർ ഫോൾഡറുകളിൽ മാത്രം പ്രവർത്തിക്കും. പട്ടികയിൽ നിന്ന് ഫയലുകൾ നീക്കുക, അല്ലെങ്കിൽ പകർത്തുക തിരഞ്ഞെടുക്കുക.
+Fix these options first:\n\n{0}	ആദ്യം ഈ ഓപ്ഷനുകൾ ശരിയാക്കുക:\n\n{0}
+/COPY:O or U	/COPY:O or U
+{0} needs administrator rights.\n\nRestart KUDUCOPY as administrator and start this job?	{0}-ന് അഡ്മിനിസ്ട്രേറ്റർ അനുമതി വേണം.\n\nKUDUCOPY അഡ്മിനിസ്ട്രേറ്ററായി വീണ്ടും തുടങ്ങി ഈ ജോലി ആരംഭിക്കണോ?
+{0} need administrator rights.\n\nRestart KUDUCOPY as administrator and start this job?	{0}-ന് അഡ്മിനിസ്ട്രേറ്റർ അനുമതി വേണം.\n\nKUDUCOPY അഡ്മിനിസ്ട്രേറ്ററായി വീണ്ടും തുടങ്ങി ഈ ജോലി ആരംഭിക്കണോ?
+{0} will DELETE files and folders in {1} that aren't in the source.\n\nUse Preview to see which ones. Start anyway?	ഉറവിടത്തിൽ ഇല്ലാത്ത {1}-ലെ ഫയലുകളും ഫോൾഡറുകളും {0} ഇല്ലാതാക്കും.\n\nഏതൊക്കെയെന്ന് കാണാൻ മുൻകാഴ്ച ഉപയോഗിക്കുക. എന്നാലും തുടങ്ങണോ?
+Restart as administrator was cancelled.	അഡ്മിനിസ്ട്രേറ്ററായി വീണ്ടും തുടങ്ങുന്നത് റദ്ദാക്കി.
+Couldn't restart as administrator:\n\n{0}	അഡ്മിനിസ്ട്രേറ്ററായി വീണ്ടും തുടങ്ങാനായില്ല:\n\n{0}
+KUDUCOPY {0} is available. Open Settings → About to download it.	KUDUCOPY {0} ലഭ്യമാണ്. ഡൗൺലോഡ് ചെയ്യാൻ ക്രമീകരണങ്ങൾ → കുറിച്ച് തുറക്കുക.
+History · KUDUCOPY	ചരിത്രം · KUDUCOPY
+Search…	തിരയുക…
+When	എപ്പോൾ
+Result	ഫലം
+No jobs yet. Every finished job is saved here.	ഇതുവരെ ജോലികളില്ല. പൂർത്തിയായ ഓരോ ജോലിയും ഇവിടെ സേവ് ചെയ്യും.
+{0} · kept on this computer only	{0} · ഈ കമ്പ്യൂട്ടറിൽ മാത്രം സൂക്ഷിക്കുന്നു
+{0} · {1} of {2} moved	{0} · {2}-ൽ {1} നീക്കി
+{0} · {1} of {2} copied	{0} · {2}-ൽ {1} പകർത്തി
+and {0} more	കൂടാതെ {0} എണ്ണം കൂടി
+Run this job again	ഈ ജോലി വീണ്ടും ചെയ്യുക
+View Robocopy log	Robocopy ലോഗ് കാണുക
+Delete	ഇല്ലാതാക്കുക
+Remove this job from History? The copied files aren't touched.	ഈ ജോലി ചരിത്രത്തിൽ നിന്ന് നീക്കണോ? പകർത്തിയ ഫയലുകളെ തൊടില്ല.
+Favourites · KUDUCOPY	പ്രിയപ്പെട്ടവ · KUDUCOPY
+Favourite folders	പ്രിയപ്പെട്ട ഫോൾഡറുകൾ
+One click to copy there from the main window, and listed under "Copy to…" and "Move to…" when you right-click files in File Explorer.	പ്രധാന ജാലകത്തിൽ നിന്ന് ഒറ്റ ക്ലിക്കിൽ അവിടേക്ക് പകർത്താം, File Explorer-ൽ ഫയലുകളിൽ റൈറ്റ്-ക്ലിക്ക് ചെയ്യുമ്പോൾ "ഇവിടേക്ക് പകർത്തുക…", "ഇവിടേക്ക് നീക്കുക…" എന്നിവയ്ക്ക് കീഴിലും കാണാം.
+Add folder…	ഫോൾഡർ ചേർക്കുക…
+Choose a favourite folder	ഒരു പ്രിയപ്പെട്ട ഫോൾഡർ തിരഞ്ഞെടുക്കുക
+Move up	മുകളിലേക്ക് നീക്കുക
+Move down	താഴേക്ക് നീക്കുക
+Remove	നീക്കം ചെയ്യുക
+No favourites yet. Add the folders you copy to most often.	ഇതുവരെ പ്രിയപ്പെട്ടവയില്ല. നിങ്ങൾ ഏറ്റവും കൂടുതൽ പകർത്തുന്ന ഫോൾഡറുകൾ ചേർക്കുക.
+Settings · KUDUCOPY	ക്രമീകരണങ്ങൾ · KUDUCOPY
+Appearance	രൂപം
+Same as Windows	Windows-ന്റേത് പോലെ
+Language	ഭാഷ
+File Explorer	File Explorer
+Add "Paste with KUDUCOPY", "Copy to…" and "Move to…" to the right-click menu	റൈറ്റ്-ക്ലിക്ക് മെനുവിൽ "Paste with KUDUCOPY", "Copy to…", "Move to…" എന്നിവ ചേർക്കുക
+For your Windows account only, no administrator rights needed. On Windows 11 they're under "Show more options".	നിങ്ങളുടെ Windows അക്കൗണ്ടിന് മാത്രം, അഡ്മിനിസ്ട്രേറ്റർ അനുമതി വേണ്ട. Windows 11-ൽ "Show more options"-ന് കീഴിലാണ്.
+When files already exist, KUDUCOPY asks you.	ഫയലുകൾ ഇതിനകം ഉണ്ടെങ്കിൽ KUDUCOPY നിങ്ങളോട് ചോദിക്കും.
+When files already exist: {0} (remembered).	ഫയലുകൾ ഇതിനകം ഉണ്ടെങ്കിൽ: {0} (ഓർത്തുവെച്ചത്).
+Ask me again	വീണ്ടും എന്നോട് ചോദിക്കുക
+Copy history and logs are saved on this computer only, in {0}	പകർത്തൽ ചരിത്രവും ലോഗുകളും ഈ കമ്പ്യൂട്ടറിൽ മാത്രം, {0}-ൽ സേവ് ചെയ്യുന്നു
+Open the History folder	ചരിത്ര ഫോൾഡർ തുറക്കുക
+Updates	അപ്ഡേറ്റുകൾ
+Check for a new KUDUCOPY version when it starts	തുടങ്ങുമ്പോൾ KUDUCOPY-യുടെ പുതിയ പതിപ്പുണ്ടോ എന്ന് പരിശോധിക്കുക
+Only asks GitHub for the latest version number. Nothing is downloaded without asking.	ഏറ്റവും പുതിയ പതിപ്പിന്റെ നമ്പർ മാത്രം GitHub-നോട് ചോദിക്കുന്നു. ചോദിക്കാതെ ഒന്നും ഡൗൺലോഡ് ചെയ്യില്ല.
+About KUDUCOPY	KUDUCOPY-യെക്കുറിച്ച്
+replace if newer	പുതിയതാണെങ്കിൽ മാറ്റിവെക്കുക
+keep both	രണ്ടും സൂക്ഷിക്കുക
+Version {0} · Fast, reliable file copying	പതിപ്പ് {0} · വേഗമേറിയ, വിശ്വസനീയമായ ഫയൽ പകർത്തൽ
+Azeem, with Claude and	Azeem, with Claude and
+Made by	Made by
+Licence	ലൈസൻസ്
+MIT · free and open source	MIT · സൗജന്യവും ഓപ്പൺ സോഴ്സും
+View	കാണുക
+Source code	സോഴ്സ് കോഡ്
+Copy engine	പകർത്തൽ എഞ്ചിൻ
+Robocopy (built into Windows)	Robocopy (Windows-ൽ ഉള്ളത്)
+Robocopy {0} (built into Windows)	Robocopy {0} (Windows-ൽ ഉള്ളത്)
+Third-party	മൂന്നാം കക്ഷി
+Third-party notices	മൂന്നാം കക്ഷി അറിയിപ്പുകൾ
+KUDUCOPY runs Robocopy, which is part of Windows, and doesn't include or change it. KUDUCOPY is not affiliated with, sponsored or endorsed by Microsoft. Windows and Robocopy are names of Microsoft.	KUDUCOPY, Windows-ന്റെ ഭാഗമായ Robocopy പ്രവർത്തിപ്പിക്കുന്നു; അത് ഉൾപ്പെടുത്തുകയോ മാറ്റുകയോ ചെയ്യുന്നില്ല. KUDUCOPY-ക്ക് Microsoft-മായി ബന്ധമോ അവരുടെ പിന്തുണയോ അംഗീകാരമോ ഇല്ല. Windows, Robocopy എന്നിവ Microsoft-ന്റെ പേരുകളാണ്.
+Check for updates	അപ്ഡേറ്റുകൾ പരിശോധിക്കുക
+Couldn't find any published version yet.	പ്രസിദ്ധീകരിച്ച പതിപ്പൊന്നും ഇതുവരെ കണ്ടെത്തിയില്ല.
+KUDUCOPY {0} is available. Open the download page?	KUDUCOPY {0} ലഭ്യമാണ്. ഡൗൺലോഡ് പേജ് തുറക്കണോ?
+You have the latest version.	നിങ്ങളുടെ കൈയിൽ ഏറ്റവും പുതിയ പതിപ്പാണ്.
+Couldn't check for updates. Check your internet connection and try again.	അപ്ഡേറ്റുകൾ പരിശോധിക്കാൻ കഴിഞ്ഞില്ല. ഇന്റർനെറ്റ് കണക്ഷൻ പരിശോധിച്ച് വീണ്ടും ശ്രമിക്കുക.
+Preview · KUDUCOPY	മുൻകാഴ്ച · KUDUCOPY
+Listing what would be copied…	എന്ത് പകർത്തുമെന്ന് പട്ടികപ്പെടുത്തുന്നു…
+Robocopy is checking the files in list-only mode. Nothing is copied.	Robocopy പട്ടിക-മാത്രം രീതിയിൽ ഫയലുകൾ പരിശോധിക്കുന്നു. ഒന്നും പകർത്തുന്നില്ല.
+The preview couldn't be made	മുൻകാഴ്ച ഉണ്ടാക്കാനായില്ല
+You'll be asked	നിങ്ങളോട് ചോദിക്കും
+Deleted from {0}	{0}-ൽ നിന്ന് ഇല്ലാതാക്കി
+Preview: {0} {1} to {2}	മുൻകാഴ്ച: {1} {2}-ലേക്ക് {0}
+move	നീക്കുക
+mirror	മിറർ ചെയ്യുക
+copy	പകർത്തുക
+Nothing has been copied yet. This is what Start would do with your Advanced options.	ഇതുവരെ ഒന്നും പകർത്തിയിട്ടില്ല. നിങ്ങളുടെ വിപുലമായ ഓപ്ഷനുകൾ ഉപയോഗിച്ച് തുടങ്ങുക അമർത്തിയാൽ ഇതാണ് സംഭവിക്കുക.
+Nothing has been copied yet. This is what Start would do.	ഇതുവരെ ഒന്നും പകർത്തിയിട്ടില്ല. തുടങ്ങുക അമർത്തിയാൽ ഇതാണ് സംഭവിക്കുക.
+new files	പുതിയ ഫയലുകൾ
+will be replaced	മാറ്റിവെക്കും
+kept as new copies	പുതിയ പകർപ്പുകളായി സൂക്ഷിക്കും
+already there (you'll be asked)	ഇതിനകം അവിടെയുണ്ട് (നിങ്ങളോട് ചോദിക്കും)
+DELETED from the destination	ലക്ഷ്യസ്ഥാനത്ത് നിന്ന് ഇല്ലാതാക്കും
+{0} in {1} will be DELETED by Mirror, because they aren't in the source.	{1}-ലെ {0} ഉറവിടത്തിൽ ഇല്ലാത്തതിനാൽ മിറർ ഇല്ലാതാക്കും.
+{0} in {1} will be DELETED because /MIR or /PURGE is on. They aren't in the source.	/MIR അല്ലെങ്കിൽ /PURGE ഓണായതിനാൽ {1}-ലെ {0} ഇല്ലാതാക്കും. അവ ഉറവിടത്തിലില്ല.
+Moving: the originals are removed after they're copied and verified.	നീക്കുന്നു: മൂലഫയലുകൾ പകർത്തി പരിശോധിച്ചശേഷം നീക്കം ചെയ്യും.
+Moving: the originals are removed after they're copied.	നീക്കുന്നു: മൂലഫയലുകൾ പകർത്തിയശേഷം നീക്കം ചെയ്യും.
+What happens	എന്ത് സംഭവിക്കും
+Why	എന്തുകൊണ്ട്
+Nothing to copy: the sources are empty, or everything was left out by your options.	പകർത്താൻ ഒന്നുമില്ല: ഉറവിടങ്ങൾ ശൂന്യമാണ്, അല്ലെങ്കിൽ നിങ്ങളുടെ ഓപ്ഷനുകൾ എല്ലാം ഒഴിവാക്കി.
+Start {0}	{0} തുടങ്ങുക
+Nothing to do: the destination is already up to date.	ചെയ്യാൻ ഒന്നുമില്ല: ലക്ഷ്യസ്ഥാനം ഇതിനകം പുതുക്കിയതാണ്.
+Writes up to {0}. {1} has {2} free, so there's enough space ✓	{0} വരെ എഴുതും. {1}-ൽ {2} ഒഴിവുണ്ട്, അതിനാൽ മതിയായ ഇടമുണ്ട് ✓
+Not enough space: this writes up to {0}, but {1} only has {2} free.	മതിയായ ഇടമില്ല: ഇത് {0} വരെ എഴുതും, പക്ഷേ {1}-ൽ {2} മാത്രമേ ഒഴിവുള്ളൂ.
+{0} in {1} will be DELETED. Start anyway?	{1}-ലെ {0} ഇല്ലാതാക്കും. എന്നാലും തുടങ്ങണോ?
+{0} ran into a problem it couldn't get past, and has to close.	{0}-ന് മറികടക്കാനാകാത്ത ഒരു പ്രശ്നം നേരിട്ടു, അതിനാൽ അടയ്ക്കേണ്ടി വരുന്നു.
+{0} file	{0} ഫയൽ
+{0} files	{0} ഫയലുകൾ
+{0} item	{0} ഇനം
+{0} items	{0} ഇനങ്ങൾ
+{0} failed file	{0} പരാജയപ്പെട്ട ഫയൽ
+{0} failed files	{0} പരാജയപ്പെട്ട ഫയലുകൾ
+{0} option	{0} ഓപ്ഷൻ
+{0} options	{0} ഓപ്ഷനുകൾ
+{0} job	{0} ജോലി
+{0} jobs	{0} ജോലികൾ

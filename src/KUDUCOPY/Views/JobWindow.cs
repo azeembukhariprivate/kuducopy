@@ -181,7 +181,7 @@ namespace Kuducopy.Views
             Content = root;
             _content.Children.Add(_progressView);
 
-            _title.Text = $"{job.Spec.Verbing} {job.Spec.SourceSummary} to {job.Spec.Destination}";
+            _title.Text = Lang.T("{0} {1} to {2}", Lang.T(job.Spec.Verbing), job.Spec.SourceSummary, job.Spec.Destination);
             _subtitle.Text = "From " + string.Join(", ", (job.Spec.Tasks != null && job.Spec.Tasks.Count > 0
                 ? job.Spec.Tasks.Select(t => t.SourceDir)
                 : job.Spec.Sources.Select(p => Path.GetDirectoryName(p) ?? p)).Distinct(StringComparer.OrdinalIgnoreCase).Take(2));
@@ -522,22 +522,22 @@ namespace Kuducopy.Views
             switch (r.Result)
             {
                 case JobResult.Done:
-                    title = r.Files == 0 ? r.Message : $"{verb} {Format.Count(r.Copied, "file")} to {r.To}";
+                    title = r.Files == 0 ? Lang.T(r.Message) : Lang.T("{0} {1} to {2}", Lang.T(verb), Format.Count(r.Copied, "file"), r.To);
                     break;
                 case JobResult.DoneWithProblems:
-                    title = $"{verb} {r.Copied:N0} of {Format.Count(r.Files, "file")} to {r.To}";
+                    title = Lang.T("{0} {1} of {2} to {3}", Lang.T(verb), r.Copied.ToString("N0"), Format.Count(r.Files, "file"), r.To);
                     break;
                 case JobResult.Cancelled:
-                    title = $"Cancelled · {r.Copied:N0} of {Format.Count(r.Files, "file")} {verb.ToLowerInvariant()}";
+                    title = Lang.T("Cancelled · {0} of {1} {2}", r.Copied.ToString("N0"), Format.Count(r.Files, "file"), _job.Spec.Mode == CopyMode.Move ? Lang.T("moved") : _job.Spec.Mode == CopyMode.Mirror ? Lang.T("mirrored") : Lang.T("copied"));
                     break;
                 default:
-                    title = "The job couldn't finish";
+                    title = Lang.T("The job couldn't finish");
                     break;
             }
             var subtitle = r.Result == JobResult.Done
-                ? (r.Deleted > 0 ? $"{Format.Count(r.Deleted, "file")} that only existed in the destination {(r.Deleted == 1 ? "was" : "were")} deleted. " : string.Empty) +
-                  (r.Verified ? "Every copy was verified." : r.Skipped > 0 ? $"{Format.Count(r.Skipped, "file")} already there or skipped." : "Everything was copied.")
-                : r.Message;
+                ? (r.Deleted > 0 ? Lang.T(r.Deleted == 1 ? "{0} that only existed in the destination was deleted." : "{0} that only existed in the destination were deleted.", Format.Count(r.Deleted, "file")) + " " : string.Empty) +
+                  (r.Verified ? Lang.T("Every copy was verified.") : r.Skipped > 0 ? Lang.T("{0} already there or skipped.", Format.Count(r.Skipped, "file")) : Lang.T("Everything was copied."))
+                : Lang.T(r.Message);
 
             var head = Ui.Columns(Ui.Auto, Ui.Star());
             head.Children.Add(icon.Margin(0, 0, 14, 0).At(0, 0));

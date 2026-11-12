@@ -1,0 +1,598 @@
+There's nothing to paste. Copy (Ctrl+C) or cut (Ctrl+X) files in File Explorer first.	चिपकाने को कुछ नहीं है। पहले File Explorer में फ़ाइलें कॉपी (Ctrl+C) या कट (Ctrl+X) करें।
+That destination can't be used:\n\n{0}	वह गंतव्य उपयोग नहीं किया जा सकता:\n\n{0}
+Something went wrong:\n\n{0}	कुछ गड़बड़ हो गई:\n\n{0}
+Azeem Bukhari	Azeem Bukhari
+less than a second	एक सेकंड से कम
+{0} h {1} min	{0} घं {1} मिनट
+{0} min {1} s	{0} मिनट {1} से
+KUDUCOPY checksums {0}	KUDUCOPY checksums {0}
+Created by KUDUCOPY on	Created by KUDUCOPY on
+"{0}" can't be found.	"{0}" नहीं मिल रहा।
+Choose two separate folders: one of them is inside the other.	दो अलग फ़ोल्डर चुनें: एक दूसरे के अंदर है।
+Only on the left	केवल बाईं ओर
+Only on the right	केवल दाईं ओर
+Left is newer	बाईं ओर वाली नई है
+Right is newer	दाईं ओर वाली नई है
+Different	अलग
+Same	एक जैसी
+Left:\t{0}	Left:\t{0}
+Right:\t{0}	Right:\t{0}
+Compared:\t{0}	Compared:\t{0}
+size, date and contents	आकार, तारीख़ और सामग्री
+size and date	आकार और तारीख़
+State\tFile\tLeft size\tLeft modified\tRight size\tRight modified	State\tFile\tLeft size\tLeft modified\tRight size\tRight modified
+Couldn't read\t{0}	Couldn't read\t{0}
+Starting…	शुरू हो रहा है…
+Paused	रुका हुआ
+Robocopy wasn't found in {0}.	{0} में Robocopy नहीं मिला।
+KUDUCOPY {0} · {1} {2} → {3} · started {4}	KUDUCOPY {0} · {1} {2} → {3} · started {4}
+Cancelled	रद्द
+Finished {0}: {1} · {2} copied, {3} failed, {4} skipped. {5}	Finished {0}: {1} · {2} copied, {3} failed, {4} skipped. {5}
+{0} files are only in the destination and will be deleted.	{0} फ़ाइलें केवल गंतव्य में हैं और हटा दी जाएँगी।
+Found {0} files ({1}).	{0} फ़ाइलें मिलीं ({1})।
+Existing files: {0}	मौजूदा फ़ाइलें: {0}
+Mirror replaces changed files	मिरर बदली हुई फ़ाइलें बदल देता है
+Advanced options decide	उन्नत विकल्प तय करते हैं
+Listing: robocopy {0}	Listing: robocopy {0}
+Robocopy couldn't read "{0}" (exit code {1}). See the log for details.	Robocopy "{0}" नहीं पढ़ सका (exit code {1})। विवरण के लिए लॉग देखें।
+Copying: robocopy {0}	Copying: robocopy {0}
+Skipped by you	आपने छोड़ा
+Robocopy stopped with exit code {0} while copying "{1}".	"{1}" कॉपी करते समय Robocopy exit code {0} के साथ रुक गया।
+· retrying	· फिर कोशिश
+Stopped at the first error, because "Keep going if a file can't be copied" is off.	पहली त्रुटि पर रुका, क्योंकि "फ़ाइल कॉपी न हो तो भी जारी रखें" बंद है।
+{0}.log	{0}.log
+Couldn't write the log file {0}: {1}	लॉग फ़ाइल {0} नहीं लिखी जा सकी: {1}
+Couldn't read output line: {0}	आउटपुट पंक्ति नहीं पढ़ी जा सकी: {0}
+Copying ({0}): {1} → {2}	कॉपी हो रहा है ({0}): {1} → {2}
+Failed: {0}: {1}	विफल: {0}: {1}
+Access is denied	पहुँच नहीं मिली
+Not copied: the job stopped early	कॉपी नहीं हुई: काम जल्दी रुक गया
+Not copied	कॉपी नहीं हुई
+Copied, but the original couldn't be removed	कॉपी हो गई, पर मूल फ़ाइल हटाई नहीं जा सकी
+The copy doesn't match the original ({0} differs)	कॉपी मूल से मेल नहीं खाती ({0} अलग है)
+Couldn't verify: {0}	जाँच नहीं हो सकी: {0}
+Copied, but the original couldn't be removed: {0}	कॉपी हो गई, पर मूल फ़ाइल हटाई नहीं जा सकी: {0}
+The drive {0} isn't ready. Is it plugged in?	ड्राइव {0} तैयार नहीं है। क्या यह लगी हुई है?
+Not enough space on {0}: this needs {1}, but only {2} is free.	{0} पर पर्याप्त जगह नहीं: इसे {1} चाहिए, पर केवल {2} ख़ाली है।
+1 file couldn't be copied.	1 फ़ाइल कॉपी नहीं हो सकी।
+{0} files couldn't be copied.	{0} फ़ाइलें कॉपी नहीं हो सकीं।
+Nothing to copy: every file was already there.	कॉपी करने को कुछ नहीं: हर फ़ाइल पहले से वहाँ थी।
+Nothing to copy.	कॉपी करने को कुछ नहीं।
+Done	पूरा
+Finding files…	फ़ाइलें ढूँढी जा रही हैं…
+Waiting for another job on {0} to finish…	{0} पर दूसरा काम पूरा होने का इंतज़ार…
+{0} files you chose to keep or replace…	{0} फ़ाइलें जिन्हें आपने रखना या बदलना चुना…
+Verifying copies ({0})…	कॉपी जाँची जा रही हैं ({0})…
+Removing the originals…	मूल फ़ाइलें हटाई जा रही हैं…
+user	user
+KUDUCOPY hub	KUDUCOPY hub
+Move	ले जाएँ
+Mirror	मिरर
+Copy	कॉपी
+Moving	ले जाया जा रहा है
+Mirroring	मिरर हो रहा है
+Copying	कॉपी हो रहा है
+Moved	ले जाया गया
+Mirrored	मिरर किया गया
+Copied	कॉपी किया गया
+{0} and {1}	{0} और {1}
+{0}, {1} and {2} more	{0}, {1} और {2} अन्य
+Drive {0}	ड्राइव {0}
+Add some files or folders to copy first.	पहले कॉपी करने के लिए कुछ फ़ाइलें या फ़ोल्डर जोड़ें।
+Choose where to copy them to.	चुनें कि उन्हें कहाँ कॉपी करना है।
+Can't copy "{0}" into itself. Choose a destination outside that folder.	"{0}" को उसी के अंदर कॉपी नहीं किया जा सकता। उस फ़ोल्डर के बाहर गंतव्य चुनें।
+Mirror works with folders. "{0}" is a file: use Copy for files.	मिरर फ़ोल्डरों के साथ काम करता है। "{0}" एक फ़ाइल है: फ़ाइलों के लिए कॉपी उपयोग करें।
+"{0}" is already in {1}. Choose a different destination.	"{0}" पहले से {1} में है। दूसरा गंतव्य चुनें।
+"{0}" can't be found. It may have been moved or deleted.	"{0}" नहीं मिल रहा। हो सकता है वह ले जाया या हटाया गया हो।
+robocopy {0}	robocopy {0}
+/s /t 60 /c "KUDUCOPY finished copying. Windows will shut down in 60 seconds."	/s /t 60 /c "KUDUCOPY finished copying. Windows will shut down in 60 seconds."
+New	नई
+Only in the destination	केवल गंतव्य में
+Already there, identical	पहले से वहाँ, एक जैसी
+Yours is newer	आपकी वाली नई है
+The one there is newer	वहाँ वाली नई है
+Same date, different size	एक ही तारीख़, अलग आकार
+Files to include / skip	शामिल करने / छोड़ने वाली फ़ाइलें
+Retry & errors	फिर कोशिश और त्रुटियाँ
+Speed & threads	गति और थ्रेड
+Logging	लॉगिंग
+Monitor & schedule	निगरानी और समय
+D data, A attributes, T timestamps, S security (permissions), O owner, U auditing, X skip alternate data streams	D डेटा, A गुण, T समय-मुहर, S सुरक्षा (अनुमतियाँ), O स्वामी, U ऑडिटिंग, X वैकल्पिक डेटा स्ट्रीम छोड़ें
+D data, A attributes, T timestamps, E extended attributes, X skip alternate data streams	D डेटा, A गुण, T समय-मुहर, E विस्तारित गुण, X वैकल्पिक डेटा स्ट्रीम छोड़ें
+R read-only, A archive, S system, H hidden, C compressed, N not indexed, E encrypted, T temporary, O offline	R केवल पढ़ने योग्य, A आर्काइव, S सिस्टम, H छिपी, C संपीड़ित, N अनुक्रमित नहीं, E एन्क्रिप्टेड, T अस्थायी, O ऑफ़लाइन
+Copy subfolders, but not empty ones	सबफ़ोल्डर कॉपी करें, पर ख़ाली वाले नहीं
+Copy subfolders, including empty ones	ख़ाली वाले समेत सबफ़ोल्डर कॉपी करें
+Only copy the top n levels of folders	फ़ोल्डरों के केवल ऊपरी n स्तर कॉपी करें
+Restartable mode: a broken copy continues where it stopped (slower for small files)	फिर शुरू होने वाला तरीक़ा: टूटी कॉपी वहीं से जारी रहती है (छोटी फ़ाइलों के लिए धीमा)
+Backup mode: copy files even without permission to read them	बैकअप तरीक़ा: पढ़ने की अनुमति न हो तब भी फ़ाइलें कॉपी करें
+Restartable mode, switching to backup mode when access is denied	फिर शुरू होने वाला तरीक़ा, पहुँच न मिलने पर बैकअप तरीक़े में बदलता है
+Unbuffered copy. Faster for very large files	बिना बफ़र कॉपी। बहुत बड़ी फ़ाइलों के लिए तेज़
+Copy encrypted files in their encrypted form	एन्क्रिप्टेड फ़ाइलें एन्क्रिप्टेड रूप में ही कॉपी करें
+What to copy for files	फ़ाइलों के लिए क्या कॉपी करें
+What to copy for folders	फ़ोल्डरों के लिए क्या कॉपी करें
+Copy files with security (same as /COPY:DATS)	सुरक्षा के साथ फ़ाइलें कॉपी करें (/COPY:DATS जैसा)
+Copy all file information (same as /COPY:DATSOU)	फ़ाइल की सारी जानकारी कॉपी करें (/COPY:DATSOU जैसा)
+Copy no file information (use with /PURGE)	फ़ाइल की कोई जानकारी कॉपी न करें (/PURGE के साथ उपयोग करें)
+Fix security on all files, even skipped ones	छोड़ी गई समेत सभी फ़ाइलों की सुरक्षा ठीक करें
+Fix timestamps on all files, even skipped ones	छोड़ी गई समेत सभी फ़ाइलों की समय-मुहर ठीक करें
+Copy no folder information	फ़ोल्डर की कोई जानकारी कॉपी न करें
+Copy files without Windows copy offload	Windows copy offload के बिना फ़ाइलें कॉपी करें
+Compress data while it travels over the network	नेटवर्क पर जाते समय डेटा संपीड़ित करें
+Keep sparse files sparse	स्पार्स फ़ाइलों को स्पार्स ही रखें
+Don't use block cloning (ReFS / Dev Drive)	ब्लॉक क्लोनिंग उपयोग न करें (ReFS / Dev Drive)
+Copy symbolic links as links, not the files they point to	सिम्बॉलिक लिंक को लिंक की तरह कॉपी करें, उनकी फ़ाइलों की तरह नहीं
+Copy junctions as junctions, not the folders they point to	जंक्शन को जंक्शन की तरह कॉपी करें, उनके फ़ोल्डरों की तरह नहीं
+Create the folder tree and empty (zero-length) files only	केवल फ़ोल्डर ढाँचा और ख़ाली (शून्य लंबाई) फ़ाइलें बनाएँ
+Create destination files with 8.3 FAT names only	गंतव्य फ़ाइलें केवल 8.3 FAT नामों से बनाएँ
+Turn off support for very long paths (over 256 characters)	बहुत लंबे पथों (256 अक्षरों से ऊपर) का समर्थन बंद करें
+Add these attributes to copied files	कॉपी की गई फ़ाइलों में ये गुण जोड़ें
+Remove these attributes from copied files	कॉपी की गई फ़ाइलों से ये गुण हटाएँ
+Delete files and folders in the destination that aren't in the source	गंतव्य में वे फ़ाइलें और फ़ोल्डर हटाएँ जो स्रोत में नहीं हैं
+Purge DELETES files and folders in the destination that aren't in the source.	Purge गंतव्य से वे फ़ाइलें और फ़ोल्डर हटाता है जो स्रोत में नहीं हैं।
+Mirror a folder: copy everything and DELETE extra files in the destination	फ़ोल्डर मिरर करें: सब कुछ कॉपी करें और गंतव्य की अतिरिक्त फ़ाइलें हटाएँ
+Mirror DELETES files and folders in the destination that aren't in the source.	मिरर गंतव्य से वे फ़ाइलें और फ़ोल्डर हटाता है जो स्रोत में नहीं हैं।
+Skip files matching these names, paths or wildcards (e.g. *.tmp)	इन नामों, पथों या वाइल्डकार्ड से मेल खाने वाली फ़ाइलें छोड़ें (जैसे *.tmp)
+Skip folders matching these names or paths	इन नामों या पथों से मेल खाने वाले फ़ोल्डर छोड़ें
+Only copy files with the Archive attribute set	केवल Archive गुण वाली फ़ाइलें कॉपी करें
+Only copy files with the Archive attribute, and reset it	केवल Archive गुण वाली फ़ाइलें कॉपी करें, और उसे हटा दें
+Only include files with any of these attributes	केवल इनमें से किसी गुण वाली फ़ाइलें शामिल करें
+Skip files with any of these attributes	इनमें से किसी गुण वाली फ़ाइलें छोड़ें
+Skip changed files (same time, different size)	बदली हुई फ़ाइलें छोड़ें (एक ही समय, अलग आकार)
+Skip files that are newer in the source	स्रोत में नई फ़ाइलें छोड़ें
+Skip files that are older in the source	स्रोत में पुरानी फ़ाइलें छोड़ें
+Skip extra files and folders (only in the destination). Keeps /PURGE from deleting them	अतिरिक्त फ़ाइलें और फ़ोल्डर छोड़ें (केवल गंतव्य में)। /PURGE को उन्हें हटाने से रोकता है
+Skip lonely files and folders (only in the source)	अकेली फ़ाइलें और फ़ोल्डर छोड़ें (केवल स्रोत में)
+Include modified files (different change time)	संशोधित फ़ाइलें शामिल करें (अलग बदलाव समय)
+Include same files (copy even if identical)	एक जैसी फ़ाइलें शामिल करें (एक जैसी हों तब भी कॉपी करें)
+Include tweaked files (same size and time, different attributes)	थोड़ी बदली फ़ाइलें शामिल करें (एक ही आकार और समय, अलग गुण)
+Skip files bigger than n bytes	n बाइट से बड़ी फ़ाइलें छोड़ें
+Skip files smaller than n bytes	n बाइट से छोटी फ़ाइलें छोड़ें
+Skip files older than n days (or a date as YYYYMMDD)	n दिन से पुरानी फ़ाइलें छोड़ें (या YYYYMMDD में तारीख़)
+Skip files newer than n days (or a date as YYYYMMDD)	n दिन से नई फ़ाइलें छोड़ें (या YYYYMMDD में तारीख़)
+Skip files not used since n days (or a date as YYYYMMDD)	n दिन से उपयोग न हुई फ़ाइलें छोड़ें (या YYYYMMDD में तारीख़)
+Skip files used since n days (or a date as YYYYMMDD)	n दिन में उपयोग हुई फ़ाइलें छोड़ें (या YYYYMMDD में तारीख़)
+Skip junction points and symbolic links	जंक्शन पॉइंट और सिम्बॉलिक लिंक छोड़ें
+Skip symbolic links to folders and junctions	फ़ोल्डरों के सिम्बॉलिक लिंक और जंक्शन छोड़ें
+Skip symbolic links to files	फ़ाइलों के सिम्बॉलिक लिंक छोड़ें
+Assume FAT file times (2-second precision). Useful for NAS and USB drives	FAT फ़ाइल समय मानें (2 सेकंड सटीकता)। NAS और USB ड्राइव के लिए उपयोगी
+Allow for 1-hour daylight saving time differences	1 घंटे के डेलाइट सेविंग समय अंतर की छूट दें
+Retries when a file can't be copied	फ़ाइल कॉपी न हो तो कितनी बार फिर कोशिश करें
+Seconds to wait between retries	कोशिशों के बीच इंतज़ार के सेकंड
+Save the /R and /W values as Robocopy's defaults in the registry	/R और /W मान Robocopy के डिफ़ॉल्ट के रूप में रजिस्ट्री में सहेजें
+Wait for network share names to be defined (retry error 67)	नेटवर्क शेयर नाम तय होने का इंतज़ार करें (त्रुटि 67 पर फिर कोशिश)
+Low free space mode: pause when the destination is nearly full	कम ख़ाली जगह मोड: गंतव्य लगभग भर जाने पर रुकें
+Copy with this many threads at once (1 to 128). Much faster for many small files	एक साथ इतने थ्रेड से कॉपी करें (1 से 128)। बहुत सारी छोटी फ़ाइलों के लिए बहुत तेज़
+Wait this many milliseconds between packets, to leave bandwidth for others	दूसरों के लिए बैंडविड्थ छोड़ने को पैकेटों के बीच इतने मिलीसेकंड रुकें
+Largest read/write size per copy cycle (e.g. 1m)	हर कॉपी चक्र में सबसे बड़ा पढ़ने/लिखने का आकार (जैसे 1m)
+Limit the copy speed (e.g. 50m = 50 MB per second)	कॉपी की गति सीमित करें (जैसे 50m = 50 MB प्रति सेकंड)
+Only throttle files bigger than this (e.g. 100m)	केवल इससे बड़ी फ़ाइलों की गति कम करें (जैसे 100m)
+Write the log to this file (replaces it)	लॉग इस फ़ाइल में लिखें (उसे बदल देता है)
+Add the log to the end of this file	लॉग को इस फ़ाइल के अंत में जोड़ें
+Write the log as Unicode to this file (replaces it)	लॉग Unicode में इस फ़ाइल में लिखें (उसे बदल देता है)
+Add the Unicode log to the end of this file	Unicode लॉग को इस फ़ाइल के अंत में जोड़ें
+Verbose: also list skipped files	विस्तृत: छोड़ी गई फ़ाइलें भी सूचीबद्ध करें
+Report all extra files, not just selected ones	केवल चुनी हुई नहीं, सभी अतिरिक्त फ़ाइलें बताएँ
+Show source file timestamps	स्रोत फ़ाइल की समय-मुहर दिखाएँ
+Don't log file sizes	फ़ाइल आकार लॉग न करें
+Don't log file names	फ़ाइल नाम लॉग न करें
+With /NFL KUDUCOPY can't show which file is being copied.	/NFL के साथ KUDUCOPY नहीं दिखा सकता कि कौन-सी फ़ाइल कॉपी हो रही है।
+Don't show per-file progress	हर फ़ाइल की प्रगति न दिखाएँ
+With /NP KUDUCOPY can only show progress when each file finishes.	/NP के साथ KUDUCOPY केवल हर फ़ाइल पूरी होने पर प्रगति दिखा सकता है।
+Show the estimated time of arrival for each file	हर फ़ाइल के पहुँचने का अनुमानित समय दिखाएँ
+Keep watching the source and copy again after n changes	स्रोत पर नज़र रखें और n बदलावों के बाद फिर कॉपी करें
+Monitoring keeps running until you press Cancel.	रद्द करें दबाने तक निगरानी चलती रहती है।
+Keep watching the source and copy again every n minutes if it changed	स्रोत पर नज़र रखें और बदलने पर हर n मिनट में फिर कॉपी करें
+Only copy between these times of day (hhmm-hhmm, e.g. 2200-0600)	दिन के केवल इन समयों के बीच कॉपी करें (hhmm-hhmm, जैसे 2200-0600)
+Check the run hours per file, not per pass	चलने के घंटे हर पास के बजाय हर फ़ाइल पर जाँचें
+{0} needs a whole number.	{0} को पूर्ण संख्या चाहिए।
+/MT must be between 1 and 128 threads.	/MT 1 से 128 थ्रेड के बीच होना चाहिए।
+{0} needs at least one attribute letter.	{0} को कम से कम एक गुण अक्षर चाहिए।
+{0} doesn't know the letter(s) {1}. Use {2}.	{0} अक्षर {1} नहीं जानता। {2} उपयोग करें।
+/RH needs two times like 2200-0600.	/RH को 2200-0600 जैसे दो समय चाहिए।
+In use by another program	दूसरा प्रोग्राम उपयोग कर रहा है
+Part of the file is locked by another program	फ़ाइल का एक भाग दूसरे प्रोग्राम ने लॉक किया है
+Not enough space on the destination	गंतव्य पर पर्याप्त जगह नहीं
+The name isn't valid on the destination	यह नाम गंतव्य पर मान्य नहीं है
+The name or path is too long	नाम या पथ बहुत लंबा है
+The file or folder is damaged and can't be read	फ़ाइल या फ़ोल्डर ख़राब है और पढ़ा नहीं जा सकता
+Error {0}	त्रुटि {0}
+Theme	थीम
+Advanced	उन्नत
+Conflict	टकराव
+Verify	जाँचें
+Hash	Hash
+Favourites	पसंदीदा
+Switches	Switches
+Player	Player
+Paste with KUDUCOPY	KUDUCOPY से चिपकाएँ
+{0} --paste "%V"	{0} --paste "%V"
+Paste into this folder with KUDUCOPY	KUDUCOPY से इस फ़ोल्डर में चिपकाएँ
+{0} --paste "%1"	{0} --paste "%1"
+Directory	Directory
+Copy to…	यहाँ कॉपी करें…
+Move to…	यहाँ ले जाएँ…
+Choose a folder…	फ़ोल्डर चुनें…
+{1} {0}-ask "%1"	{1} {0}-ask "%1"
+{0}.tmp	{0}.tmp
+{0}.json	{0}.json
+Today, {0}	आज, {0}
+Yesterday, {0}	कल, {0}
+Done · verified	पूरा · जाँचा गया
+ · {0} deleted	 · {0} हटाई गईं
+1 failed	1 विफल
+{0} failed	{0} विफल
+Failed	विफल
+Missing theme resource {0}	Missing theme resource {0}
+Light	हल्का
+Styles	Styles
+Dark	गहरा
+Application	Application
+Preferred DropEffect	Preferred DropEffect
+Also compare file contents (slower)	फ़ाइल की सामग्री भी मिलाएँ (धीमा)
+Compare folders · KUDUCOPY	फ़ोल्डरों की तुलना · KUDUCOPY
+Reads files of the same size on both sides and compares their checksums, to find changes that kept the same size and date.	दोनों ओर एक ही आकार की फ़ाइलें पढ़ता है और उनके चेकसम मिलाता है, ताकि वे बदलाव मिलें जिनमें आकार और तारीख़ नहीं बदली।
+Compare	तुलना करें
+Copy selected to the right	चुनी हुई दाईं ओर कॉपी करें
+Copy selected to the left	चुनी हुई बाईं ओर कॉपी करें
+Copy list	सूची कॉपी करें
+Save report…	रिपोर्ट सहेजें…
+Compare two folders	दो फ़ोल्डरों की तुलना करें
+See which files are only on one side, newer, or different. Nothing is copied unless you choose to.	देखें कि कौन-सी फ़ाइलें केवल एक ओर हैं, नई हैं या अलग हैं। आपके चुने बिना कुछ कॉपी नहीं होता।
+Browse…	ब्राउज़ करें…
+Choose the {0} folder	{0} फ़ोल्डर चुनें
+Left	बायाँ
+Right	दायाँ
+Swap	अदला-बदली
+Files	फ़ाइलें
+State	स्थिति
+Name	नाम
+Folder	फ़ोल्डर
+Close	बंद करें
+Choose two folders and press Compare.	दो फ़ोल्डर चुनें और तुलना करें दबाएँ।
+Choose a folder for both sides first.	पहले दोनों ओर के लिए फ़ोल्डर चुनें।
+Stop	रोकें
+Comparing, and reading files to compare their contents…	तुलना हो रही है, और सामग्री मिलाने के लिए फ़ाइलें पढ़ी जा रही हैं…
+Comparing…	तुलना हो रही है…
+Stopped. Press Compare to start again.	रुक गया। फिर शुरू करने के लिए तुलना करें दबाएँ।
+The folders couldn't be compared:\n{0}	फ़ोल्डरों की तुलना नहीं हो सकी:\n{0}
+Compared size, date and contents.	आकार, तारीख़ और सामग्री की तुलना हुई।
+Compared size and date. Files whose dates are within 2 seconds count as the same.	आकार और तारीख़ की तुलना हुई। जिन फ़ाइलों की तारीख़ें 2 सेकंड के भीतर हों, वे एक जैसी गिनी जाती हैं।
+Only left	केवल बाएँ
+Only right	केवल दाएँ
+Left newer	बाईं नई
+Right newer	दाईं नई
+Same content	एक जैसी सामग्री
+The folders match: {0}, all the same.	फ़ोल्डर मेल खाते हैं: {0}, सब एक जैसी।
+{0} couldn't be read, so the comparison may be incomplete. First: {1}	{0} पढ़ी नहीं जा सकीं, इसलिए तुलना अधूरी हो सकती है। पहली: {1}
+Both folders are empty.	दोनों फ़ोल्डर ख़ाली हैं।
+All	सभी
+Copy {0} to the right	{0} दाईं ओर कॉपी करें
+Copy {0} to the left	{0} बाईं ओर कॉपी करें
+Select files to copy them across (Ctrl+A selects everything shown, Shift or Ctrl+click for more).	दूसरी ओर कॉपी करने के लिए फ़ाइलें चुनें (Ctrl+A दिखाई गई सब चुनता है, और के लिए Shift या Ctrl+क्लिक)।
+Copy {0} to {1}?	{0} को {1} में कॉपी करें?
+{0} there will be replaced.	वहाँ की {0} बदल दी जाएँगी।
+{0} of them is NEWER than the file you're copying over it.	उनमें से {0} उस फ़ाइल से नई है जिसे आप उसके ऊपर कॉपी कर रहे हैं।
+{0} of them are NEWER than the file you're copying over it.	उनमें से {0} उन फ़ाइलों से नई हैं जिन्हें आप उनके ऊपर कॉपी कर रहे हैं।
+Copying in a separate window. Press Compare again when it's finished to see the result.	अलग खिड़की में कॉपी हो रहा है। पूरा होने पर परिणाम देखने के लिए फिर तुलना करें दबाएँ।
+Save the comparison	तुलना सहेजें
+Compare {0} and {1}.txt	{0} और {1} की तुलना.txt
+Text file (tab separated)	टेक्स्ट फ़ाइल (टैब से अलग)
+All files	सभी फ़ाइलें
+The report couldn't be saved:\n\n{0}	रिपोर्ट सहेजी नहीं जा सकी:\n\n{0}
+Theirs is newer	उनकी वाली नई है
+Different size	अलग आकार
+{0} already exists in {1}	{0} पहले से {1} में है
+{0} already exist in {1}	{0} पहले से {1} में हैं
+File	फ़ाइल
+You're copying	आप कॉपी कर रहे हैं
+Already there	पहले से वहाँ
+and {0} more…	और {0} अन्य…
+Overwrite all	सभी बदलें
+Replace the {0} files in {1} with these ones.	{1} की {0} फ़ाइलों को इनसे बदलें।
+Replace if newer	नई हो तो बदलें
+Only replace files where the one you're copying is newer. {0} of {1}.	केवल वही फ़ाइलें बदलें जहाँ आपकी वाली नई है। {1} में से {0}।
+Skip all	सभी छोड़ें
+Keep the files already there. Copy everything else.	वहाँ पहले से मौजूद फ़ाइलें रखें। बाक़ी सब कॉपी करें।
+Keep both	दोनों रखें
+Copy these as new files, e.g. "photo (2).jpg".	इन्हें नई फ़ाइलों के रूप में कॉपी करें, जैसे "photo (2).jpg"।
+Let me decide for each file	मुझे हर फ़ाइल के लिए तय करने दें
+See the {0} files side by side and choose one by one.	{0} फ़ाइलें साथ-साथ देखें और एक-एक करके चुनें।
+Remember this choice for future copies (change it in the main window)	आगे की कॉपी के लिए यह चुनाव याद रखें (मुख्य खिड़की में बदलें)
+Found before copying started. Nothing has been changed yet.	कॉपी शुरू होने से पहले मिला। अभी कुछ नहीं बदला।
+Continue	जारी रखें
+Cancel job	काम रद्द करें
+Files already exist · KUDUCOPY	फ़ाइलें पहले से मौजूद हैं · KUDUCOPY
+Yours: {0}	आपकी: {0}
+There: {0}	वहाँ: {0}
+Replace	बदलें
+Skip	छोड़ें
+For all files:	सभी फ़ाइलों के लिए:
+Replace only newer	केवल नई बदलें
+Showing the first {0} of {1}. "For all files" applies to every file.	{1} में से पहली {0} दिखाई जा रही हैं। "सभी फ़ाइलों के लिए" हर फ़ाइल पर लागू होता है।
+Choose for each of the {0}	{0} में से हर एक के लिए चुनें
+Choose for each file · KUDUCOPY	हर फ़ाइल के लिए चुनें · KUDUCOPY
+Error message shown: {0}	Error message shown: {0}
+Save	सहेजें
+Cancel	रद्द करें
+Copied as {0}	{0} के रूप में कॉपी हुई
+Copied · verified	कॉपी हुई · जाँची गई
+Skipped	छोड़ी गई
+Waiting · keep both	इंतज़ार · दोनों रखें
+Waiting · replace	इंतज़ार · बदलें
+Waiting	इंतज़ार
+{0} · KUDUCOPY	{0} · KUDUCOPY
+Pause	रोकें
+Skip this file	यह फ़ाइल छोड़ें
+{0} {1} to {2}	{0}: {1} → {2}
+From {0}	{0} से
+Advanced options	उन्नत विकल्प
+Play a sound	आवाज़ बजाएँ
+Sleep	स्लीप
+Shut down	बंद करें (शट डाउन)
+Do nothing	कुछ न करें
+Now:	अभी:
+When finished:	पूरा होने पर:
+Size	आकार
+Status	स्थिति
+Verifying · {0} of {1} checked	जाँच · {1} में से {0} जाँची गईं
+{0} of {1} · {2} of {3}	{1} में से {0} · {3} में से {2}
+Press Resume to continue	जारी रखने के लिए फिर शुरू करें दबाएँ
+About {0} left	लगभग {0} बाक़ी
+{0} of {1}	{1} में से {0}
+Waiting in queue	कतार में इंतज़ार
+Finding files	फ़ाइलें ढूँढी जा रही हैं
+Verifying	जाँच हो रही है
+done	पूरा
+copied	कॉपी हुई
+copying	कॉपी हो रही है
+retrying	फिर कोशिश
+failed	विफल
+skipped	छोड़ी गई
+waiting	इंतज़ार
+already there	पहले से वहाँ
+Resume	फिर शुरू करें
+Stop this job? Files already copied stay where they are.	यह काम रोकें? पहले से कॉपी हुई फ़ाइलें वहीं रहेंगी।
+This job is still running. Stop it and close?	यह काम अभी चल रहा है। रोककर बंद करें?
+Finished · KUDUCOPY	पूरा · KUDUCOPY
+Finished · saved in History	पूरा · इतिहास में सहेजा गया
+Not going to sleep or shutting down: other jobs are still running.	स्लीप या बंद नहीं हो रहा: दूसरे काम अभी चल रहे हैं।
+{0} {1} of {2} to {3}	{0}: {2} में से {1}, {3} में
+Cancelled · {0} of {1} {2}	रद्द · {1} में से {0} {2}
+moved	ले जाई गईं
+mirrored	मिरर की गईं
+The job couldn't finish	काम पूरा नहीं हो सका
+{0} that only existed in the destination was deleted.	{0} जो केवल गंतव्य में थी, हटा दी गई।
+{0} that only existed in the destination were deleted.	{0} जो केवल गंतव्य में थीं, हटा दी गईं।
+Every copy was verified.	हर कॉपी जाँची गई।
+{0} already there or skipped.	{0} पहले से वहाँ थीं या छोड़ी गईं।
+Everything was copied.	सब कुछ कॉपी हो गया।
+verified ({0}) ✓	जाँची गई ({0}) ✓
+skipped or already there	छोड़ी गई या पहले से वहाँ
+couldn't be copied	कॉपी नहीं हो सकीं
+deleted from the destination	गंतव्य से हटाई गईं
+at {0} average	औसतन {0}
+in total	कुल
+Couldn't be copied	कॉपी नहीं हो सकीं
+Close any programs using these files, then retry.	इन फ़ाइलों का उपयोग कर रहे प्रोग्राम बंद करें, फिर कोशिश करें।
+Retry {0}	{0} फिर कोशिश
+Open destination	गंतव्य खोलें
+Save checksums…	चेकसम सहेजें…
+View log	लॉग देखें
+Windows will shut down in 60 seconds.	Windows 60 सेकंड में बंद हो जाएगा।
+Cancel shutdown	बंद होना रद्द करें
+Saved {0}	सहेजा गया {0}
+Couldn't save the checksum file:\n\n{0}	चेकसम फ़ाइल सहेजी नहीं जा सकी:\n\n{0}
+Standard	सामान्य
+Verify copies	कॉपी जाँचें
+Keep going if a file can't be copied	फ़ाइल कॉपी न हो तो भी जारी रखें
+KUDUCOPY	KUDUCOPY
+Start copying	कॉपी शुरू करें
+Make the destination folder an exact copy of the source folder. Files that are only in the destination are deleted.	गंतव्य फ़ोल्डर को स्रोत फ़ोल्डर की हूबहू कॉपी बनाएँ। जो फ़ाइलें केवल गंतव्य में हैं, वे हटा दी जाती हैं।
+files and folders	फ़ाइलें और फ़ोल्डर
+Compare two folders and see which files are only on one side, newer or different	दो फ़ोल्डरों की तुलना करें और देखें कि कौन-सी फ़ाइलें केवल एक ओर हैं, नई हैं या अलग हैं
+History	इतिहास
+Settings	सेटिंग्स
+Preview	पूर्वावलोकन
+See what will be copied, replaced, skipped or deleted, before anything happens	कुछ भी होने से पहले देखें कि क्या कॉपी, बदला, छोड़ा या हटाया जाएगा
+From	कहाँ से
+Add files	फ़ाइलें जोड़ें
+Choose files to copy	कॉपी करने के लिए फ़ाइलें चुनें
+Add folder	फ़ोल्डर जोड़ें
+Choose a folder to copy	कॉपी करने के लिए फ़ोल्डर चुनें
+Drop files or folders here, or press	फ़ाइलें या फ़ोल्डर यहाँ छोड़ें, या दबाएँ
+to paste files you copied in File Explorer	File Explorer में कॉपी की गई फ़ाइलें चिपकाने के लिए
+Choose where to copy to	चुनें कि कहाँ कॉपी करना है
+Add this folder to favourites	यह फ़ोल्डर पसंदीदा में जोड़ें
+To	कहाँ
+Options	विकल्प
+If a file already exists	अगर फ़ाइल पहले से मौजूद हो
+Ask me	मुझसे पूछें
+Overwrite	बदल दें
+Tries 3 times, then skips the file and lists it at the end so you can retry. When off, the job stops at the first problem.	3 बार कोशिश करता है, फिर फ़ाइल छोड़कर अंत में सूची में दिखाता है ताकि आप फिर कोशिश कर सकें। बंद होने पर पहली समस्या पर काम रुक जाता है।
+When finished	पूरा होने पर
+Robocopy options	Robocopy विकल्प
+Search all options…	सभी विकल्पों में खोजें…
+Change	बदलें
+Files, folders and destination are chosen in Standard mode. Verify and When finished apply here too.	फ़ाइलें, फ़ोल्डर और गंतव्य सामान्य मोड में चुने जाते हैं। जाँच और पूरा होने पर यहाँ भी लागू होते हैं।
+Robocopy command	Robocopy कमांड
+Extra options	अतिरिक्त विकल्प
+Anything typed here is added to the command as it is, e.g. /XA:H /MAXAGE:30	यहाँ जो भी लिखा जाए वह जैसा है वैसा कमांड में जुड़ता है, जैसे /XA:H /MAXAGE:30
+Job files	काम फ़ाइलें
+Load .rcj…	.rcj खोलें…
+Save as .rcj…	.rcj के रूप में सहेजें…
+Robocopy job files can also be run from a script or Task Scheduler: robocopy /JOB:file	Robocopy काम फ़ाइलें किसी स्क्रिप्ट या टास्क शेड्यूलर से भी चलाई जा सकती हैं: robocopy /JOB:file
+Reset to the default options	डिफ़ॉल्ट विकल्पों पर लौटें
+{0} on · {1}	{0} चालू · {1}
+{0} options available	{0} विकल्प उपलब्ध
+Robocopy {0} · {1} options available on this PC	Robocopy {0} · इस पीसी पर {1} विकल्प उपलब्ध
+Search	खोजें
+Options matching "{0}"	"{0}" से मेल खाते विकल्प
+No options match.	कोई विकल्प मेल नहीं खाता।
+How files and folders are copied	फ़ाइलें और फ़ोल्डर कैसे कॉपी होते हैं
+Which files are copied	कौन-सी फ़ाइलें कॉपी होती हैं
+What happens when a file can't be copied	फ़ाइल कॉपी न हो सके तो क्या होता है
+Threads and bandwidth	थ्रेड और बैंडविड्थ
+Robocopy's own log file	Robocopy की अपनी लॉग फ़ाइल
+Keep copying as things change	बदलाव होने पर कॉपी करते रहें
+Default: {0}	डिफ़ॉल्ट: {0}
+none	कोई नहीं
+Needs admin	व्यवस्थापक चाहिए
+Deletes files	फ़ाइलें हटाता है
+Empty uses {0}	ख़ाली हो तो {0} उपयोग होगा
+Robocopy's default	Robocopy का डिफ़ॉल्ट
+Advanced mode · every option maps to a Robocopy switch	उन्नत मोड · हर विकल्प एक Robocopy स्विच है
+Standard mode · switch to Advanced for every Robocopy option	सामान्य मोड · हर Robocopy विकल्प के लिए उन्नत पर जाएँ
+On. After copying, KUDUCOPY reads every file again and compares {0} checksums. Slower, but proves each copy is identical.	चालू। कॉपी के बाद KUDUCOPY हर फ़ाइल फिर पढ़ता है और {0} चेकसम मिलाता है। धीमा, पर साबित करता है कि हर कॉपी हूबहू है।
+Off. When on, KUDUCOPY compares checksums after copying. Slower, but proves each copy is identical.	बंद। चालू होने पर KUDUCOPY कॉपी के बाद चेकसम मिलाता है। धीमा, पर साबित करता है कि हर कॉपी हूबहू है।
+Mirror replaces changed files and DELETES files that are only in the destination folder. You'll see a preview first.	मिरर बदली हुई फ़ाइलें बदलता है और केवल गंतव्य फ़ोल्डर में मौजूद फ़ाइलें हटाता है। पहले आपको पूर्वावलोकन दिखेगा।
+Nothing to paste. Copy or cut files in File Explorer first.	चिपकाने को कुछ नहीं। पहले File Explorer में फ़ाइलें कॉपी या कट करें।
+Added {0} from the clipboard (cut, so Move is selected).	क्लिपबोर्ड से {0} जोड़े गए (कट किए गए थे, इसलिए ले जाएँ चुना गया)।
+Added {0} from the clipboard.	क्लिपबोर्ड से {0} जोड़े गए।
+Remove from the list	सूची से हटाएँ
+Counting…	गिनती हो रही है…
+· counting…	· गिनती हो रही है…
+Copy to {0}. Right-click to remove.	{0} में कॉपी करें। हटाने के लिए राइट-क्लिक करें।
+Remove from favourites	पसंदीदा से हटाएँ
+Choose an existing folder first, then add it to favourites.	पहले कोई मौजूदा फ़ोल्डर चुनें, फिर उसे पसंदीदा में जोड़ें।
+{0} added to favourites.	{0} पसंदीदा में जोड़ा गया।
+Network folder	नेटवर्क फ़ोल्डर
+Free space can't be checked in advance for network folders.	नेटवर्क फ़ोल्डरों की ख़ाली जगह पहले से नहीं जाँची जा सकती।
+Local Disk	लोकल डिस्क
+{0} free of {1}	{1} में से {0} ख़ाली
+After copying: about {0} free. Enough space ✓	कॉपी के बाद: लगभग {0} ख़ाली। पर्याप्त जगह ✓
+Not enough space: about {0} more is needed.	पर्याप्त जगह नहीं: लगभग {0} और चाहिए।
+Ready · uses Windows' built-in Robocopy{0}	तैयार · Windows का अपना Robocopy उपयोग करता है{0}
+Robocopy wasn't found on this PC. It's part of Windows; check {0}	इस पीसी पर Robocopy नहीं मिला। यह Windows का हिस्सा है; {0} जाँचें
+One command per source ({0} in total). 	हर स्रोत के लिए एक कमांड (कुल {0})। 
+{0}Grey options are added by KUDUCOPY to show progress. Options this PC's Robocopy doesn't support are hidden.	{0}धूसर विकल्प KUDUCOPY ने प्रगति दिखाने के लिए जोड़े हैं। जो विकल्प इस पीसी का Robocopy नहीं जानता, वे छिपे हैं।
+Robocopy command copied. Paste it into a terminal to run the same copy without KUDUCOPY.	Robocopy कमांड कॉपी हो गई। KUDUCOPY के बिना यही कॉपी चलाने के लिए इसे टर्मिनल में चिपकाएँ।
+Save a Robocopy job file	Robocopy काम फ़ाइल सहेजें
+KUDUCOPY job.rcj	KUDUCOPY job.rcj
+Robocopy job	Robocopy काम
+Add a folder to copy and choose a destination first. A job file contains them.	पहले कॉपी करने के लिए फ़ोल्डर जोड़ें और गंतव्य चुनें। काम फ़ाइल में ये होते हैं।
+Robocopy didn't create the job file.	Robocopy ने काम फ़ाइल नहीं बनाई।
+Couldn't save the job file:\n\n{0}	काम फ़ाइल सहेजी नहीं जा सकी:\n\n{0}
+Load a Robocopy job file	Robocopy काम फ़ाइल खोलें
+Loaded {0} · {1} options	{0} खोली · {1} विकल्प
+Couldn't read the job file:\n\n{0}	काम फ़ाइल पढ़ी नहीं जा सकी:\n\n{0}
+Add files or folders to {0}	{0} में फ़ाइलें या फ़ोल्डर जोड़ें
+Drag them in, use Add files / Add folder, or paste with Ctrl+V.	उन्हें खींचकर लाएँ, फ़ाइलें जोड़ें / फ़ोल्डर जोड़ें उपयोग करें, या Ctrl+V से चिपकाएँ।
+ and {0} more	 और {0} अन्य
+Mirror {0} to {1}	{0} को {1} में मिरर करें
+The destination folder becomes an exact copy. Files only there are deleted. You'll see a preview first.	गंतव्य फ़ोल्डर हूबहू कॉपी बन जाता है। जो फ़ाइलें केवल वहाँ हैं, वे हटा दी जाती हैं। पहले आपको पूर्वावलोकन दिखेगा।
+{0} {1} ({2}) to {3}	{0}: {1} ({2}) → {3}
+Another job is copying to {0}; this one will wait its turn.	दूसरा काम {0} में कॉपी कर रहा है; यह अपनी बारी का इंतज़ार करेगा।
+Advanced mode · {0}	उन्नत मोड · {0}
+verify on ({0})	जाँच चालू ({0})
+Preview mirror…	मिरर का पूर्वावलोकन…
+Start moving	ले जाना शुरू करें
+Started: {0} to {1}. You can add another job now.	शुरू हुआ: {0} → {1}। अब आप दूसरा काम जोड़ सकते हैं।
+Add some files or folders to copy first. Drag them in, use Add files / Add folder, or paste with Ctrl+V.	पहले कॉपी करने के लिए कुछ फ़ाइलें या फ़ोल्डर जोड़ें। उन्हें खींचकर लाएँ, फ़ाइलें जोड़ें / फ़ोल्डर जोड़ें उपयोग करें, या Ctrl+V से चिपकाएँ।
+Choose where to copy to.	चुनें कि कहाँ कॉपी करना है।
+Mirror works with folders. Remove the files from the list, or choose Copy.	मिरर फ़ोल्डरों के साथ काम करता है। सूची से फ़ाइलें हटाएँ, या कॉपी चुनें।
+Fix these options first:\n\n{0}	पहले ये विकल्प ठीक करें:\n\n{0}
+/COPY:O or U	/COPY:O or U
+{0} needs administrator rights.\n\nRestart KUDUCOPY as administrator and start this job?	{0} को व्यवस्थापक अधिकार चाहिए।\n\nKUDUCOPY को व्यवस्थापक के रूप में फिर से शुरू करके यह काम शुरू करें?
+{0} need administrator rights.\n\nRestart KUDUCOPY as administrator and start this job?	{0} को व्यवस्थापक अधिकार चाहिए।\n\nKUDUCOPY को व्यवस्थापक के रूप में फिर से शुरू करके यह काम शुरू करें?
+{0} will DELETE files and folders in {1} that aren't in the source.\n\nUse Preview to see which ones. Start anyway?	{0} {1} की वे फ़ाइलें और फ़ोल्डर हटा देगा जो स्रोत में नहीं हैं।\n\nकौन-सी, यह देखने के लिए पूर्वावलोकन उपयोग करें। फिर भी शुरू करें?
+Restart as administrator was cancelled.	व्यवस्थापक के रूप में फिर से शुरू करना रद्द हुआ।
+Couldn't restart as administrator:\n\n{0}	व्यवस्थापक के रूप में फिर से शुरू नहीं हो सका:\n\n{0}
+KUDUCOPY {0} is available. Open Settings → About to download it.	KUDUCOPY {0} उपलब्ध है। डाउनलोड करने के लिए सेटिंग्स → परिचय खोलें।
+History · KUDUCOPY	इतिहास · KUDUCOPY
+Search…	खोजें…
+When	कब
+Result	परिणाम
+No jobs yet. Every finished job is saved here.	अभी कोई काम नहीं। हर पूरा काम यहाँ सहेजा जाता है।
+{0} · kept on this computer only	{0} · केवल इसी कंप्यूटर पर रखा गया
+{0} · {1} of {2} moved	{0} · {2} में से {1} ले जाई गईं
+{0} · {1} of {2} copied	{0} · {2} में से {1} कॉपी हुईं
+and {0} more	और {0} अन्य
+Run this job again	यह काम फिर चलाएँ
+View Robocopy log	Robocopy लॉग देखें
+Delete	हटाएँ
+Remove this job from History? The copied files aren't touched.	इस काम को इतिहास से हटाएँ? कॉपी हुई फ़ाइलों को छुआ नहीं जाता।
+Favourites · KUDUCOPY	पसंदीदा · KUDUCOPY
+Favourite folders	पसंदीदा फ़ोल्डर
+One click to copy there from the main window, and listed under "Copy to…" and "Move to…" when you right-click files in File Explorer.	मुख्य खिड़की से एक क्लिक में वहाँ कॉपी करें, और File Explorer में फ़ाइलों पर राइट-क्लिक करने पर "यहाँ कॉपी करें…" और "यहाँ ले जाएँ…" के अंदर भी दिखते हैं।
+Add folder…	फ़ोल्डर जोड़ें…
+Choose a favourite folder	पसंदीदा फ़ोल्डर चुनें
+Move up	ऊपर ले जाएँ
+Move down	नीचे ले जाएँ
+Remove	हटाएँ
+No favourites yet. Add the folders you copy to most often.	अभी कोई पसंदीदा नहीं। जिन फ़ोल्डरों में आप सबसे ज़्यादा कॉपी करते हैं, उन्हें जोड़ें।
+Settings · KUDUCOPY	सेटिंग्स · KUDUCOPY
+Appearance	रूप
+Same as Windows	Windows जैसा
+Language	भाषा
+File Explorer	File Explorer
+Add "Paste with KUDUCOPY", "Copy to…" and "Move to…" to the right-click menu	राइट-क्लिक मेनू में "Paste with KUDUCOPY", "Copy to…" और "Move to…" जोड़ें
+For your Windows account only, no administrator rights needed. On Windows 11 they're under "Show more options".	केवल आपके Windows खाते के लिए, व्यवस्थापक अधिकार नहीं चाहिए। Windows 11 पर ये "Show more options" के अंदर हैं।
+When files already exist, KUDUCOPY asks you.	फ़ाइलें पहले से हों तो KUDUCOPY आपसे पूछता है।
+When files already exist: {0} (remembered).	फ़ाइलें पहले से हों तो: {0} (याद रखा गया)।
+Ask me again	फिर से मुझसे पूछें
+Copy history and logs are saved on this computer only, in {0}	कॉपी का इतिहास और लॉग केवल इसी कंप्यूटर पर, {0} में सहेजे जाते हैं
+Open the History folder	इतिहास फ़ोल्डर खोलें
+Updates	अपडेट
+Check for a new KUDUCOPY version when it starts	शुरू होने पर KUDUCOPY का नया संस्करण देखें
+Only asks GitHub for the latest version number. Nothing is downloaded without asking.	GitHub से केवल नवीनतम संस्करण का नंबर पूछता है। बिना पूछे कुछ डाउनलोड नहीं होता।
+About KUDUCOPY	KUDUCOPY के बारे में
+replace if newer	नई हो तो बदलें
+keep both	दोनों रखें
+Version {0} · Fast, reliable file copying	संस्करण {0} · तेज़, भरोसेमंद फ़ाइल कॉपी
+Azeem, with Claude and	Azeem, with Claude and
+Made by	Made by
+Licence	लाइसेंस
+MIT · free and open source	MIT · मुफ़्त और ओपन सोर्स
+View	देखें
+Source code	सोर्स कोड
+Copy engine	कॉपी इंजन
+Robocopy (built into Windows)	Robocopy (Windows में शामिल)
+Robocopy {0} (built into Windows)	Robocopy {0} (Windows में शामिल)
+Third-party	तृतीय पक्ष
+Third-party notices	तृतीय पक्ष सूचनाएँ
+KUDUCOPY runs Robocopy, which is part of Windows, and doesn't include or change it. KUDUCOPY is not affiliated with, sponsored or endorsed by Microsoft. Windows and Robocopy are names of Microsoft.	KUDUCOPY, Windows का हिस्सा Robocopy चलाता है, और उसे शामिल या बदलता नहीं। KUDUCOPY का Microsoft से कोई संबंध, प्रायोजन या समर्थन नहीं है। Windows और Robocopy, Microsoft के नाम हैं।
+Check for updates	अपडेट देखें
+Couldn't find any published version yet.	अभी तक कोई प्रकाशित संस्करण नहीं मिला।
+KUDUCOPY {0} is available. Open the download page?	KUDUCOPY {0} उपलब्ध है। डाउनलोड पेज खोलें?
+You have the latest version.	आपके पास नवीनतम संस्करण है।
+Couldn't check for updates. Check your internet connection and try again.	अपडेट नहीं देखे जा सके। अपना इंटरनेट कनेक्शन जाँचें और फिर कोशिश करें।
+Preview · KUDUCOPY	पूर्वावलोकन · KUDUCOPY
+Listing what would be copied…	क्या कॉपी होगा, उसकी सूची बन रही है…
+Robocopy is checking the files in list-only mode. Nothing is copied.	Robocopy केवल-सूची मोड में फ़ाइलें जाँच रहा है। कुछ कॉपी नहीं होता।
+The preview couldn't be made	पूर्वावलोकन नहीं बन सका
+You'll be asked	आपसे पूछा जाएगा
+Deleted from {0}	{0} से हटाई गईं
+Preview: {0} {1} to {2}	पूर्वावलोकन: {1} को {2} में {0}
+move	ले जाएँ
+mirror	मिरर करें
+copy	कॉपी करें
+Nothing has been copied yet. This is what Start would do with your Advanced options.	अभी कुछ कॉपी नहीं हुआ। आपके उन्नत विकल्पों के साथ शुरू करें यही करेगा।
+Nothing has been copied yet. This is what Start would do.	अभी कुछ कॉपी नहीं हुआ। शुरू करें यही करेगा।
+new files	नई फ़ाइलें
+will be replaced	बदली जाएँगी
+kept as new copies	नई कॉपी के रूप में रखी जाएँगी
+already there (you'll be asked)	पहले से वहाँ (आपसे पूछा जाएगा)
+DELETED from the destination	गंतव्य से हटाई जाएँगी
+{0} in {1} will be DELETED by Mirror, because they aren't in the source.	{1} की {0} मिरर हटा देगा, क्योंकि वे स्रोत में नहीं हैं।
+{0} in {1} will be DELETED because /MIR or /PURGE is on. They aren't in the source.	{1} की {0} हटा दी जाएँगी क्योंकि /MIR या /PURGE चालू है। वे स्रोत में नहीं हैं।
+Moving: the originals are removed after they're copied and verified.	ले जाना: मूल फ़ाइलें कॉपी और जाँच होने के बाद हटाई जाती हैं।
+Moving: the originals are removed after they're copied.	ले जाना: मूल फ़ाइलें कॉपी होने के बाद हटाई जाती हैं।
+What happens	क्या होगा
+Why	क्यों
+Nothing to copy: the sources are empty, or everything was left out by your options.	कॉपी करने को कुछ नहीं: स्रोत ख़ाली हैं, या आपके विकल्पों ने सब छोड़ दिया।
+Start {0}	{0} शुरू करें
+Nothing to do: the destination is already up to date.	करने को कुछ नहीं: गंतव्य पहले से अद्यतन है।
+Writes up to {0}. {1} has {2} free, so there's enough space ✓	{0} तक लिखेगा। {1} पर {2} ख़ाली है, इसलिए पर्याप्त जगह है ✓
+Not enough space: this writes up to {0}, but {1} only has {2} free.	पर्याप्त जगह नहीं: यह {0} तक लिखेगा, पर {1} पर केवल {2} ख़ाली है।
+{0} in {1} will be DELETED. Start anyway?	{1} की {0} हटा दी जाएँगी। फिर भी शुरू करें?
+{0} ran into a problem it couldn't get past, and has to close.	{0} को ऐसी समस्या आई जिससे वह आगे नहीं बढ़ सका, और उसे बंद होना होगा।
+{0} file	{0} फ़ाइल
+{0} files	{0} फ़ाइलें
+{0} item	{0} चीज़
+{0} items	{0} चीज़ें
+{0} failed file	{0} विफल फ़ाइल
+{0} failed files	{0} विफल फ़ाइलें
+{0} option	{0} विकल्प
+{0} options	{0} विकल्प
+{0} job	{0} काम
+{0} jobs	{0} काम

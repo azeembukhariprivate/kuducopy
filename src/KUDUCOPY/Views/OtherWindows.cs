@@ -101,10 +101,10 @@ namespace Kuducopy.Views
             _detail.Children.Clear();
             if (r == null) return;
             var verb = r.Mode == CopyMode.Move ? "Move" : r.Mode == CopyMode.Mirror ? "Mirror" : "Copy";
-            var head = Ui.Row(Ui.Text($"{verb} · {r.From} → {r.To}", 13.5, bold: true),
-                Ui.Subtle($"   {r.WhenText} · {r.Copied:N0} of {Format.Count(r.Files, "file")} {(r.Mode == CopyMode.Move ? "moved" : "copied")}" +
-                          (r.Deleted > 0 ? $" · {r.Deleted:N0} deleted" : string.Empty) +
-                          (string.IsNullOrEmpty(r.Message) || r.Message == "Done" ? string.Empty : " · " + r.Message), 12, false));
+            var head = Ui.Row(Ui.Text($"{Lang.T(verb)} · {r.From} → {r.To}", 13.5, bold: true),
+                Ui.Subtle("   " + Lang.T(r.Mode == CopyMode.Move ? "{0} · {1} of {2} moved" : "{0} · {1} of {2} copied", r.WhenText, r.Copied.ToString("N0"), Format.Count(r.Files, "file")) +
+                          (r.Deleted > 0 ? Lang.T(" · {0} deleted", r.Deleted.ToString("N0")) : string.Empty) +
+                          (string.IsNullOrEmpty(r.Message) || r.Message == "Done" ? string.Empty : " · " + Lang.T(r.Message)), 12, false));
             var body = Ui.Column(head);
             foreach (var f in r.Failed.Take(4))
             {
@@ -255,6 +255,9 @@ namespace Kuducopy.Views
             }
             root.Children.Add(themes);
 
+            root.Children.Add(Ui.Heading("Language", 14).Margin(0, 16, 0, 6));
+            root.Children.Add(LangUi.Picker());
+
             root.Children.Add(Ui.Heading("File Explorer", 14).Margin(0, 12, 0, 4));
             var menu = new CheckBox { Content = "Add \"Paste with KUDUCOPY\", \"Copy to…\" and \"Move to…\" to the right-click menu", IsChecked = Settings.ShellMenu };
             menu.Click += (s, e) =>
@@ -269,7 +272,7 @@ namespace Kuducopy.Views
             var remembered = Settings.Conflict;
             var conflictText = Ui.Text(remembered == Conflict.Ask
                 ? "When files already exist, KUDUCOPY asks you."
-                : "When files already exist: " + ConflictName(remembered) + " (remembered).", 12.5, wrap: true);
+                : Lang.T("When files already exist: {0} (remembered).", Lang.T(ConflictName(remembered))), 12.5, wrap: true);
             var reset = Ui.Link("Ask me again", (s, e) =>
             {
                 Settings.Conflict = Conflict.Ask;
@@ -342,7 +345,7 @@ namespace Kuducopy.Views
             Row("Made by", madeBy);
             Row("Licence", Ui.Row(Ui.Text("MIT · free and open source  ", 12.5), Ui.Link("View", (s, e) => OpenLocal("LICENSE.txt"))));
             Row("Source code", Ui.Link("github.com/" + AppInfo.RepoOwner + "/" + AppInfo.RepoName, (s, e) => AppInfo.OpenUrl(AppInfo.RepoUrl)));
-            Row("Copy engine", Ui.Text("Robocopy " + (string.IsNullOrEmpty(robocopyVersion) ? string.Empty : robocopyVersion + " ") + "(built into Windows)", 12.5));
+            Row("Copy engine", Ui.Text(string.IsNullOrEmpty(robocopyVersion) ? Lang.T("Robocopy (built into Windows)") : Lang.T("Robocopy {0} (built into Windows)", robocopyVersion), 12.5));
             Row("Third-party", Ui.Link("Third-party notices", (s, e) => OpenLocal("THIRD-PARTY-NOTICES.txt")));
             rows.Children.Add(Ui.Divider());
 

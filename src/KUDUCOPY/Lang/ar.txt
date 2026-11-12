@@ -1,0 +1,598 @@
+There's nothing to paste. Copy (Ctrl+C) or cut (Ctrl+X) files in File Explorer first.	لا يوجد شيء للصق. انسخ (Ctrl+C) أو قصّ (Ctrl+X) الملفات في مستكشف الملفات أولًا.
+That destination can't be used:\n\n{0}	لا يمكن استخدام تلك الوجهة:\n\n{0}
+Something went wrong:\n\n{0}	حدث خطأ ما:\n\n{0}
+Azeem Bukhari	Azeem Bukhari
+less than a second	أقل من ثانية
+{0} h {1} min	{0} س {1} د
+{0} min {1} s	{0} د {1} ث
+KUDUCOPY checksums {0}	KUDUCOPY checksums {0}
+Created by KUDUCOPY on	Created by KUDUCOPY on
+"{0}" can't be found.	تعذّر العثور على "{0}".
+Choose two separate folders: one of them is inside the other.	اختر مجلدين منفصلين: أحدهما داخل الآخر.
+Only on the left	في اليسار فقط
+Only on the right	في اليمين فقط
+Left is newer	الأيسر أحدث
+Right is newer	الأيمن أحدث
+Different	مختلف
+Same	متطابق
+Left:\t{0}	Left:\t{0}
+Right:\t{0}	Right:\t{0}
+Compared:\t{0}	Compared:\t{0}
+size, date and contents	الحجم والتاريخ والمحتوى
+size and date	الحجم والتاريخ
+State\tFile\tLeft size\tLeft modified\tRight size\tRight modified	State\tFile\tLeft size\tLeft modified\tRight size\tRight modified
+Couldn't read\t{0}	Couldn't read\t{0}
+Starting…	جارٍ البدء…
+Paused	متوقف مؤقتًا
+Robocopy wasn't found in {0}.	لم يُعثر على Robocopy في {0}.
+KUDUCOPY {0} · {1} {2} → {3} · started {4}	KUDUCOPY {0} · {1} {2} → {3} · started {4}
+Cancelled	أُلغي
+Finished {0}: {1} · {2} copied, {3} failed, {4} skipped. {5}	Finished {0}: {1} · {2} copied, {3} failed, {4} skipped. {5}
+{0} files are only in the destination and will be deleted.	{0} ملفات موجودة في الوجهة فقط وستُحذف.
+Found {0} files ({1}).	وُجد {0} ملفات ({1}).
+Existing files: {0}	الملفات الموجودة: {0}
+Mirror replaces changed files	المرآة تستبدل الملفات المتغيرة
+Advanced options decide	الخيارات المتقدمة هي التي تقرر
+Listing: robocopy {0}	Listing: robocopy {0}
+Robocopy couldn't read "{0}" (exit code {1}). See the log for details.	تعذّر على Robocopy قراءة "{0}" (exit code {1}). راجع السجل للتفاصيل.
+Copying: robocopy {0}	Copying: robocopy {0}
+Skipped by you	تخطيته أنت
+Robocopy stopped with exit code {0} while copying "{1}".	توقف Robocopy بـ exit code {0} أثناء نسخ "{1}".
+· retrying	· إعادة المحاولة
+Stopped at the first error, because "Keep going if a file can't be copied" is off.	توقف عند أول خطأ، لأن "المتابعة إذا تعذّر نسخ ملف" متوقف.
+{0}.log	{0}.log
+Couldn't write the log file {0}: {1}	تعذّرت كتابة ملف السجل {0}: {1}
+Couldn't read output line: {0}	تعذّرت قراءة سطر المخرجات: {0}
+Copying ({0}): {1} → {2}	جارٍ النسخ ({0}): {1} → {2}
+Failed: {0}: {1}	فشل: {0}: {1}
+Access is denied	تم رفض الوصول
+Not copied: the job stopped early	لم يُنسخ: توقفت المهمة مبكرًا
+Not copied	لم يُنسخ
+Copied, but the original couldn't be removed	نُسخ، لكن تعذّرت إزالة الأصل
+The copy doesn't match the original ({0} differs)	النسخة لا تطابق الأصل ({0} مختلف)
+Couldn't verify: {0}	تعذّر التحقق: {0}
+Copied, but the original couldn't be removed: {0}	نُسخ، لكن تعذّرت إزالة الأصل: {0}
+The drive {0} isn't ready. Is it plugged in?	القرص {0} غير جاهز. هل هو موصول؟
+Not enough space on {0}: this needs {1}, but only {2} is free.	لا توجد مساحة كافية على {0}: يحتاج هذا إلى {1}، لكن المتاح {2} فقط.
+1 file couldn't be copied.	تعذّر نسخ ملف واحد.
+{0} files couldn't be copied.	تعذّر نسخ {0} ملفات.
+Nothing to copy: every file was already there.	لا شيء للنسخ: كل الملفات موجودة هناك بالفعل.
+Nothing to copy.	لا شيء للنسخ.
+Done	تم
+Finding files…	جارٍ البحث عن الملفات…
+Waiting for another job on {0} to finish…	بانتظار انتهاء مهمة أخرى على {0}…
+{0} files you chose to keep or replace…	{0} ملفات اخترت الاحتفاظ بها أو استبدالها…
+Verifying copies ({0})…	جارٍ التحقق من النسخ ({0})…
+Removing the originals…	جارٍ إزالة الأصول…
+user	user
+KUDUCOPY hub	KUDUCOPY hub
+Move	نقل
+Mirror	مرآة
+Copy	نسخ
+Moving	جارٍ النقل
+Mirroring	جارٍ عمل المرآة
+Copying	جارٍ النسخ
+Moved	نُقل
+Mirrored	تمت المرآة
+Copied	نُسخ
+{0} and {1}	{0} و{1}
+{0}, {1} and {2} more	{0} و{1} و{2} أخرى
+Drive {0}	القرص {0}
+Add some files or folders to copy first.	أضف أولًا بعض الملفات أو المجلدات للنسخ.
+Choose where to copy them to.	اختر مكان النسخ.
+Can't copy "{0}" into itself. Choose a destination outside that folder.	لا يمكن نسخ "{0}" إلى داخله. اختر وجهة خارج ذلك المجلد.
+Mirror works with folders. "{0}" is a file: use Copy for files.	المرآة تعمل مع المجلدات. "{0}" ملف: استخدم النسخ للملفات.
+"{0}" is already in {1}. Choose a different destination.	"{0}" موجود بالفعل في {1}. اختر وجهة أخرى.
+"{0}" can't be found. It may have been moved or deleted.	تعذّر العثور على "{0}". ربما نُقل أو حُذف.
+robocopy {0}	robocopy {0}
+/s /t 60 /c "KUDUCOPY finished copying. Windows will shut down in 60 seconds."	/s /t 60 /c "KUDUCOPY finished copying. Windows will shut down in 60 seconds."
+New	جديد
+Only in the destination	في الوجهة فقط
+Already there, identical	موجود بالفعل، متطابق
+Yours is newer	ملفك أحدث
+The one there is newer	الملف الموجود هناك أحدث
+Same date, different size	نفس التاريخ، حجم مختلف
+Files to include / skip	الملفات التي تُضمَّن / تُتخطّى
+Retry & errors	إعادة المحاولة والأخطاء
+Speed & threads	السرعة وسلاسل التنفيذ
+Logging	السجل
+Monitor & schedule	المراقبة والجدولة
+D data, A attributes, T timestamps, S security (permissions), O owner, U auditing, X skip alternate data streams	D البيانات، A السمات، T الطوابع الزمنية، S الأمان (الأذونات)، O المالك، U التدقيق، X تخطي تدفقات البيانات البديلة
+D data, A attributes, T timestamps, E extended attributes, X skip alternate data streams	D البيانات، A السمات، T الطوابع الزمنية، E السمات الموسّعة، X تخطي تدفقات البيانات البديلة
+R read-only, A archive, S system, H hidden, C compressed, N not indexed, E encrypted, T temporary, O offline	R للقراءة فقط، A أرشيف، S نظام، H مخفي، C مضغوط، N غير مفهرس، E مشفّر، T مؤقت، O غير متصل
+Copy subfolders, but not empty ones	نسخ المجلدات الفرعية، دون الفارغة
+Copy subfolders, including empty ones	نسخ المجلدات الفرعية، بما فيها الفارغة
+Only copy the top n levels of folders	نسخ المستويات n العليا فقط من المجلدات
+Restartable mode: a broken copy continues where it stopped (slower for small files)	وضع قابل للاستئناف: النسخ المنقطع يكمل من حيث توقف (أبطأ مع الملفات الصغيرة)
+Backup mode: copy files even without permission to read them	وضع النسخ الاحتياطي: نسخ الملفات حتى دون إذن بقراءتها
+Restartable mode, switching to backup mode when access is denied	وضع قابل للاستئناف، يتحول إلى النسخ الاحتياطي عند رفض الوصول
+Unbuffered copy. Faster for very large files	نسخ دون ذاكرة مؤقتة. أسرع للملفات الكبيرة جدًا
+Copy encrypted files in their encrypted form	نسخ الملفات المشفّرة بصيغتها المشفّرة
+What to copy for files	ما يُنسخ للملفات
+What to copy for folders	ما يُنسخ للمجلدات
+Copy files with security (same as /COPY:DATS)	نسخ الملفات مع الأمان (مثل /COPY:DATS)
+Copy all file information (same as /COPY:DATSOU)	نسخ كل معلومات الملف (مثل /COPY:DATSOU)
+Copy no file information (use with /PURGE)	عدم نسخ أي معلومات للملف (يُستخدم مع /PURGE)
+Fix security on all files, even skipped ones	إصلاح الأمان لكل الملفات، حتى المتخطّاة
+Fix timestamps on all files, even skipped ones	إصلاح الطوابع الزمنية لكل الملفات، حتى المتخطّاة
+Copy no folder information	عدم نسخ أي معلومات للمجلدات
+Copy files without Windows copy offload	نسخ الملفات دون تفريغ النسخ في Windows
+Compress data while it travels over the network	ضغط البيانات أثناء انتقالها عبر الشبكة
+Keep sparse files sparse	إبقاء الملفات المتناثرة متناثرة
+Don't use block cloning (ReFS / Dev Drive)	عدم استخدام استنساخ الكتل (ReFS / Dev Drive)
+Copy symbolic links as links, not the files they point to	نسخ الروابط الرمزية كروابط، لا الملفات التي تشير إليها
+Copy junctions as junctions, not the folders they point to	نسخ نقاط الوصل كنقاط وصل، لا المجلدات التي تشير إليها
+Create the folder tree and empty (zero-length) files only	إنشاء شجرة المجلدات وملفات فارغة (بطول صفر) فقط
+Create destination files with 8.3 FAT names only	إنشاء ملفات الوجهة بأسماء FAT 8.3 فقط
+Turn off support for very long paths (over 256 characters)	إيقاف دعم المسارات الطويلة جدًا (أكثر من 256 حرفًا)
+Add these attributes to copied files	إضافة هذه السمات إلى الملفات المنسوخة
+Remove these attributes from copied files	إزالة هذه السمات من الملفات المنسوخة
+Delete files and folders in the destination that aren't in the source	حذف الملفات والمجلدات في الوجهة غير الموجودة في المصدر
+Purge DELETES files and folders in the destination that aren't in the source.	Purge يحذف الملفات والمجلدات في الوجهة غير الموجودة في المصدر.
+Mirror a folder: copy everything and DELETE extra files in the destination	عمل مرآة لمجلد: نسخ كل شيء وحذف الملفات الزائدة في الوجهة
+Mirror DELETES files and folders in the destination that aren't in the source.	المرآة تحذف الملفات والمجلدات في الوجهة غير الموجودة في المصدر.
+Skip files matching these names, paths or wildcards (e.g. *.tmp)	تخطي الملفات المطابقة لهذه الأسماء أو المسارات أو أحرف البدل (مثل *.tmp)
+Skip folders matching these names or paths	تخطي المجلدات المطابقة لهذه الأسماء أو المسارات
+Only copy files with the Archive attribute set	نسخ الملفات التي لها سمة Archive فقط
+Only copy files with the Archive attribute, and reset it	نسخ الملفات التي لها سمة Archive فقط، وإزالتها
+Only include files with any of these attributes	تضمين الملفات التي لها إحدى هذه السمات فقط
+Skip files with any of these attributes	تخطي الملفات التي لها إحدى هذه السمات
+Skip changed files (same time, different size)	تخطي الملفات المتغيرة (نفس الوقت، حجم مختلف)
+Skip files that are newer in the source	تخطي الملفات الأحدث في المصدر
+Skip files that are older in the source	تخطي الملفات الأقدم في المصدر
+Skip extra files and folders (only in the destination). Keeps /PURGE from deleting them	تخطي الملفات والمجلدات الزائدة (في الوجهة فقط). يمنع /PURGE من حذفها
+Skip lonely files and folders (only in the source)	تخطي الملفات والمجلدات المنفردة (في المصدر فقط)
+Include modified files (different change time)	تضمين الملفات المعدّلة (وقت تغيير مختلف)
+Include same files (copy even if identical)	تضمين الملفات المتماثلة (النسخ حتى لو كانت متطابقة)
+Include tweaked files (same size and time, different attributes)	تضمين الملفات المعدّلة قليلًا (نفس الحجم والوقت، سمات مختلفة)
+Skip files bigger than n bytes	تخطي الملفات الأكبر من n بايت
+Skip files smaller than n bytes	تخطي الملفات الأصغر من n بايت
+Skip files older than n days (or a date as YYYYMMDD)	تخطي الملفات الأقدم من n يومًا (أو تاريخ بصيغة YYYYMMDD)
+Skip files newer than n days (or a date as YYYYMMDD)	تخطي الملفات الأحدث من n يومًا (أو تاريخ بصيغة YYYYMMDD)
+Skip files not used since n days (or a date as YYYYMMDD)	تخطي الملفات غير المستخدمة منذ n يومًا (أو تاريخ بصيغة YYYYMMDD)
+Skip files used since n days (or a date as YYYYMMDD)	تخطي الملفات المستخدمة خلال n يومًا (أو تاريخ بصيغة YYYYMMDD)
+Skip junction points and symbolic links	تخطي نقاط الوصل والروابط الرمزية
+Skip symbolic links to folders and junctions	تخطي الروابط الرمزية إلى المجلدات ونقاط الوصل
+Skip symbolic links to files	تخطي الروابط الرمزية إلى الملفات
+Assume FAT file times (2-second precision). Useful for NAS and USB drives	افتراض أوقات ملفات FAT (دقة ثانيتين). مفيد لأجهزة NAS وأقراص USB
+Allow for 1-hour daylight saving time differences	السماح بفروق ساعة واحدة بسبب التوقيت الصيفي
+Retries when a file can't be copied	مرات إعادة المحاولة عند تعذّر نسخ ملف
+Seconds to wait between retries	ثوانٍ للانتظار بين المحاولات
+Save the /R and /W values as Robocopy's defaults in the registry	حفظ قيمتي /R و/W كقيم Robocopy الافتراضية في السجل
+Wait for network share names to be defined (retry error 67)	انتظار تعريف أسماء مشاركات الشبكة (إعادة المحاولة عند الخطأ 67)
+Low free space mode: pause when the destination is nearly full	وضع المساحة المنخفضة: التوقف مؤقتًا عندما تقارب الوجهة الامتلاء
+Copy with this many threads at once (1 to 128). Much faster for many small files	النسخ بهذا العدد من سلاسل التنفيذ معًا (1 إلى 128). أسرع بكثير مع الكثير من الملفات الصغيرة
+Wait this many milliseconds between packets, to leave bandwidth for others	الانتظار هذا العدد من أجزاء الثانية بين الحزم، لترك عرض نطاق للآخرين
+Largest read/write size per copy cycle (e.g. 1m)	أكبر حجم قراءة/كتابة في كل دورة نسخ (مثل 1m)
+Limit the copy speed (e.g. 50m = 50 MB per second)	تحديد سرعة النسخ (مثل 50m = 50 ميغابايت في الثانية)
+Only throttle files bigger than this (e.g. 100m)	تحديد سرعة الملفات الأكبر من هذا فقط (مثل 100m)
+Write the log to this file (replaces it)	كتابة السجل في هذا الملف (يستبدله)
+Add the log to the end of this file	إضافة السجل إلى نهاية هذا الملف
+Write the log as Unicode to this file (replaces it)	كتابة السجل بترميز Unicode في هذا الملف (يستبدله)
+Add the Unicode log to the end of this file	إضافة سجل Unicode إلى نهاية هذا الملف
+Verbose: also list skipped files	مفصّل: سرد الملفات المتخطّاة أيضًا
+Report all extra files, not just selected ones	الإبلاغ عن كل الملفات الزائدة، لا المحددة فقط
+Show source file timestamps	عرض الطوابع الزمنية لملفات المصدر
+Don't log file sizes	عدم تسجيل أحجام الملفات
+Don't log file names	عدم تسجيل أسماء الملفات
+With /NFL KUDUCOPY can't show which file is being copied.	مع /NFL لا يستطيع KUDUCOPY عرض الملف الجاري نسخه.
+Don't show per-file progress	عدم عرض التقدم لكل ملف
+With /NP KUDUCOPY can only show progress when each file finishes.	مع /NP لا يستطيع KUDUCOPY عرض التقدم إلا عند انتهاء كل ملف.
+Show the estimated time of arrival for each file	عرض الوقت المتوقع لوصول كل ملف
+Keep watching the source and copy again after n changes	مواصلة مراقبة المصدر والنسخ مجددًا بعد n تغييرات
+Monitoring keeps running until you press Cancel.	تستمر المراقبة حتى تضغط إلغاء.
+Keep watching the source and copy again every n minutes if it changed	مواصلة مراقبة المصدر والنسخ مجددًا كل n دقائق إذا تغيّر
+Only copy between these times of day (hhmm-hhmm, e.g. 2200-0600)	النسخ فقط بين هذه الأوقات من اليوم (hhmm-hhmm، مثل 2200-0600)
+Check the run hours per file, not per pass	التحقق من ساعات التشغيل لكل ملف، لا لكل دورة
+{0} needs a whole number.	{0} يحتاج إلى عدد صحيح.
+/MT must be between 1 and 128 threads.	يجب أن يكون /MT بين 1 و128 سلسلة تنفيذ.
+{0} needs at least one attribute letter.	{0} يحتاج إلى حرف سمة واحد على الأقل.
+{0} doesn't know the letter(s) {1}. Use {2}.	{0} لا يعرف الحرف (الأحرف) {1}. استخدم {2}.
+/RH needs two times like 2200-0600.	/RH يحتاج إلى وقتين مثل 2200-0600.
+In use by another program	يستخدمه برنامج آخر
+Part of the file is locked by another program	جزء من الملف مقفل من برنامج آخر
+Not enough space on the destination	لا توجد مساحة كافية في الوجهة
+The name isn't valid on the destination	الاسم غير صالح في الوجهة
+The name or path is too long	الاسم أو المسار طويل جدًا
+The file or folder is damaged and can't be read	الملف أو المجلد تالف ولا يمكن قراءته
+Error {0}	خطأ {0}
+Theme	المظهر
+Advanced	متقدم
+Conflict	تعارض
+Verify	تحقق
+Hash	Hash
+Favourites	المفضلة
+Switches	Switches
+Player	Player
+Paste with KUDUCOPY	لصق باستخدام KUDUCOPY
+{0} --paste "%V"	{0} --paste "%V"
+Paste into this folder with KUDUCOPY	لصق في هذا المجلد باستخدام KUDUCOPY
+{0} --paste "%1"	{0} --paste "%1"
+Directory	Directory
+Copy to…	نسخ إلى…
+Move to…	نقل إلى…
+Choose a folder…	اختر مجلدًا…
+{1} {0}-ask "%1"	{1} {0}-ask "%1"
+{0}.tmp	{0}.tmp
+{0}.json	{0}.json
+Today, {0}	اليوم، {0}
+Yesterday, {0}	أمس، {0}
+Done · verified	تم · تم التحقق
+ · {0} deleted	 · حُذف {0}
+1 failed	فشل واحد
+{0} failed	فشل {0}
+Failed	فشل
+Missing theme resource {0}	Missing theme resource {0}
+Light	فاتح
+Styles	Styles
+Dark	داكن
+Application	Application
+Preferred DropEffect	Preferred DropEffect
+Also compare file contents (slower)	مقارنة محتوى الملفات أيضًا (أبطأ)
+Compare folders · KUDUCOPY	مقارنة المجلدات · KUDUCOPY
+Reads files of the same size on both sides and compares their checksums, to find changes that kept the same size and date.	يقرأ الملفات المتساوية في الحجم في الجانبين ويقارن مجاميعها الاختبارية، لإيجاد التغييرات التي أبقت الحجم والتاريخ.
+Compare	مقارنة
+Copy selected to the right	نسخ المحدد إلى اليمين
+Copy selected to the left	نسخ المحدد إلى اليسار
+Copy list	نسخ القائمة
+Save report…	حفظ التقرير…
+Compare two folders	مقارنة مجلدين
+See which files are only on one side, newer, or different. Nothing is copied unless you choose to.	اعرف أي الملفات موجودة في جانب واحد فقط، أو أحدث، أو مختلفة. لا يُنسخ شيء ما لم تختر ذلك.
+Browse…	استعراض…
+Choose the {0} folder	اختر المجلد {0}
+Left	اليسار
+Right	اليمين
+Swap	تبديل
+Files	الملفات
+State	الحالة
+Name	الاسم
+Folder	المجلد
+Close	إغلاق
+Choose two folders and press Compare.	اختر مجلدين واضغط "مقارنة".
+Choose a folder for both sides first.	اختر مجلدًا لكلا الجانبين أولًا.
+Stop	إيقاف
+Comparing, and reading files to compare their contents…	جارٍ المقارنة، وقراءة الملفات لمقارنة محتواها…
+Comparing…	جارٍ المقارنة…
+Stopped. Press Compare to start again.	توقف. اضغط "مقارنة" للبدء من جديد.
+The folders couldn't be compared:\n{0}	تعذّرت مقارنة المجلدين:\n{0}
+Compared size, date and contents.	تمت مقارنة الحجم والتاريخ والمحتوى.
+Compared size and date. Files whose dates are within 2 seconds count as the same.	تمت مقارنة الحجم والتاريخ. الملفات التي يقع تاريخها ضمن ثانيتين تُعتبر متطابقة.
+Only left	اليسار فقط
+Only right	اليمين فقط
+Left newer	الأيسر أحدث
+Right newer	الأيمن أحدث
+Same content	نفس المحتوى
+The folders match: {0}, all the same.	المجلدان متطابقان: {0}، كلها متطابقة.
+{0} couldn't be read, so the comparison may be incomplete. First: {1}	تعذّرت قراءة {0}، لذا قد تكون المقارنة ناقصة. الأول: {1}
+Both folders are empty.	المجلدان فارغان.
+All	الكل
+Copy {0} to the right	نسخ {0} إلى اليمين
+Copy {0} to the left	نسخ {0} إلى اليسار
+Select files to copy them across (Ctrl+A selects everything shown, Shift or Ctrl+click for more).	حدد ملفات لنسخها إلى الجانب الآخر (Ctrl+A يحدد كل المعروض، وShift أو Ctrl+نقر لتحديد المزيد).
+Copy {0} to {1}?	هل تريد نسخ {0} إلى {1}؟
+{0} there will be replaced.	سيُستبدل {0} هناك.
+{0} of them is NEWER than the file you're copying over it.	{0} منها أحدث من الملف الذي تنسخه فوقه.
+{0} of them are NEWER than the file you're copying over it.	{0} منها أحدث من الملفات التي تنسخها فوقها.
+Copying in a separate window. Press Compare again when it's finished to see the result.	جارٍ النسخ في نافذة منفصلة. اضغط "مقارنة" مجددًا عند الانتهاء لرؤية النتيجة.
+Save the comparison	حفظ المقارنة
+Compare {0} and {1}.txt	مقارنة {0} و{1}.txt
+Text file (tab separated)	ملف نصي (مفصول بعلامات جدولة)
+All files	كل الملفات
+The report couldn't be saved:\n\n{0}	تعذّر حفظ التقرير:\n\n{0}
+Theirs is newer	ملفهم أحدث
+Different size	حجم مختلف
+{0} already exists in {1}	{0} موجود بالفعل في {1}
+{0} already exist in {1}	{0} موجودة بالفعل في {1}
+File	الملف
+You're copying	ما تنسخه
+Already there	الموجود هناك
+and {0} more…	و{0} أخرى…
+Overwrite all	استبدال الكل
+Replace the {0} files in {1} with these ones.	استبدال الملفات الـ {0} في {1} بهذه.
+Replace if newer	استبدال إن كان أحدث
+Only replace files where the one you're copying is newer. {0} of {1}.	استبدال الملفات فقط عندما يكون ما تنسخه أحدث. {0} من {1}.
+Skip all	تخطي الكل
+Keep the files already there. Copy everything else.	الاحتفاظ بالملفات الموجودة هناك. نسخ كل ما عداها.
+Keep both	الاحتفاظ بالاثنين
+Copy these as new files, e.g. "photo (2).jpg".	نسخ هذه كملفات جديدة، مثل "photo (2).jpg".
+Let me decide for each file	دعني أقرر لكل ملف
+See the {0} files side by side and choose one by one.	اعرض الملفات الـ {0} جنبًا إلى جنب واختر واحدًا تلو الآخر.
+Remember this choice for future copies (change it in the main window)	تذكّر هذا الاختيار للنسخ القادمة (يُغيَّر من النافذة الرئيسية)
+Found before copying started. Nothing has been changed yet.	وُجدت قبل بدء النسخ. لم يتغيّر شيء بعد.
+Continue	متابعة
+Cancel job	إلغاء المهمة
+Files already exist · KUDUCOPY	الملفات موجودة بالفعل · KUDUCOPY
+Yours: {0}	ملفك: {0}
+There: {0}	هناك: {0}
+Replace	استبدال
+Skip	تخطي
+For all files:	لكل الملفات:
+Replace only newer	استبدال الأحدث فقط
+Showing the first {0} of {1}. "For all files" applies to every file.	يُعرض أول {0} من {1}. "لكل الملفات" ينطبق على كل ملف.
+Choose for each of the {0}	اختر لكل واحد من الـ {0}
+Choose for each file · KUDUCOPY	اختر لكل ملف · KUDUCOPY
+Error message shown: {0}	Error message shown: {0}
+Save	حفظ
+Cancel	إلغاء
+Copied as {0}	نُسخ باسم {0}
+Copied · verified	نُسخ · تم التحقق
+Skipped	تم التخطي
+Waiting · keep both	بانتظار · الاحتفاظ بالاثنين
+Waiting · replace	بانتظار · استبدال
+Waiting	بانتظار
+{0} · KUDUCOPY	{0} · KUDUCOPY
+Pause	إيقاف مؤقت
+Skip this file	تخطي هذا الملف
+{0} {1} to {2}	{0} {1} إلى {2}
+From {0}	من {0}
+Advanced options	خيارات متقدمة
+Play a sound	تشغيل صوت
+Sleep	سكون
+Shut down	إيقاف التشغيل
+Do nothing	لا شيء
+Now:	الآن:
+When finished:	عند الانتهاء:
+Size	الحجم
+Status	الحالة
+Verifying · {0} of {1} checked	جارٍ التحقق · تم فحص {0} من {1}
+{0} of {1} · {2} of {3}	{0} من {1} · {2} من {3}
+Press Resume to continue	اضغط "استئناف" للمتابعة
+About {0} left	بقي حوالي {0}
+{0} of {1}	{0} من {1}
+Waiting in queue	بانتظار الدور
+Finding files	جارٍ البحث عن الملفات
+Verifying	جارٍ التحقق
+done	تم
+copied	نُسخ
+copying	جارٍ النسخ
+retrying	إعادة المحاولة
+failed	فشل
+skipped	تم التخطي
+waiting	بانتظار
+already there	موجود بالفعل
+Resume	استئناف
+Stop this job? Files already copied stay where they are.	هل تريد إيقاف هذه المهمة؟ الملفات المنسوخة بالفعل تبقى في مكانها.
+This job is still running. Stop it and close?	هذه المهمة لا تزال قيد التشغيل. هل تريد إيقافها والإغلاق؟
+Finished · KUDUCOPY	انتهى · KUDUCOPY
+Finished · saved in History	انتهى · حُفظ في السجل
+Not going to sleep or shutting down: other jobs are still running.	لن يدخل في السكون أو يُطفأ: لا تزال مهام أخرى قيد التشغيل.
+{0} {1} of {2} to {3}	{0} {1} من {2} إلى {3}
+Cancelled · {0} of {1} {2}	أُلغي · {0} من {1} {2}
+moved	نُقلت
+mirrored	بالمرآة
+The job couldn't finish	تعذّر إكمال المهمة
+{0} that only existed in the destination was deleted.	حُذف {0} كان موجودًا في الوجهة فقط.
+{0} that only existed in the destination were deleted.	حُذفت {0} كانت موجودة في الوجهة فقط.
+Every copy was verified.	تم التحقق من كل نسخة.
+{0} already there or skipped.	{0} موجودة بالفعل أو تم تخطيها.
+Everything was copied.	نُسخ كل شيء.
+verified ({0}) ✓	تم التحقق ({0}) ✓
+skipped or already there	تم تخطيها أو موجودة بالفعل
+couldn't be copied	تعذّر نسخها
+deleted from the destination	حُذفت من الوجهة
+at {0} average	بمعدل {0}
+in total	إجمالًا
+Couldn't be copied	تعذّر نسخها
+Close any programs using these files, then retry.	أغلق أي برامج تستخدم هذه الملفات، ثم أعد المحاولة.
+Retry {0}	إعادة محاولة {0}
+Open destination	فتح الوجهة
+Save checksums…	حفظ المجاميع الاختبارية…
+View log	عرض السجل
+Windows will shut down in 60 seconds.	سيُطفأ Windows خلال 60 ثانية.
+Cancel shutdown	إلغاء إيقاف التشغيل
+Saved {0}	حُفظ {0}
+Couldn't save the checksum file:\n\n{0}	تعذّر حفظ ملف المجاميع الاختبارية:\n\n{0}
+Standard	عادي
+Verify copies	التحقق من النسخ
+Keep going if a file can't be copied	المتابعة إذا تعذّر نسخ ملف
+KUDUCOPY	KUDUCOPY
+Start copying	بدء النسخ
+Make the destination folder an exact copy of the source folder. Files that are only in the destination are deleted.	اجعل مجلد الوجهة نسخة مطابقة لمجلد المصدر. الملفات الموجودة في الوجهة فقط تُحذف.
+files and folders	ملفات ومجلدات
+Compare two folders and see which files are only on one side, newer or different	قارن مجلدين واعرف أي الملفات موجودة في جانب واحد فقط، أو أحدث، أو مختلفة
+History	السجل
+Settings	الإعدادات
+Preview	معاينة
+See what will be copied, replaced, skipped or deleted, before anything happens	اعرف ما سيُنسخ أو يُستبدل أو يُتخطى أو يُحذف، قبل أن يحدث أي شيء
+From	من
+Add files	إضافة ملفات
+Choose files to copy	اختر ملفات للنسخ
+Add folder	إضافة مجلد
+Choose a folder to copy	اختر مجلدًا للنسخ
+Drop files or folders here, or press	أفلت الملفات أو المجلدات هنا، أو اضغط
+to paste files you copied in File Explorer	للصق ملفات نسختها في مستكشف الملفات
+Choose where to copy to	اختر مكان النسخ
+Add this folder to favourites	إضافة هذا المجلد إلى المفضلة
+To	إلى
+Options	الخيارات
+If a file already exists	إذا كان الملف موجودًا بالفعل
+Ask me	اسألني
+Overwrite	استبدال
+Tries 3 times, then skips the file and lists it at the end so you can retry. When off, the job stops at the first problem.	يحاول 3 مرات، ثم يتخطى الملف ويذكره في النهاية لتعيد المحاولة. عند الإيقاف، تتوقف المهمة عند أول مشكلة.
+When finished	عند الانتهاء
+Robocopy options	خيارات Robocopy
+Search all options…	البحث في كل الخيارات…
+Change	تغيير
+Files, folders and destination are chosen in Standard mode. Verify and When finished apply here too.	تُختار الملفات والمجلدات والوجهة في الوضع العادي. التحقق و"عند الانتهاء" ينطبقان هنا أيضًا.
+Robocopy command	أمر Robocopy
+Extra options	خيارات إضافية
+Anything typed here is added to the command as it is, e.g. /XA:H /MAXAGE:30	كل ما يُكتب هنا يُضاف إلى الأمر كما هو، مثل /XA:H /MAXAGE:30
+Job files	ملفات المهام
+Load .rcj…	تحميل .rcj…
+Save as .rcj…	حفظ كـ .rcj…
+Robocopy job files can also be run from a script or Task Scheduler: robocopy /JOB:file	يمكن أيضًا تشغيل ملفات مهام Robocopy من برنامج نصي أو من برنامج جدولة المهام: robocopy /JOB:file
+Reset to the default options	العودة إلى الخيارات الافتراضية
+{0} on · {1}	{0} مفعّلة · {1}
+{0} options available	{0} خيارات متاحة
+Robocopy {0} · {1} options available on this PC	Robocopy {0} · {1} خيارات متاحة على هذا الكمبيوتر
+Search	بحث
+Options matching "{0}"	الخيارات المطابقة لـ "{0}"
+No options match.	لا توجد خيارات مطابقة.
+How files and folders are copied	كيف تُنسخ الملفات والمجلدات
+Which files are copied	أي الملفات تُنسخ
+What happens when a file can't be copied	ما يحدث عند تعذّر نسخ ملف
+Threads and bandwidth	سلاسل التنفيذ وعرض النطاق
+Robocopy's own log file	ملف سجل Robocopy الخاص
+Keep copying as things change	مواصلة النسخ مع حدوث التغييرات
+Default: {0}	الافتراضي: {0}
+none	لا شيء
+Needs admin	يحتاج مسؤولًا
+Deletes files	يحذف ملفات
+Empty uses {0}	الفارغ يستخدم {0}
+Robocopy's default	افتراضي Robocopy
+Advanced mode · every option maps to a Robocopy switch	الوضع المتقدم · كل خيار يقابل مفتاحًا في Robocopy
+Standard mode · switch to Advanced for every Robocopy option	الوضع العادي · انتقل إلى المتقدم لكل خيارات Robocopy
+On. After copying, KUDUCOPY reads every file again and compares {0} checksums. Slower, but proves each copy is identical.	مفعّل. بعد النسخ يعيد KUDUCOPY قراءة كل ملف ويقارن مجاميع {0}. أبطأ، لكنه يثبت أن كل نسخة مطابقة.
+Off. When on, KUDUCOPY compares checksums after copying. Slower, but proves each copy is identical.	متوقف. عند التفعيل، يقارن KUDUCOPY المجاميع الاختبارية بعد النسخ. أبطأ، لكنه يثبت أن كل نسخة مطابقة.
+Mirror replaces changed files and DELETES files that are only in the destination folder. You'll see a preview first.	المرآة تستبدل الملفات المتغيرة وتحذف الملفات الموجودة في مجلد الوجهة فقط. سترى معاينة أولًا.
+Nothing to paste. Copy or cut files in File Explorer first.	لا يوجد شيء للصق. انسخ أو قصّ الملفات في مستكشف الملفات أولًا.
+Added {0} from the clipboard (cut, so Move is selected).	أُضيف {0} من الحافظة (مقصوصة، لذلك اختير النقل).
+Added {0} from the clipboard.	أُضيف {0} من الحافظة.
+Remove from the list	إزالة من القائمة
+Counting…	جارٍ العدّ…
+· counting…	· جارٍ العدّ…
+Copy to {0}. Right-click to remove.	نسخ إلى {0}. انقر بزر الماوس الأيمن للإزالة.
+Remove from favourites	إزالة من المفضلة
+Choose an existing folder first, then add it to favourites.	اختر مجلدًا موجودًا أولًا، ثم أضفه إلى المفضلة.
+{0} added to favourites.	أُضيف {0} إلى المفضلة.
+Network folder	مجلد شبكة
+Free space can't be checked in advance for network folders.	لا يمكن التحقق من المساحة الفارغة مسبقًا لمجلدات الشبكة.
+Local Disk	القرص المحلي
+{0} free of {1}	{0} فارغة من {1}
+After copying: about {0} free. Enough space ✓	بعد النسخ: حوالي {0} فارغة. المساحة كافية ✓
+Not enough space: about {0} more is needed.	المساحة غير كافية: يلزم حوالي {0} إضافية.
+Ready · uses Windows' built-in Robocopy{0}	جاهز · يستخدم Robocopy المدمج في Windows{0}
+Robocopy wasn't found on this PC. It's part of Windows; check {0}	لم يُعثر على Robocopy على هذا الكمبيوتر. إنه جزء من Windows؛ تحقق من {0}
+One command per source ({0} in total). 	أمر لكل مصدر ({0} إجمالًا). 
+{0}Grey options are added by KUDUCOPY to show progress. Options this PC's Robocopy doesn't support are hidden.	{0}الخيارات الرمادية أضافها KUDUCOPY لعرض التقدم. الخيارات التي لا يدعمها Robocopy على هذا الكمبيوتر مخفية.
+Robocopy command copied. Paste it into a terminal to run the same copy without KUDUCOPY.	نُسخ أمر Robocopy. الصقه في نافذة الأوامر لتنفيذ النسخ نفسه دون KUDUCOPY.
+Save a Robocopy job file	حفظ ملف مهمة Robocopy
+KUDUCOPY job.rcj	KUDUCOPY job.rcj
+Robocopy job	مهمة Robocopy
+Add a folder to copy and choose a destination first. A job file contains them.	أضف مجلدًا للنسخ واختر وجهة أولًا. ملف المهمة يحتويهما.
+Robocopy didn't create the job file.	لم ينشئ Robocopy ملف المهمة.
+Couldn't save the job file:\n\n{0}	تعذّر حفظ ملف المهمة:\n\n{0}
+Load a Robocopy job file	تحميل ملف مهمة Robocopy
+Loaded {0} · {1} options	تم تحميل {0} · {1} خيارات
+Couldn't read the job file:\n\n{0}	تعذّرت قراءة ملف المهمة:\n\n{0}
+Add files or folders to {0}	أضف ملفات أو مجلدات إلى {0}
+Drag them in, use Add files / Add folder, or paste with Ctrl+V.	اسحبها إلى هنا، أو استخدم "إضافة ملفات" / "إضافة مجلد"، أو الصق بـ Ctrl+V.
+ and {0} more	 و{0} أخرى
+Mirror {0} to {1}	مرآة {0} إلى {1}
+The destination folder becomes an exact copy. Files only there are deleted. You'll see a preview first.	يصبح مجلد الوجهة نسخة مطابقة. الملفات الموجودة هناك فقط تُحذف. سترى معاينة أولًا.
+{0} {1} ({2}) to {3}	{0} {1} ({2}) إلى {3}
+Another job is copying to {0}; this one will wait its turn.	مهمة أخرى تنسخ إلى {0}؛ هذه ستنتظر دورها.
+Advanced mode · {0}	الوضع المتقدم · {0}
+verify on ({0})	التحقق مفعّل ({0})
+Preview mirror…	معاينة المرآة…
+Start moving	بدء النقل
+Started: {0} to {1}. You can add another job now.	بدأ: {0} إلى {1}. يمكنك إضافة مهمة أخرى الآن.
+Add some files or folders to copy first. Drag them in, use Add files / Add folder, or paste with Ctrl+V.	أضف أولًا بعض الملفات أو المجلدات للنسخ. اسحبها إلى هنا، أو استخدم "إضافة ملفات" / "إضافة مجلد"، أو الصق بـ Ctrl+V.
+Choose where to copy to.	اختر مكان النسخ.
+Mirror works with folders. Remove the files from the list, or choose Copy.	المرآة تعمل مع المجلدات. أزل الملفات من القائمة، أو اختر النسخ.
+Fix these options first:\n\n{0}	أصلح هذه الخيارات أولًا:\n\n{0}
+/COPY:O or U	/COPY:O or U
+{0} needs administrator rights.\n\nRestart KUDUCOPY as administrator and start this job?	{0} يحتاج إلى صلاحيات المسؤول.\n\nهل تريد إعادة تشغيل KUDUCOPY كمسؤول وبدء هذه المهمة؟
+{0} need administrator rights.\n\nRestart KUDUCOPY as administrator and start this job?	{0} تحتاج إلى صلاحيات المسؤول.\n\nهل تريد إعادة تشغيل KUDUCOPY كمسؤول وبدء هذه المهمة؟
+{0} will DELETE files and folders in {1} that aren't in the source.\n\nUse Preview to see which ones. Start anyway?	سيحذف {0} الملفات والمجلدات في {1} غير الموجودة في المصدر.\n\nاستخدم المعاينة لترى أيها. هل تريد البدء على أي حال؟
+Restart as administrator was cancelled.	أُلغيت إعادة التشغيل كمسؤول.
+Couldn't restart as administrator:\n\n{0}	تعذّرت إعادة التشغيل كمسؤول:\n\n{0}
+KUDUCOPY {0} is available. Open Settings → About to download it.	يتوفر KUDUCOPY {0}. افتح الإعدادات ← حول لتنزيله.
+History · KUDUCOPY	السجل · KUDUCOPY
+Search…	بحث…
+When	متى
+Result	النتيجة
+No jobs yet. Every finished job is saved here.	لا توجد مهام بعد. تُحفظ كل مهمة مكتملة هنا.
+{0} · kept on this computer only	{0} · محفوظة على هذا الكمبيوتر فقط
+{0} · {1} of {2} moved	{0} · نُقل {1} من {2}
+{0} · {1} of {2} copied	{0} · نُسخ {1} من {2}
+and {0} more	و{0} أخرى
+Run this job again	تشغيل هذه المهمة مرة أخرى
+View Robocopy log	عرض سجل Robocopy
+Delete	حذف
+Remove this job from History? The copied files aren't touched.	هل تريد إزالة هذه المهمة من السجل؟ لن تُمس الملفات المنسوخة.
+Favourites · KUDUCOPY	المفضلة · KUDUCOPY
+Favourite folders	المجلدات المفضلة
+One click to copy there from the main window, and listed under "Copy to…" and "Move to…" when you right-click files in File Explorer.	نقرة واحدة للنسخ إليها من النافذة الرئيسية، وتظهر تحت "نسخ إلى…" و"نقل إلى…" عند النقر بزر الماوس الأيمن على ملفات في مستكشف الملفات.
+Add folder…	إضافة مجلد…
+Choose a favourite folder	اختر مجلدًا مفضلًا
+Move up	نقل لأعلى
+Move down	نقل لأسفل
+Remove	إزالة
+No favourites yet. Add the folders you copy to most often.	لا توجد مفضلة بعد. أضف المجلدات التي تنسخ إليها أكثر.
+Settings · KUDUCOPY	الإعدادات · KUDUCOPY
+Appearance	المظهر
+Same as Windows	مثل Windows
+Language	اللغة
+File Explorer	مستكشف الملفات
+Add "Paste with KUDUCOPY", "Copy to…" and "Move to…" to the right-click menu	إضافة "Paste with KUDUCOPY" و"Copy to…" و"Move to…" إلى قائمة النقر بزر الماوس الأيمن
+For your Windows account only, no administrator rights needed. On Windows 11 they're under "Show more options".	لحسابك في Windows فقط، دون صلاحيات المسؤول. في Windows 11 تجدها تحت "إظهار المزيد من الخيارات".
+When files already exist, KUDUCOPY asks you.	عندما تكون الملفات موجودة بالفعل، يسألك KUDUCOPY.
+When files already exist: {0} (remembered).	عندما تكون الملفات موجودة بالفعل: {0} (محفوظ).
+Ask me again	اسألني مرة أخرى
+Copy history and logs are saved on this computer only, in {0}	سجل النسخ وملفات السجل محفوظة على هذا الكمبيوتر فقط، في {0}
+Open the History folder	فتح مجلد السجل
+Updates	التحديثات
+Check for a new KUDUCOPY version when it starts	البحث عن إصدار جديد من KUDUCOPY عند البدء
+Only asks GitHub for the latest version number. Nothing is downloaded without asking.	يسأل GitHub فقط عن رقم أحدث إصدار. لا يُنزَّل شيء دون أن يسألك.
+About KUDUCOPY	حول KUDUCOPY
+replace if newer	استبدال إن كان أحدث
+keep both	الاحتفاظ بالاثنين
+Version {0} · Fast, reliable file copying	الإصدار {0} · نسخ ملفات سريع وموثوق
+Azeem, with Claude and	Azeem, with Claude and
+Made by	Made by
+Licence	الترخيص
+MIT · free and open source	MIT · مجاني ومفتوح المصدر
+View	عرض
+Source code	الشيفرة المصدرية
+Copy engine	محرك النسخ
+Robocopy (built into Windows)	Robocopy (مدمج في Windows)
+Robocopy {0} (built into Windows)	Robocopy {0} (مدمج في Windows)
+Third-party	أطراف أخرى
+Third-party notices	إشعارات الأطراف الأخرى
+KUDUCOPY runs Robocopy, which is part of Windows, and doesn't include or change it. KUDUCOPY is not affiliated with, sponsored or endorsed by Microsoft. Windows and Robocopy are names of Microsoft.	يشغّل KUDUCOPY أداة Robocopy، وهي جزء من Windows، دون أن يضمّنها أو يغيّرها. لا يرتبط KUDUCOPY بـ Microsoft ولا يحظى برعايتها أو اعتمادها. Windows وRobocopy اسمان لـ Microsoft.
+Check for updates	البحث عن تحديثات
+Couldn't find any published version yet.	لم يُعثر على أي إصدار منشور بعد.
+KUDUCOPY {0} is available. Open the download page?	يتوفر KUDUCOPY {0}. هل تريد فتح صفحة التنزيل؟
+You have the latest version.	لديك أحدث إصدار.
+Couldn't check for updates. Check your internet connection and try again.	تعذّر البحث عن تحديثات. تحقق من اتصالك بالإنترنت وحاول مرة أخرى.
+Preview · KUDUCOPY	معاينة · KUDUCOPY
+Listing what would be copied…	جارٍ سرد ما سيُنسخ…
+Robocopy is checking the files in list-only mode. Nothing is copied.	يفحص Robocopy الملفات في وضع السرد فقط. لا يُنسخ شيء.
+The preview couldn't be made	تعذّر إعداد المعاينة
+You'll be asked	سيُطلب منك
+Deleted from {0}	حُذف من {0}
+Preview: {0} {1} to {2}	معاينة: {0} {1} إلى {2}
+move	نقل
+mirror	عمل مرآة لـ
+copy	نسخ
+Nothing has been copied yet. This is what Start would do with your Advanced options.	لم يُنسخ شيء بعد. هذا ما سيفعله "بدء" مع خياراتك المتقدمة.
+Nothing has been copied yet. This is what Start would do.	لم يُنسخ شيء بعد. هذا ما سيفعله "بدء".
+new files	ملفات جديدة
+will be replaced	ستُستبدل
+kept as new copies	ستُحفظ كنسخ جديدة
+already there (you'll be asked)	موجودة بالفعل (سيُطلب منك)
+DELETED from the destination	ستُحذف من الوجهة
+{0} in {1} will be DELETED by Mirror, because they aren't in the source.	ستحذف المرآة {0} في {1}، لأنها غير موجودة في المصدر.
+{0} in {1} will be DELETED because /MIR or /PURGE is on. They aren't in the source.	سيُحذف {0} في {1} لأن /MIR أو /PURGE مفعّل. إنها غير موجودة في المصدر.
+Moving: the originals are removed after they're copied and verified.	النقل: تُزال الأصول بعد نسخها والتحقق منها.
+Moving: the originals are removed after they're copied.	النقل: تُزال الأصول بعد نسخها.
+What happens	ما سيحدث
+Why	لماذا
+Nothing to copy: the sources are empty, or everything was left out by your options.	لا شيء للنسخ: المصادر فارغة، أو استبعدت خياراتك كل شيء.
+Start {0}	بدء {0}
+Nothing to do: the destination is already up to date.	لا شيء للقيام به: الوجهة محدّثة بالفعل.
+Writes up to {0}. {1} has {2} free, so there's enough space ✓	سيكتب حتى {0}. في {1} مساحة فارغة {2}، لذا المساحة كافية ✓
+Not enough space: this writes up to {0}, but {1} only has {2} free.	المساحة غير كافية: سيكتب هذا حتى {0}، لكن في {1} {2} فارغة فقط.
+{0} in {1} will be DELETED. Start anyway?	سيُحذف {0} في {1}. هل تريد البدء على أي حال؟
+{0} ran into a problem it couldn't get past, and has to close.	واجه {0} مشكلة لم يستطع تجاوزها، ويجب أن يُغلق.
+{0} file	{0} ملف
+{0} files	{0} ملفات
+{0} item	{0} عنصر
+{0} items	{0} عناصر
+{0} failed file	{0} ملف فاشل
+{0} failed files	{0} ملفات فاشلة
+{0} option	{0} خيار
+{0} options	{0} خيارات
+{0} job	{0} مهمة
+{0} jobs	{0} مهام

@@ -37,6 +37,7 @@
 - **Mirror / sync** a folder: make the destination an exact copy of the source. New and changed files are copied, and files that exist only in the destination are deleted. A mirror always opens the preview first so you can see every deletion before anything happens, and History shows how many files were deleted.
 - **Compare two folders** without copying: see which files are only on the left or the right, newer on one side, different, or the same, by size and date or (optionally) by contents too. Filter the list, copy selected files across in either direction into the matching subfolders, and copy or save the comparison as a report.
 - **Free space check** before copying, **light and dark mode**, and an **update check**.
+- **In your language**: English, Malayalam (മലയാളം), Hindi (हिन्दी), Spanish, French and Arabic (with the windows mirrored for right-to-left). KUDUCOPY starts in the same language as Windows when it has it; choose another in Settings. Robocopy's own options and logs stay in English.
 
 **Advanced mode** — every Robocopy option:
 

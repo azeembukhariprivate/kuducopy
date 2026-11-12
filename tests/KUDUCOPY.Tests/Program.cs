@@ -16,6 +16,7 @@ namespace Kuducopy.Tests
         private static int Main()
         {
             Run("Reads robocopy output", ReadsOutput);
+            Run("In other languages", LangTests.Run);
             Run("Builds standard commands", BuildsStandardCommands);
             Run("Builds advanced commands", BuildsAdvancedCommands);
             Run("Groups sources into robocopy runs", PlansTasks);

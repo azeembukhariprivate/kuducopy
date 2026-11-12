@@ -34,6 +34,14 @@ dotnet build src/KUDUCOPY/KUDUCOPY.csproj -c Release -o out/KUDUCOPY
 out\KUDUCOPY\KUDUCOPY.exe --self-test        (Windows only)
 ```
 
+## Other languages (1.4)
+
+The shared `Lang`/`LangUi` (kudu-common) put each window into the chosen language as it's shown. Texts built in code
+(job titles, counts, the conflict question, the preview notes, History rows) call `Lang.T` or `Format.Count` on whole
+sentences. Robocopy's switches, the log files, the checksum file and the compare report stay in English. Texts are in
+`src/KUDUCOPY/Lang/<code>.txt`, made and checked with kudu-common's `tools/lang.py`; when adding or changing a text, add
+it to every language file (`tools/lang.py check ../kuducopy`). The rule below applies to translations too.
+
 ## Shared code (kudu-common)
 
 The files listed in `.kudu-common` (the look and controls in `Controls/`, `Core/Admin.cs`, `AppInfo.cs`, `Args.cs`,

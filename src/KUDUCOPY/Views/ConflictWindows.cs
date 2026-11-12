@@ -33,7 +33,7 @@ namespace Kuducopy.Views
 
             var n = q.Conflicts.Count;
             var head = Ui.Row(Ui.Icon("IconWarn", 18).Res(TextElement.ForegroundProperty, "WarnText"),
-                Ui.Text($"{Format.Count(n, "file")} already exist{(n == 1 ? "s" : "")} in {q.Destination}", 17, bold: true).Margin(10, 0, 0, 0));
+                Ui.Text(Lang.T(n == 1 ? "{0} already exists in {1}" : "{0} already exist in {1}", Format.Count(n, "file"), q.Destination), 17, bold: true).Margin(10, 0, 0, 0));
             ((TextBlock)head.Children[1]).TextWrapping = TextWrapping.Wrap;
             ((TextBlock)head.Children[1]).MaxWidth = 560;
 

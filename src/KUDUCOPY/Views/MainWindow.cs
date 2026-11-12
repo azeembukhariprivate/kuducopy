@@ -730,7 +730,7 @@ namespace Kuducopy.Views
             }
             AddSources(files);
             if (cut) SetMode(CopyMode.Move);
-            SetStatus($"Added {Format.Count(files.Count, "item")} from the clipboard" + (cut ? " (cut, so Move is selected)." : "."));
+            SetStatus(Lang.T(cut ? "Added {0} from the clipboard (cut, so Move is selected)." : "Added {0} from the clipboard.", Format.Count(files.Count, "item")));
         }
 
         /// <summary>Opens Compare, starting from the first source folder and its copy in the destination when there is one.</summary>
@@ -1146,13 +1146,13 @@ namespace Kuducopy.Views
             {
                 var counted = Draft.Sources.All(p => _sizes.ContainsKey(p));
                 _summary.Text = counted
-                    ? $"{Draft.Verb} {Format.Count(TotalFiles, "file")} ({Format.Size(TotalBytes)}) to {dest}"
-                    : $"{Draft.Verb} {Format.Count(count, "item")} to {dest}";
+                    ? Lang.T("{0} {1} ({2}) to {3}", Lang.T(Draft.Verb), Format.Count(TotalFiles, "file"), Format.Size(TotalBytes), dest)
+                    : Lang.T("{0} {1} to {2}", Lang.T(Draft.Verb), Format.Count(count, "item"), dest);
                 var key = string.IsNullOrWhiteSpace(Draft.Destination) ? null : Planner.VolumeKey(Draft.Destination);
                 var busy = key != null && JobQueue.IsBusy(key);
-                _summaryNote.Text = (busy ? $"Another job is copying to {key}; this one will wait its turn. " : string.Empty) +
-                                    (Draft.Advanced ? $"Advanced mode · {Format.Count(Draft.Switches.Count, "option")}" : string.Empty) +
-                                    (Draft.Verify ? (Draft.Advanced ? " · " : string.Empty) + "verify on (" + Checksums.Name(Draft.Hash) + ")" : string.Empty);
+                _summaryNote.Text = (busy ? Lang.T("Another job is copying to {0}; this one will wait its turn.", key) + " " : string.Empty) +
+                                    (Draft.Advanced ? Lang.T("Advanced mode · {0}", Format.Count(Draft.Switches.Count, "option")) : string.Empty) +
+                                    (Draft.Verify ? (Draft.Advanced ? " · " : string.Empty) + Lang.T("verify on ({0})", Checksums.Name(Draft.Hash)) : string.Empty);
             }
             _start.Content = Draft.Mode == CopyMode.Mirror
                 ? Ui.Label("IconList", "Preview mirror…")
@@ -1235,7 +1235,7 @@ namespace Kuducopy.Views
                     if (spec.Switches.Any(s => s.Switch == "/COPY" && (s.Value ?? string.Empty).ToUpperInvariant().IndexOfAny(new[] { 'O', 'U' }) >= 0)) admin.Add("/COPY:O or U");
                     if (admin.Count > 0 && !Admin.IsAdmin)
                     {
-                        if (Dialogs.Confirm(this, $"{string.Join(", ", admin)} need{(admin.Count == 1 ? "s" : "")} administrator rights.\n\nRestart KUDUCOPY as administrator and start this job?"))
+                        if (Dialogs.Confirm(this, Lang.T(admin.Count == 1 ? "{0} needs administrator rights.\n\nRestart KUDUCOPY as administrator and start this job?" : "{0} need administrator rights.\n\nRestart KUDUCOPY as administrator and start this job?", string.Join(", ", admin))))
                             RestartAsAdmin(spec);
                         return null;
                     }

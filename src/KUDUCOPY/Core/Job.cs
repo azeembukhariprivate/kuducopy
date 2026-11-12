@@ -65,8 +65,8 @@ namespace Kuducopy.Core
                     .ToList();
                 if (names.Count == 0) return "nothing";
                 if (names.Count == 1) return names[0];
-                if (names.Count == 2) return names[0] + " and " + names[1];
-                return $"{names[0]}, {names[1]} and {names.Count - 2} more";
+                if (names.Count == 2) return Lang.T("{0} and {1}", names[0], names[1]);
+                return Lang.T("{0}, {1} and {2} more", names[0], names[1], names.Count - 2);
             }
         }
     }
